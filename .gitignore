@@ -1,2 +1,4 @@
 *.jpg
+*.pyc
+__pycache__
 saved_weigts

@@ -1,6 +1,6 @@
 import numpy as np
-from cv2.dnn import NMSBoxes
-import cv2
+#from cv2.dnn import NMSBoxes
+#import cv2
 def prior_box(feature_map, aspect_ratios):
     '''
     Calculate the coordinates of prior boxes according to shape of feature maps、aspect ratios
@@ -215,51 +215,11 @@ def post_process(y_pred_no_process,priors,top_k = 200,score_thresh = 0.1,iou_thr
         y_pred.append(detections)
     return y_pred 
 
-def draw_detection(frame,prediction,class_names,box_color = (255,0,0),box_width = 2,text_color=(0,0,0),draw_label = True,water_mask=None,font = cv2.FONT_HERSHEY_COMPLEX,font_scale=0.5):
-    '''
-    Input a frame and prediction
-    #each class
-    '''
-    conf = prediction[:-4]
-    bbox = prediction[-4:].copy() #* 224).astype('int32')
-    h,w,c = frame.shape
-    bbox[[0,2]] *= w
-    bbox[[1,3]] *= h
-    bbox = bbox.astype('int32')
-    class_name = class_names[np.argmax(conf)] 
-    score = np.max(conf)
-    #draw box
-    cv2.rectangle(frame,(bbox[0],bbox[1]),(bbox[2],bbox[3]),box_color,box_width)
-  
-    if draw_label:
-        offset_y = 5
-        text = class_name #+ " " + str(round(float(score),3))
-        (text_width, text_height) = cv2.getTextSize(text, font, fontScale=font_scale, thickness=1)[0]
-        if text_width < bbox[2] - bbox[0]:
-            text_width = bbox[2] - bbox[0]
-        text_pos = [bbox[0],bbox[1]]
-        if text_pos[1] <= 8:
-            text_pos[1] = 8
-        text_pos = tuple(text_pos)
-        text_rect = [(text_pos[0],text_pos[1] + offset_y),(text_pos[0] + text_width , text_pos[1] - text_height)]
-        cv2.rectangle(frame,text_rect[0],text_rect[1],box_color,cv2.FILLED)
-        cv2.putText(frame,text,text_pos, font, font_scale,text_color,1,cv2.LINE_AA)
-        
-    if water_mask != None:
-        cv2.putText(frame,water_mask, (20, 20), font, 1,text_color,1,cv2.LINE_AA)
-
 def fit_generator(model,x_train,y_train):
     (train_flow,val_flow) = data_augment(x_train,y_train,batch_size)
     history = model.fit_generator(train_flow,steps_per_epoch=len(x_train)/batch_size,validation_data=val_flow,validation_steps=300,epochs=epochs_per_stage)
     return history
-def plot_history(history):
-    plt.plot(history.history['loss'])
-    plt.plot(history.history['val_loss'])
-    plt.title('Model loss')
-    plt.ylabel('Loss')
-    plt.xlabel('Epoch')
-    plt.legend(['Train', 'Test'], loc='upper left')
-    plt.show()
+
 ## Calculate accuracy. 
 def evaluate(model,x_test,y_test,iou_thresh = 0.5):
     y_pred = model.predict(x_test)
@@ -267,7 +227,10 @@ def evaluate(model,x_test,y_test,iou_thresh = 0.5):
     #1. Mask all wrong classification  incorrect
     classes_gt = np.argmax(y_test[:,:-4],axis=1)
     classes_pred = np.argmax(y_pred[:,:-4],axis=1)
-    correct = np.where(classes_gt != classes_pred,0,1)
+    correct_class = np.where(classes_gt == classes_pred,1,0)
     #2. Mask all box with iou < 0.5 incorrect
-    correct = np.where(iou(y_pred[:,-4:],y_test[:,-4:]) >= iou_thresh,correct,0)
+    correct_loc = np.where(iou(y_pred[:,-4:],y_test[:,-4:]) >= iou_thresh,1,0)
+    correct = np.logical_and(correct_class,correct_loc)
+    print('class accuracy',round(np.sum(correct_class) / len(correct),4))
+    print('loc accuracy',round(np.sum(correct_loc) / len(correct),4))
     print('accuracy ',round(np.sum(correct) / len(correct),4))

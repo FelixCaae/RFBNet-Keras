@@ -10,7 +10,7 @@ import scipy.io
 from keras.preprocessing.image import ImageDataGenerator
 import xml.etree.ElementTree as ET
 import random
-import cv2
+#import cv2
         
 def read_list(list_path):
     name_list = open(list_path).readlines()
@@ -101,7 +101,7 @@ def load_data(train_sample= 0.7,test_sample= 0.3,input_shape=(224,224,3),task = 
     annot_path = os.path.join(root,"annotations")
     xml_path = os.path.join(annot_path,"xmls")
     
-    assert(train_sample + test_sample <= 1 )
+    #assert(train_sample + test_sample <= 1 )
     list_train,y_train = read_list(annot_path + '/train.txt')
     list_test,y_test = read_list(annot_path + '/test.txt')
     

@@ -10,7 +10,7 @@ def build_simple_detection_net(base_model,source_layer,num_classes,version_name,
     x = base_model.get_layer(source_layer).output
 #    x = Dense(2048,activation = 'relu')(x)
 #    x = Dense(1024,activation = 'relu')(x)
-    x = Dense(2000,activation = 'relu')(x)
+    x = Dense(4000,activation = 'relu')(x)
     x = Dropout(0.3)(x)
     x0 = Dense(4,activation ='sigmoid')(x)
     x1 = Dense(num_classes,activation = 'softmax')(x)

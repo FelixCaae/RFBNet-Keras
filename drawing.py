@@ -1,4 +1,6 @@
 import cv2
+import numpy as np
+from matplotlib import pyplot as plt
 def plot_history(history):
     plt.plot(history.history['loss'])
     plt.plot(history.history['val_loss'])

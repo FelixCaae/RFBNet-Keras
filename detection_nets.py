@@ -6,11 +6,12 @@ from keras.models import Model,Sequential
 def build_simple_detection_net(base_model,source_layer,num_classes,version_name,base_name='mobilenetv2'):
 #    x = BasicFC(base_model.get_layer('out_relu').output, 4 + num_classes, 'relu')
 #    x = Dense(4 + num_classes,activation = 'relu')(base_model.output)
-    base_model.get_layer(source_layer).output
     x = base_model.get_layer(source_layer).output
+    x = AveragePooling2D(strides=2)(x)
+    x = Flatten()(x)
 #    x = Dense(2048,activation = 'relu')(x)
 #    x = Dense(1024,activation = 'relu')(x)
-    x = Dense(4000,activation = 'relu')(x)
+    x = Dense(500,activation = 'relu')(x)
     x = Dropout(0.3)(x)
     x0 = Dense(4,activation ='sigmoid')(x)
     x1 = Dense(num_classes,activation = 'softmax')(x)

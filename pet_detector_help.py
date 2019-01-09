@@ -231,6 +231,9 @@ def evaluate(model,x_test,y_test,iou_thresh = 0.5):
     #2. Mask all box with iou < 0.5 incorrect
     correct_loc = np.where(iou(y_pred[:,-4:],y_test[:,-4:]) >= iou_thresh,1,0)
     correct = np.logical_and(correct_class,correct_loc)
-    print('class accuracy',round(np.sum(correct_class) / len(correct),4))
-    print('loc accuracy',round(np.sum(correct_loc) / len(correct),4))
-    print('accuracy ',round(np.sum(correct) / len(correct),4))
+    accuracy={
+          'class accuracy':round(np.sum(correct_class) / len(correct),4),
+          'loc accuracy':round(np.sum(correct_loc) / len(correct),4),
+          'accuracy ':round(np.sum(correct) / len(correct),4)
+     }
+    return accuracy

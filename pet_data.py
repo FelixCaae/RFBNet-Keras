@@ -150,25 +150,5 @@ def data_augment(x_train,y_train,batch_size,val_split =0.25):
     return (train_flow,val_flow)
 #show_all_data()
 
-def show_data(x,y,index):
-    if type(index) != type([]):
-        index=[index]
-    for i in index:
-        if y[i][0] == 1:
-            print('A cat')
-        else:
-            print('A dog')
-        plt.imshow(x[i])
-        plt.show()
 
-def show_false_pics(model, x_test, y_test,limit=7):
-    y_pred = model.predict(x_test)
-    bias = np.argmax(y_pred,axis=1) - np.argmax(y_test,axis=1)
-    bias = bias.squeeze()
-    print(bias)
-    false = np.where(bias != 0)[0]
-    false = false[:limit]
-    for index in false:
-        print('index: ',index)
-        show_data(x_test, y_pred,index)
         

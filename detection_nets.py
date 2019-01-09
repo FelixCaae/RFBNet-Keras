@@ -3,6 +3,17 @@ from keras.layers import Conv2D,SeparableConv2D,Dense,Input,Flatten,Reshape,MaxP
 from keras.layers import Concatenate,Add,Multiply,Lambda
 from keras.layers import BatchNormalization,Dropout 
 from keras.models import Model,Sequential
+
+def build_simple_model(base_model,source_layer,extractor,version_name):
+    x = base_model.get_layer(source_layer).output
+    for layer in extractor:
+        x = layer(x)
+    x0 = Dense(4,activation ='sigmoid')(x)
+    x1 = Dense(num_classes,activation = 'softmax')(x)
+    x = Concatenate()([x1,x0])
+    model = Model(inputs = base_model.input, outputs = x)
+    name = 'simple_detection_' + '_' + version_name
+    
 def build_simple_detection_net(base_model,source_layer,num_classes,version_name,base_name='mobilenetv2'):
 #    x = BasicFC(base_model.get_layer('out_relu').output, 4 + num_classes, 'relu')
 #    x = Dense(4 + num_classes,activation = 'relu')(base_model.output)
@@ -18,6 +29,25 @@ def build_simple_detection_net(base_model,source_layer,num_classes,version_name,
     x = Concatenate()([x1,x0])
     model = Model(inputs = base_model.input, outputs = x)
     name = 'simple_detection_' + base_name + '_' + version_name 
+    return name,model
+
+def build_double_tail_detection_net(base_model,source_layer,num_classes,version_name,base_name='mobilenetv2'):
+#    x = BasicFC(base_model.get_layer('out_relu').output, 4 + num_classes, 'relu')
+#    x = Dense(4 + num_classes,activation = 'relu')(base_model.output)
+    x = base_model.get_layer(source_layer).output
+    x0 = AveragePooling2D(strides=2)(x)
+    x0 = Flatten()(x0)
+    x0 = Dropout(0.5)(x0)
+    x0 = Dense(100,activation = 'relu')(x0)
+    x0 = Dense(4,activation ='sigmoid')(x0)
+    x1 = AveragePooling2D(strides=7)(x)
+    x1 = Flatten()(x1)
+    x1 = Dense(1000,activation = 'relu')(x1)
+    x1 = Dropout(0.5)(x1)
+    x1 = Dense(num_classes,activation = 'softmax')(x1)
+    x = Concatenate()([x1,x0])
+    model = Model(inputs = base_model.input, outputs = x)
+    name = 'double_tail_detection_' + base_name + '_' + version_name 
     return name,model
 
 def build_feature_pyramid_detection_net(base_model,source_layers,num_classes):

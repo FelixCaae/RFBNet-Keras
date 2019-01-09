@@ -29,6 +29,7 @@ def draw_detection(frame,prediction,class_names,box_color = (255,0,0),box_width 
     loc[[0,2]] *= w
     loc[[1,3]] *= h
     loc = loc.astype('int32')
+    bbox = loc
     
     #draw box
     cv2.rectangle(frame,(bbox[0],bbox[1]),(bbox[2],bbox[3]),box_color,box_width)
@@ -49,3 +50,22 @@ def draw_detection(frame,prediction,class_names,box_color = (255,0,0),box_width 
         
     if water_mask != None:
         cv2.putText(frame,water_mask, (20, 20), font, 1,text_color,1,cv2.LINE_AA)
+
+def show_data(x,y,index,class_names):
+    if type(index) != type([]):
+        index=[index]
+    for i in index:
+        print(class_names[np.argmax(y[i])])
+        plt.imshow(x[i])
+        plt.show()
+
+def show_false_pics(model, x_test, y_test,limit=7):
+    y_pred = model.predict(x_test)
+    bias = np.argmax(y_pred,axis=1) - np.argmax(y_test,axis=1)
+    bias = bias.squeeze()
+    print(bias)
+    false = np.where(bias != 0)[0]
+    false = false[:limit]
+    for index in false:
+        print('index: ',index)
+        show_data(x_test, y_pred,index)

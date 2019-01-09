@@ -1,0 +1,36 @@
+model name simple_detection_mobilenetv2_avg_2_500_dropf 
+start fitting..  
+stages: 5  epochs_per_stage: 10  plot_history: False 
+trainset size: 1101  validation_split: 0.25 
+learning rate: 0.0005  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 5
+Epoch num 10
+{'accuracy ': 0.4236, 'loc accuracy': 0.5983, 'class accuracy': 0.7074}
+Stage  2 / 5
+Epoch num 9
+{'accuracy ': 0.4847, 'loc accuracy': 0.6507, 'class accuracy': 0.738}
+Stage  3 / 5
+Epoch num 8
+{'accuracy ': 0.5983, 'loc accuracy': 0.7511, 'class accuracy': 0.7729}
+Stage  4 / 5
+Epoch num 7
+{'accuracy ': 0.5721, 'loc accuracy': 0.7336, 'class accuracy': 0.7598}
+Stage  5 / 5
+Epoch num 6
+model name simple_detection_mobilenetv2_avg_2_500_dropf 
+start fitting..  
+stages: 5  epochs_per_stage: 10  plot_history: False 
+trainset size: 1101  validation_split: 0.25 
+learning rate: 0.0005  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 5 
+load weight: False
+Stage  1 / 5
+Epoch num 10
+{'accuracy ': 0.5895, 'loc accuracy': 0.7686, 'class accuracy': 0.7511}
+Stage  2 / 5
+Epoch num 9
+{'accuracy ': 0.5808, 'loc accuracy': 0.7467, 'class accuracy': 0.7686}
+Stage  3 / 5
+Epoch num 8

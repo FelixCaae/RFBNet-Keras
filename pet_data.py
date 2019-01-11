@@ -8,10 +8,14 @@ from matplotlib.image import imread
 from keras.preprocessing import image
 import scipy.io
 from keras.preprocessing.image import ImageDataGenerator
+from importlib import reload
+import object_detection_2d_data_generator
+reload(object_detection_2d_data_generator)
+from object_detection_2d_data_generator import DataGenerator as Detection_DataGenerator
 import xml.etree.ElementTree as ET
 import random
-#import cv2
-        
+
+
 def read_list(list_path):
     name_list = open(list_path).readlines()
     class_list = np.ones(len(name_list))
@@ -23,28 +27,33 @@ def read_list(list_path):
   
     return name_list,to_categorical(class_list - 1)
 
-def split_annotations(data_root,list_name,split = 0.75,seed = 1):
+def split_annotations(data_root,list_name,split = 0.75,seed = 1,task='detection'):
     images_path = os.path.join(data_root, "images")
     annot_path = os.path.join(data_root,"annotations")
     xml_path = os.path.join(annot_path,"xmls")
     list_path = os.path.join(annot_path,list_name)
     lines = open(list_path).readlines()
     name_list = []
-    for k,line in enumerate(lines):
+    for k,line in enumerate(lines[:]):
+        if line[0] == '#':
+            lines.remove(line)
+            continue
         strings = line.split(' ')
         name = strings[0]
         name_list.append(name)
     idx = np.arange(0,len(name_list))
-    print('before ignore:',len(idx))
-    idx = [i for i in idx if os.path.isfile(xml_path + '/' + name_list[i] + '.xml') and \
-               os.path.isfile(images_path + '/' + name_list[i]  + '.jpg')]
-    print('after ignore:',len(idx))
-    
+    if task == 'detection':
+        print('before ignore:',len(idx))
+        idx = [i for i in idx if os.path.isfile(xml_path + '/' + name_list[i] + '.xml') and \
+                   os.path.isfile(images_path + '/' + name_list[i]  + '.jpg')]
+        print('after ignore:',len(idx))    
     random.seed(seed)
     random.shuffle(idx)
     train_size = int(len(idx) * split)
     train_data = [lines[i] for i in idx[:train_size]]
     test_data = [lines[i] for i in idx[train_size:]]
+    t = [line for line in lines if line[0] == '#']
+    print(t)
     train_file = open(os.path.join(annot_path,'train.txt'),'w')
     test_file = open(os.path.join(annot_path,'test.txt'),'w')
     train_file.writelines(train_data)
@@ -113,18 +122,20 @@ def load_data(train_sample= 0.7,test_sample= 0.3,input_shape=(224,224,3),task = 
         bboxes_test = get_bounding_boxes(list_test,xml_path)
         y_train = np.concatenate([y_train,bboxes_train],axis = 1)
         y_test = np.concatenate([y_test,bboxes_test], axis = 1)
-    
-    elif task != 'classification':
+        #x_train = list_train[:train_size]
+        #x_test = list_test[:test_size]
+    elif task == 'classification':
+        pass
+    else:
         raise RuntimeError("task argument should be either classification or detection")
     x_train = read_imgs(list_train[:train_size],images_path,input_shape)
     x_test = read_imgs(list_test[:test_size],images_path,input_shape)
-    
     y_train = y_train[:train_size,:]
     y_test = y_test[:test_size,:]  
     print('done')
     return (x_train,y_train),(x_test,y_test)
 
-def data_augment(x_train,y_train,batch_size,val_split =0.25):
+def data_augment(x_train,y_train,batch_size,val_split =0.25,task = 'classification'):
     # Shuffle training data and split some for validation
     seed = 1
     m =len(x_train)
@@ -138,15 +149,26 @@ def data_augment(x_train,y_train,batch_size,val_split =0.25):
     y_train,y_val = y_train[:split],y_train[split:]
     
     #Use shift、flip and rotation to augment data 
-    datagen = ImageDataGenerator(
-        rotation_range=10,
-        width_shift_range=0.1,
-        height_shift_range=0.1,
-        horizontal_flip=True)
-    train_flow = datagen.flow(x_train, y_train, batch_size=batch_size)
+    if task == 'classification':
+        datagen = ImageDataGenerator(
+            rotation_range=10,
+            width_shift_range=0.1,
+            height_shift_range=0.1,
+            validation_split = val_split,
+            horizontal_flip=True)
+        train_flow = datagen.flow(x_train, y_train, batch_size=batch_size)
+    elif task == 'detection':
+        datagen = Detection_DataGenerator(
+#             rotation_range=10,
+#             width_shift_range=0.1,
+#             height_shift_range=0.1,
+#             validation_split = val_split,
+#             horizontal_flip=True,
+            labels = y_train.tolist())
+        datagen.load_from_memory(x_train)
+        train_flow = datagen
     datagen = ImageDataGenerator()
     val_flow = datagen.flow(x_val, y_val, batch_size=batch_size)
-    
     return (train_flow,val_flow)
 #show_all_data()
 

@@ -289,3 +289,222 @@ initial checkpoint: 1
 load weight: False
 Stage  1 / 4
 Epoch num 8
+model name mobilenet_v2 
+start fitting..  
+stages: 8  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 8
+Epoch num 8
+model name double_tail_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name double_tail_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.0218, 'class accuracy': 0.9346, 'loc accuracy': 0.0218}
+Stage  2 / 4
+Epoch num 7
+model name double_tail_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name double_tail_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.7112, 'class accuracy': 0.9155, 'loc accuracy': 0.7466}
+Stage  2 / 4
+Epoch num 7
+{'accuracy ': 0.733, 'class accuracy': 0.8856, 'loc accuracy': 0.8038}
+Stage  3 / 4
+Epoch num 6
+model name double_tail_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name double_tail_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.7003, 'class accuracy': 0.9455, 'loc accuracy': 0.7357}
+Stage  2 / 4
+Epoch num 7
+{'accuracy ': 0.782, 'class accuracy': 0.9482, 'loc accuracy': 0.8174}
+Stage  3 / 4
+Epoch num 6
+{'accuracy ': 0.782, 'class accuracy': 0.9428, 'loc accuracy': 0.8229}
+Stage  4 / 4
+Epoch num 5
+{'accuracy ': 0.7929, 'class accuracy': 0.9428, 'loc accuracy': 0.8311}
+model name double_tail_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name double_tail_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.0001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.8038, 'class accuracy': 0.9455, 'loc accuracy': 0.8447}
+Stage  2 / 4
+Epoch num 7
+{'accuracy ': 0.8065, 'class accuracy': 0.9428, 'loc accuracy': 0.8474}
+Stage  3 / 4
+Epoch num 6
+{'accuracy ': 0.8174, 'class accuracy': 0.9428, 'loc accuracy': 0.8583}
+Stage  4 / 4
+Epoch num 5
+{'accuracy ': 0.8229, 'class accuracy': 0.9401, 'loc accuracy': 0.8719}
+model name double_tail_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.0001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.7003, 'class accuracy': 0.9428, 'loc accuracy': 0.7302}
+Stage  2 / 4
+Epoch num 7
+model name simple_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.0001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.4986, 'class accuracy': 0.8774, 'loc accuracy': 0.5422}
+Stage  2 / 4
+Epoch num 7
+{'accuracy ': 0.5722, 'class accuracy': 0.9264, 'loc accuracy': 0.6076}
+Stage  3 / 4
+Epoch num 6
+{'accuracy ': 0.5804, 'class accuracy': 0.9264, 'loc accuracy': 0.6158}
+Stage  4 / 4
+Epoch num 5
+model name simple_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_ 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.6213, 'class accuracy': 0.9401, 'loc accuracy': 0.6567}
+Stage  2 / 4
+Epoch num 8
+{'accuracy ': 0.6185, 'class accuracy': 0.9346, 'loc accuracy': 0.6594}
+Stage  3 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.0 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.564, 'class accuracy': 0.9482, 'loc accuracy': 0.5831}
+Stage  2 / 4
+Epoch num 8
+{'accuracy ': 0.6349, 'class accuracy': 0.9401, 'loc accuracy': 0.6621}
+Stage  3 / 4
+Epoch num 8
+{'accuracy ': 0.654, 'class accuracy': 0.9401, 'loc accuracy': 0.6948}
+Stage  4 / 4
+Epoch num 8
+{'accuracy ': 0.6812, 'class accuracy': 0.9482, 'loc accuracy': 0.7139}
+model name simple_detection_mobilenetv2_1.1 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.5286, 'class accuracy': 0.9373, 'loc accuracy': 0.5586}
+Stage  2 / 4
+Epoch num 8
+{'accuracy ': 0.5341, 'class accuracy': 0.9401, 'loc accuracy': 0.564}
+Stage  3 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.1 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 3 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.6213, 'class accuracy': 0.9074, 'loc accuracy': 0.6649}
+Stage  2 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.1 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8

@@ -1,4 +1,4 @@
-*.jpg
 *.pyc
 __pycache__
 *.h5
+*.avi

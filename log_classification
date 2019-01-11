@@ -1,0 +1,82 @@
+model name mobilenet_v2 
+start fitting..  
+stages: 8  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 8
+Epoch num 8
+Stage  2 / 8
+Epoch num 7
+Stage  3 / 8
+Epoch num 6
+Stage  4 / 8
+Epoch num 5
+Stage  5 / 8
+Epoch num 5
+Stage  6 / 8
+Epoch num 4
+model name mobilenet_v2 
+start fitting..  
+stages: 8  epochs_per_stage: 8  plot_history: False 
+trainset size: 5511  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 8
+Epoch num 8
+model name mobilenet_v2 
+start fitting..  
+stages: 8  epochs_per_stage: 8  plot_history: False 
+trainset size: 5511  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 8
+Epoch num 8
+Stage  2 / 8
+Epoch num 7
+Stage  3 / 8
+Epoch num 6
+model name mobilenet_v2 
+start fitting..  
+stages: 8  epochs_per_stage: 8  plot_history: False 
+trainset size: 5511  validation_split: 0.25 
+learning rate: 0.0005  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 7 
+load weight: True
+Stage  1 / 8
+Epoch num 8
+Stage  2 / 8
+Epoch num 7
+Stage  3 / 8
+Epoch num 6
+Stage  4 / 8
+Epoch num 5
+Stage  5 / 8
+Epoch num 5
+Stage  6 / 8
+Epoch num 4
+Stage  7 / 8
+Epoch num 3
+Stage  8 / 8
+Epoch num 2
+model name mobilenet_v2 
+start fitting..  
+stages: 8  epochs_per_stage: 8  plot_history: False 
+trainset size: 551  validation_split: 0.25 
+learning rate: 0.0001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 15 
+load weight: True
+Stage  1 / 8
+Epoch num 8
+model name mobilenet_v2 
+start fitting..  
+stages: 8  epochs_per_stage: 8  plot_history: False 
+trainset size: 551  validation_split: 0.25 
+learning rate: 0.0001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 15 
+load weight: True
+Stage  1 / 8
+Epoch num 8

@@ -64,6 +64,7 @@ def iou(boxes1, boxes2,mode='elementwise'):
     '''
     Input should be corner format.Support two modes of iou calculating method:elementwise and outerproduct.
     '''
+     
     if mode == 'elementwise':
         area1 = (boxes1[:,2] - boxes1[:,0]) * (boxes1[:,3] - boxes1[:,1])
         area2 = (boxes2[:,2] - boxes2[:,0]) * (boxes2[:,3] - boxes2[:,1])
@@ -73,6 +74,10 @@ def iou(boxes1, boxes2,mode='elementwise'):
         inner_area = np.where(inner_area < 0 ,0,inner_area)
         iou = inner_area / (area1 + area2 - inner_area)
         return iou
+    elif mode == 'group':
+        area1 = (boxes1[:,2] - boxes1[:,0]) * (boxes1[:,3] - boxes1[:,1])
+        area2 = (boxes2[:,2] - boxes2[:,0]) * (boxes2[:,3] - boxes2[:,1])
+        
 
 def compute_ghat(g,priors):
     '''

@@ -21,7 +21,7 @@ import numpy as np
 import inspect
 from collections import defaultdict
 import warnings
-#import sklearn.utils
+import sklearn.utils
 sklearn.utils = None
 from copy import deepcopy
 from PIL import Image
@@ -29,7 +29,7 @@ import cv2
 import csv
 import os
 import sys
-#from tqdm import tqdm, trange
+from tqdm import tqdm, trange
 tqdm = None
 trange = None
 try:

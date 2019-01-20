@@ -157,20 +157,33 @@ def data_augment(x_train,y_train,batch_size,val_split =0.25,task = 'classificati
             validation_split = val_split,
             horizontal_flip=True)
         train_flow = datagen.flow(x_train, y_train, batch_size=batch_size)
-    elif task == 'detection':
-        datagen = Detection_DataGenerator(
-#             rotation_range=10,
-#             width_shift_range=0.1,
-#             height_shift_range=0.1,
-#             validation_split = val_split,
-#             horizontal_flip=True,
-            labels = y_train.tolist())
-        datagen.load_from_memory(x_train)
-        train_flow = datagen
+    elif task == 'detection_single':
+        ssd_data_augmentation = SSDDataAugmentation(img_height=input_H,
+                                                    img_width=input_W)
+        gen = DataGenerator()
+        box = y_train[:,-4:] * 224
+        class_id = np.argmax(y_train[:,:-4,np.newaxis],axis = 1)
+        labels = np.hstack([class_id,box])
+        labels = labels[:,np.newaxis,:].tolist()
+        gen.images = x_train * 255
+        gen.labels = labels
+        gen.dataset_size = len(labels)
+        gen.dataset_indices = np.arange(gen.dataset_size)
+        gen.filenames = ['x' for i in range(gen.dataset_size) ]
+        train_flow = gen.generate(batch_size=batch_size,
+                         shuffle=True,
+                         transformations=[ssd_data_augmentation],
+                         label_encoder=None,
+                         returns={'processed_images',
+                               'processed_labels'},
+                         keep_images_without_gt=False)
     datagen = ImageDataGenerator()
     val_flow = datagen.flow(x_val, y_val, batch_size=batch_size)
     return (train_flow,val_flow)
 #show_all_data()
-
+def fit_generator(model,x_train,y_train):
+    (train_flow,val_flow) = data_augment(x_train,y_train,batch_size)
+    history = model.fit_generator(train_flow,steps_per_epoch=len(x_train)/batch_size,validation_data=val_flow,validation_steps=300,epochs=epochs_per_stage)
+    return history
 
         

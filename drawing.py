@@ -22,14 +22,15 @@ def draw_detection(frame,prediction,class_names,box_color = (255,0,0),box_width 
     Input a frame and prediction
     #each class
     '''
-    class_name,score,loc = interpret(class_names,prediction)
-    
+    if draw_label == True:
+        class_name,score,bbox = interpret(class_names,prediction)
+    else:
+       # print('hello',prediction.shape)
+        bbox = prediction
     #Transform from scale 0-1 to scale 0-255
-    h,w,c = frame.shape
-    loc[[0,2]] *= w
-    loc[[1,3]] *= h
-    loc = loc.astype('int32')
-    bbox = loc
+    #h,w,c = frame.shape
+    #bbox *= [w,h,w,h]
+    bbox = bbox.astype('int32')
     
     #draw box
     cv2.rectangle(frame,(bbox[0],bbox[1]),(bbox[2],bbox[3]),box_color,box_width)

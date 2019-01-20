@@ -508,3 +508,21 @@ initial checkpoint: 1
 load weight: False
 Stage  1 / 4
 Epoch num 8
+model name simple_detection_mobilenetv2_1.1 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: False 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'accuracy ': 0.5858, 'class accuracy': 0.9237, 'loc accuracy': 0.6213}
+Stage  2 / 4
+Epoch num 8
+{'accuracy ': 0.6213, 'class accuracy': 0.9319, 'loc accuracy': 0.6649}
+Stage  3 / 4
+Epoch num 8
+{'accuracy ': 0.6458, 'class accuracy': 0.9346, 'loc accuracy': 0.6757}
+Stage  4 / 4
+Epoch num 8

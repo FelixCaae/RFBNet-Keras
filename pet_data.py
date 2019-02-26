@@ -9,12 +9,11 @@ from keras.preprocessing import image
 import scipy.io
 from keras.preprocessing.image import ImageDataGenerator
 from importlib import reload
-import object_detection_2d_data_generator
-reload(object_detection_2d_data_generator)
-from object_detection_2d_data_generator import DataGenerator as Detection_DataGenerator
+from data_generator.object_detection_2d_data_generator import DataGenerator
+from data_generator.data_augmentation_chain_original_ssd import SSDDataAugmentation
 import xml.etree.ElementTree as ET
 import random
-
+import data_generator.object_detection_2d_data_generator
 
 def read_list(list_path):
     name_list = open(list_path).readlines()
@@ -25,7 +24,7 @@ def read_list(list_path):
         class_list[k] = int(strings[1])
         name_list[k] = strings[0]
   
-    return name_list,to_categorical(class_list - 1)
+    return name_list,to_categorical(class_list)
 
 def split_annotations(data_root,list_name,split = 0.75,seed = 1,task='detection'):
     images_path = os.path.join(data_root, "images")
@@ -134,8 +133,34 @@ def load_data(train_sample= 0.7,test_sample= 0.3,input_shape=(224,224,3),task = 
     y_test = y_test[:test_size,:]  
     print('done')
     return (x_train,y_train),(x_test,y_test)
-
-def data_augment(x_train,y_train,batch_size,val_split =0.25,task = 'classification'):
+class PetLabelEncoder:
+    def __init__(self,num_classes):
+        self.num_classes = num_classes
+        
+    def __call__(self,labels,diagnostics = False):
+        for i,label in enumerate(labels):
+#            encoded_label = np.zeros((self.num_classses + 4))
+            if label.size == 0:
+                labels[i] = np.zeros((1,5))
+        labels = np.array(labels)
+        labels = np.squeeze(labels)
+        #print(labels[:,0])
+        labels = np.hstack([to_categorical(labels[:,0],num_classes = self.num_classes),labels[:,-4:]])
+        return np.array(labels)
+class Normalize:
+    def __init__(self,img_height,img_width):
+        self.img_height = img_height
+        self.img_width = img_width
+        
+    def __call__(self,images,labels=None):
+        images = images.astype('float')
+        images /= 255
+        labels[:,-4:] /= [self.img_width,self.img_height,self.img_width,self.img_height]
+        return images, labels
+    
+def data_augment(x_train,y_train,batch_size,val_split =0.25,task = 'classification',num_classes = None):
+    h,w = x_train.shape[1:3]
+    
     # Shuffle training data and split some for validation
     seed = 1
     m =len(x_train)
@@ -158,10 +183,10 @@ def data_augment(x_train,y_train,batch_size,val_split =0.25,task = 'classificati
             horizontal_flip=True)
         train_flow = datagen.flow(x_train, y_train, batch_size=batch_size)
     elif task == 'detection_single':
-        ssd_data_augmentation = SSDDataAugmentation(img_height=input_H,
-                                                    img_width=input_W)
+        ssd_data_augmentation = SSDDataAugmentation(img_height = h, img_width = w)
+        normalize = Normalize(h,w)
         gen = DataGenerator()
-        box = y_train[:,-4:] * 224
+        box = y_train[:,-4:] * [w,h,w,h] 
         class_id = np.argmax(y_train[:,:-4,np.newaxis],axis = 1)
         labels = np.hstack([class_id,box])
         labels = labels[:,np.newaxis,:].tolist()
@@ -172,17 +197,17 @@ def data_augment(x_train,y_train,batch_size,val_split =0.25,task = 'classificati
         gen.filenames = ['x' for i in range(gen.dataset_size) ]
         train_flow = gen.generate(batch_size=batch_size,
                          shuffle=True,
-                         transformations=[ssd_data_augmentation],
-                         label_encoder=None,
+                         transformations=[ssd_data_augmentation, normalize],
+                         label_encoder=PetLabelEncoder(num_classes),
                          returns={'processed_images',
-                               'processed_labels'},
+                               'encoded_labels'},
                          keep_images_without_gt=False)
     datagen = ImageDataGenerator()
     val_flow = datagen.flow(x_val, y_val, batch_size=batch_size)
     return (train_flow,val_flow)
 #show_all_data()
-def fit_generator(model,x_train,y_train):
-    (train_flow,val_flow) = data_augment(x_train,y_train,batch_size)
+def fit_generator(model,x_train,y_train,batch_size,epochs_per_stage,val_split = 0.25,task='classification'):
+    (train_flow,val_flow) = data_augment(x_train,y_train,batch_size,val_split,task)
     history = model.fit_generator(train_flow,steps_per_epoch=len(x_train)/batch_size,validation_data=val_flow,validation_steps=300,epochs=epochs_per_stage)
     return history
 

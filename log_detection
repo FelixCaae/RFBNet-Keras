@@ -92,3 +92,505 @@ loss 508262.66982
 ac {'class accuracy': 0.921, 'loc accuracy': 0.6948, 'accuracy ': 0.6567}
 loss 508262.66982
 ac {'class accuracy': 0.921, 'loc accuracy': 0.6948, 'accuracy ': 0.6567}
+loss 0.90771
+ac {'class accuracy': 0.9563, 'accuracy ': 0.7978, 'loc accuracy': 0.8306}
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True 
+trainset size: 550  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 10 
+load weight: True
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 10 
+load weight: True
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 10 
+load weight: True
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  with data augmented True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 9 
+load weight: True
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.2 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'loc accuracy': 0.0764, 'class accuracy': 0.5127, 'accuracy ': 0.04}
+Stage  2 / 4
+Epoch num 8
+{'loc accuracy': 0.0764, 'class accuracy': 0.7636, 'accuracy ': 0.0655}
+Stage  3 / 4
+Epoch num 8
+{'loc accuracy': 0.0727, 'class accuracy': 0.7673, 'accuracy ': 0.0582}
+Stage  4 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.0001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.0001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+{'loc accuracy': 0.3673, 'class accuracy': 0.7018, 'accuracy ': 0.2691}
+Stage  2 / 4
+Epoch num 8
+{'loc accuracy': 0.5236, 'class accuracy': 0.9273, 'accuracy ': 0.48}
+Stage  3 / 4
+Epoch num 8
+{'loc accuracy': 0.6182, 'class accuracy': 0.9418, 'accuracy ': 0.5855}
+Stage  4 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 4  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 1e-05  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 4
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 8  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 1e-05  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 8
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 8  epochs_per_stage: 8  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 8
+Epoch num 8
+{'loc accuracy': 0.5527, 'class accuracy': 0.9527, 'accuracy ': 0.5236}
+Stage  2 / 8
+Epoch num 8
+{'loc accuracy': 0.6109, 'class accuracy': 0.9382, 'accuracy ': 0.5673}
+Stage  3 / 8
+Epoch num 8
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 3 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 3 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 3 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 3 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 3 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 1 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 3 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+{'accuracy ': 0.6982, 'loc accuracy': 0.7964, 'class accuracy': 0.8473}
+Stage  2 / 2
+Epoch num 30
+{'accuracy ': 0.6545, 'loc accuracy': 0.76, 'class accuracy': 0.8436}
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 5 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 5 
+load weight: True
+Stage  1 / 2
+Epoch num 30
+{'accuracy ': 0.8545, 'loc accuracy': 0.9164, 'class accuracy': 0.9309}
+Stage  2 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 6 
+load weight: True
+Stage  1 / 2
+Epoch num 30
+{'accuracy ': 0.88, 'loc accuracy': 0.9345, 'class accuracy': 0.9345}
+Stage  2 / 2
+Epoch num 30
+{'accuracy ': 0.8618, 'loc accuracy': 0.9345, 'class accuracy': 0.9091}
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 8 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+{'loc accuracy': 0.9127, 'accuracy ': 0.7964, 'class accuracy': 0.8655}
+Stage  2 / 2
+Epoch num 30
+{'loc accuracy': 0.9091, 'accuracy ': 0.8436, 'class accuracy': 0.9164}
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 10 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+{'loc accuracy': 0.9418, 'accuracy ': 0.8364, 'class accuracy': 0.88}
+Stage  2 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 11 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 30  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 11 
+load weight: False
+Stage  1 / 2
+Epoch num 30
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 7 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name simple_detection_mobilenetv2_1.3 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 2753  validation_split: 0.25 
+learning rate: 5e-05  decay: 1e-06  momentum: 0.9 
+initial checkpoint: 7 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+{'loc accuracy': 0.9527, 'accuracy ': 0.8873, 'class accuracy': 0.9236}
+Stage  2 / 2
+Epoch num 10
+{'loc accuracy': 0.9564, 'accuracy ': 0.88, 'class accuracy': 0.9164}

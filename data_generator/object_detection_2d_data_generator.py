@@ -15,7 +15,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 '''
-
 from __future__ import division
 import numpy as np
 import inspect
@@ -921,10 +920,10 @@ class DataGenerator:
             if any([ret in returns for ret in ['encoded_labels', 'matched_anchors']]):
                 warnings.warn("Since no label encoder was given, 'encoded_labels' and 'matched_anchors' aren't possible returns, " +
                               "but you set `returns = {}`. The impossible returns will be `None`.".format(returns))
-        elif not isinstance(label_encoder, SSDInputEncoder):
-            if 'matched_anchors' in returns:
-                warnings.warn("`label_encoder` is not an `SSDInputEncoder` object, therefore 'matched_anchors' is not a possible return, " +
-                              "but you set `returns = {}`. The impossible returns will be `None`.".format(returns))
+       # elif not isinstance(label_encoder, SSDInputEncoder):
+      #      if 'matched_anchors' in returns:
+      #          warnings.warn("`label_encoder` is not an `SSDInputEncoder` object, therefore 'matched_anchors' is not a possible return, " +
+      #                        "but you set `returns = {}`. The impossible returns will be `None`.".format(returns))
 
         #############################################################################################
         # Do a few preparatory things like maybe shuffling the dataset initially.
@@ -1090,9 +1089,9 @@ class DataGenerator:
                 #########################################################################################
                 # Check for degenerate boxes in this batch item.
                 #########################################################################################
-
+                
                 if not (self.labels is None):
-
+                   # batch_y = np.array(batch_y) #Turn list to array
                     xmin = self.labels_format['xmin']
                     ymin = self.labels_format['ymin']
                     xmax = self.labels_format['xmax']

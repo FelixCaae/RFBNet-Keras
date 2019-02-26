@@ -220,10 +220,7 @@ def post_process(y_pred_no_process,priors,top_k = 200,score_thresh = 0.1,iou_thr
         y_pred.append(detections)
     return y_pred 
 
-def fit_generator(model,x_train,y_train):
-    (train_flow,val_flow) = data_augment(x_train,y_train,batch_size)
-    history = model.fit_generator(train_flow,steps_per_epoch=len(x_train)/batch_size,validation_data=val_flow,validation_steps=300,epochs=epochs_per_stage)
-    return history
+
 
 ## Calculate accuracy. 
 def evaluate(model,x_test,y_test,iou_thresh = 0.5):

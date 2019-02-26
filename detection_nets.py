@@ -24,7 +24,7 @@ def build_simple_detection_net(base_model,source_layer,num_classes,version_name,
 #    x = Dense(2048,activation = 'relu')(x)
 #    x = Dense(1024,activation = 'relu')(x)
     x = Dense(100,activation = 'relu')(x)
-    #x = Dropout(0.5)(x)
+#    x = Dropout(0.5)(x)
     x0 = Dense(4,activation ='sigmoid')(x)
     x1 = Dense(num_classes,activation = 'softmax')(x)
     x = Concatenate()([x1,x0])

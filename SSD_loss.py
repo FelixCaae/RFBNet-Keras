@@ -42,10 +42,10 @@ class SSDLoss:
             alpha (float, optional): A factor to weight the localization loss in the
                 computation of the total loss. Defaults to 1.0 following the paper.
         '''
-        self.neg_pos_ratio = neg_pos_ratio
-        self.n_neg_min = n_neg_min
-        self.alpha = alpha
-
+        self.neg_pos_ratio = tf.constant(neg_pos_ratio)
+        self.n_neg_min = tf.constant(n_neg_min)
+        self.alpha = tf.constant(alpha)
+        
     def smooth_L1_loss(self, y_true, y_pred):
         '''
         Compute smooth L1 loss, see references.
@@ -85,7 +85,6 @@ class SSDLoss:
         # Compute the log loss
         log_loss = -tf.reduce_sum(y_true * tf.log(y_pred), axis=-1)
         return log_loss
-
     def compute_loss(self, y_true, y_pred):
         '''
         Compute the loss of the SSD model prediction against the ground truth.
@@ -111,9 +110,6 @@ class SSDLoss:
         Returns:
             A scalar, the total multitask loss for classification and localization.
         '''
-        self.neg_pos_ratio = tf.constant(self.neg_pos_ratio)
-        self.n_neg_min = tf.constant(self.n_neg_min)
-        self.alpha = tf.constant(self.alpha)
 
         batch_size = tf.shape(y_pred)[0] # Output dtype: tf.int32
         n_boxes = tf.shape(y_pred)[1] # Output dtype: tf.int32, note that `n_boxes` in this context denotes the total number of boxes per image, not the number of boxes per cell.
@@ -190,12 +186,23 @@ class SSDLoss:
         loc_loss = tf.reduce_sum(localization_loss * positives, axis=-1) # Tensor of shape (batch_size,)
 
         # 4: Compute the total loss.
-
-        total_loss = (class_loss + self.alpha * loc_loss) / tf.maximum(1.0, n_positive) # In case `n_positive == 0`
+        
+        class_loss = class_loss / tf.maximum(1.0,n_positive) * tf.to_float(batch_size)
+        loc_loss = loc_loss / tf.maximum(1.0,n_positive) * tf.to_float(batch_size)
+        total_loss = class_loss + self.alpha * loc_loss
+        #total_loss = (class_loss + self.alpha * loc_loss) / tf.maximum(1.0, n_positive) # In case `n_positive == 0`
         # Keras has the annoying habit of dividing the loss by the batch size, which sucks in our case
         # because the relevant criterion to average our loss over is the number of positive boxes in the batch
         # (by which we're dividing in the line above), not the batch size. So in order to revert Keras' averaging
         # over the batch size, we'll have to multiply by it.
-        total_loss = total_loss * tf.to_float(batch_size)
-        
-        return total_loss
+        #total_loss = total_loss * tf.to_float(batch_size)
+        return class_loss,loc_loss
+    def loss(self, y_true, y_pred):
+        class_loss,loc_loss = self.compute_loss(y_true,y_pred)
+        return class_loss + self.alpha * loc_loss
+    def class_loss(self, y_true, y_pred):
+        class_loss,loc_loss = self.compute_loss(y_true,y_pred)
+        return class_loss
+    def loc_loss(self, y_true, y_pred):
+        class_loss,loc_loss = self.compute_loss(y_true,y_pred)
+        return loc_loss

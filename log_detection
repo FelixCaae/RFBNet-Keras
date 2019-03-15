@@ -594,3 +594,371 @@ Epoch num 10
 Stage  2 / 2
 Epoch num 10
 {'loc accuracy': 0.9564, 'accuracy ': 0.88, 'class accuracy': 0.9164}
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 5e-05  decay: 1e-06  momentum: 0.9 
+load weight: False
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 5e-05  decay: 1e-06  momentum: 0.9 
+load weight: False
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 5e-05  decay: 1e-06  momentum: 0.9 
+load weight: False
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 5e-05  decay: 1e-06  momentum: 0.9 
+load weight: False
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 5e-05  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 5e-05  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 5e-05  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+Stage  2 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.001  decay: 1e-06  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+Stage  2 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.0005  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.0005  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+Stage  2 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.0005  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 2  epochs_per_stage: 10  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.0001  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 2
+Epoch num 10
+Stage  2 / 2
+Epoch num 10
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.0001  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+Epoch num 20
+Stage  2 / 4
+Epoch num 20
+Stage  3 / 4
+Epoch num 20
+Stage  4 / 4
+Epoch num 20
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 818  validation_split: 0.25 
+learning rate: 0.0001  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+Epoch num 20
+Stage  2 / 4
+Epoch num 20
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 8183  validation_split: 0.25 
+learning rate: 0.0001  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+Epoch num 20
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25 
+learning rate: 0.0001  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0001  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+Stage  2 / 4
+Stage  3 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0001  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0001  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0001  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0001  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+Stage  2 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0005  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+Stage  2 / 4
+Stage  3 / 4
+Stage  4 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0005  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+Stage  2 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0005  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+Stage  2 / 4
+Stage  3 / 4
+Stage  4 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0005  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+Stage  2 / 4
+Stage  3 / 4
+Stage  4 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0005  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True  data_augmented: True 
+trainset size: 2727  validation_split: 0.25  batch_size 32 
+learning rate: 0.0005  decay: 0.0001  momentum: 0.9 
+load weight: False
+Stage  1 / 4
+Stage  2 / 4
+model name RFB_mobilet_net 
+start fitting..  
+stages: 4  epochs_per_stage: 20  plot_history: True 
+trainset size: 16551  validation_split: 0.25  batch_size 32 
+learning rate: 0.0005  decay: 0.0001  momentum: 0.9 
+load weight: False

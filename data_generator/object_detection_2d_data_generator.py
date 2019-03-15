@@ -1045,7 +1045,9 @@ class DataGenerator:
 
             batch_items_to_remove = [] # In case we need to remove any images from the batch, store their indices in this list.
             batch_inverse_transforms = []
-
+            
+            import copy
+            batch_X_bak = copy.deepcopy(batch_X)
             for i in range(len(batch_X)):
 
                 if not (self.labels is None):
@@ -1054,6 +1056,7 @@ class DataGenerator:
                     # If this image has no ground truth boxes, maybe we don't want to keep it in the batch.
                     if (batch_y[i].size == 0) and not keep_images_without_gt:
                         batch_items_to_remove.append(i)
+                        #print('1')
                         batch_inverse_transforms.append([])
                         continue
 
@@ -1073,6 +1076,7 @@ class DataGenerator:
                                 batch_X[i], batch_y[i] = transform(batch_X[i], batch_y[i])
                             if batch_X[i] is None : # In case the transform failed to produce an output image, which is possible for some random transforms.      
                                 batch_items_to_remove.append(i)
+                                #print('2')
                                 batch_inverse_transforms.append([])
                                 continue
 
@@ -1108,12 +1112,14 @@ class DataGenerator:
                             batch_y[i] = box_filter(batch_y[i])
                             if (batch_y[i].size == 0) and not keep_images_without_gt:
                                 batch_items_to_remove.append(i)
+                                #print('3')
 
             #########################################################################################
             # Remove any items we might not want to keep from the batch.
             #########################################################################################
-
+            batch_X_bak_premove = copy.deepcopy(batch_X)
             if batch_items_to_remove:
+                #print('remove items in batch_X')
                 for j in sorted(batch_items_to_remove, reverse=True):
                     # This isn't efficient, but it hopefully shouldn't need to be done often anyway.
                     batch_X.pop(j)
@@ -1124,14 +1130,25 @@ class DataGenerator:
                     if not (self.eval_neutral is None): batch_eval_neutral.pop(j)
                     if 'original_images' in returns: batch_original_images.pop(j)
                     if 'original_labels' in returns and not (self.labels is None): batch_original_labels.pop(j)
-
+                #print(np.array(batch_X).shape)
+            batch_X_bak_posremove = copy.deepcopy(batch_X)
             #########################################################################################
 
             # CAUTION: Converting `batch_X` into an array will result in an empty batch if the images have varying sizes
             #          or varying numbers of channels. At this point, all images must have the same size and the same
             #          number of channels.
+            
             batch_X = np.array(batch_X)
             if (batch_X.size == 0):
+                #print('batch_X ',batch_X.shape)
+                #print('batch_X_premove',np.array(batch_X_bak_premove).shape)
+                #print('batch_X_posremove',np.array(batch_X_bak_posremove).shape)
+                #print('items to remove',batch_items_to_remove)
+#                 from matplotlib import pyplot as plt
+#                 for image in batch_X_bak_premove:
+#                     plt.imshow(image)
+#                     plt.show()
+                continue
                 raise DegenerateBatchError("You produced an empty batch. This might be because the images in the batch vary " +
                                            "in their size and/or number of channels. Note that after all transformations " +
                                            "(if any were given) have been applied to all images in the batch, all images " +

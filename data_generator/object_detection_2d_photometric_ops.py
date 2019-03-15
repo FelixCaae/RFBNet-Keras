@@ -453,7 +453,25 @@ class ChannelSwap:
             return image
         else:
             return image, labels
+class ColorNormalization:
+    '''
+    Minus mean color.
+    '''
+    def __init__(self, order):
+        '''
+        Arguments:
+            order (tuple): A tuple of integers that defines the desired channel order
+                of the input images after the channel swap.
+        '''
+        self.order = order
 
+    def __call__(self, image, labels=None):
+        image = image[:,:,self.order]
+        if labels is None:
+            return image
+        else:
+            return image, labels
+    
 class RandomChannelSwap:
     '''
     Randomly swaps the channels of RGB images.

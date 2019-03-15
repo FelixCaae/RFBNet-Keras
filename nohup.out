@@ -1,0 +1,25 @@
+[W 21:17:44.648 NotebookApp] Collisions detected in /home/cai/.jupyter/jupyter_notebook_config.py and /home/cai/.jupyter/jupyter_notebook_config.json config files. /home/cai/.jupyter/jupyter_notebook_config.json has higher priority: {
+      "NotebookApp": {
+        "password": "'sha1:f0a4aa555073:6320653741d6a562666d4e25aafc2cc68f0e1fb7' ignored, using 'sha1:efd0d59a849f:1b398eed9e30fc273058d9bb52595d9563cb5008'"
+      }
+    }
+[I 21:17:44.809 NotebookApp] Serving notebooks from local directory: /home/cai/project/RFBNet-Keras
+[I 21:17:44.809 NotebookApp] The Jupyter Notebook is running at:
+[I 21:17:44.809 NotebookApp] http://(IRIP5003 or 127.0.0.1):8889/
+[I 21:17:44.809 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 21:17:58.768 NotebookApp] 404 GET /api/contents/project/rfb_shuffleNetV2/rfb_ssd_detection.ipynb?type=notebook&_=1551187080901 (10.139.11.178): No such file or directory: project/rfb_shuffleNetV2/rfb_ssd_detection.ipynb
+[W 21:17:58.768 NotebookApp] No such file or directory: project/rfb_shuffleNetV2/rfb_ssd_detection.ipynb
+[W 21:17:58.768 NotebookApp] 404 GET /api/contents/project/rfb_shuffleNetV2/rfb_ssd_detection.ipynb?type=notebook&_=1551187080901 (10.139.11.178) 1.68ms referer=http://10.134.171.252:8889/notebooks/project/rfb_shuffleNetV2/rfb_ssd_detection.ipynb
+[W 21:18:02.637 NotebookApp] 404 GET /api/contents/project/rfb_shuffleNetV2?type=directory&_=1551181955413 (10.139.11.178): No such file or directory: project/rfb_shuffleNetV2
+[W 21:18:02.638 NotebookApp] No such file or directory: project/rfb_shuffleNetV2
+[W 21:18:02.638 NotebookApp] 404 GET /api/contents/project/rfb_shuffleNetV2?type=directory&_=1551181955413 (10.139.11.178) 1.59ms referer=http://10.134.171.252:8889/tree/project/rfb_shuffleNetV2
+[W 21:18:04.911 NotebookApp] 404 GET /api/contents/project?type=directory&_=1551181955414 (10.139.11.178): No such file or directory: project
+[W 21:18:04.911 NotebookApp] No such file or directory: project
+[W 21:18:04.911 NotebookApp] 404 GET /api/contents/project?type=directory&_=1551181955414 (10.139.11.178) 1.94ms referer=http://10.134.171.252:8889/tree/project
+[W 21:18:07.185 NotebookApp] 404 GET /tree/project (10.139.11.178) 26.25ms referer=http://10.134.171.252:8889/login?next=%2Ftree%3F
+[W 21:18:38.771 NotebookApp] Notebook detection.ipynb is not trusted
+[I 21:18:40.268 NotebookApp] Kernel started: df37c7fd-06f4-4210-aa38-f647886134e0
+[I 21:18:40.838 NotebookApp] Adapting to protocol v5.1 for kernel df37c7fd-06f4-4210-aa38-f647886134e0
+[C 21:19:09.102 NotebookApp] received signal 15, stopping
+[I 21:19:09.103 NotebookApp] Shutting down 1 kernel
+[I 21:19:09.405 NotebookApp] Kernel shutdown: df37c7fd-06f4-4210-aa38-f647886134e0

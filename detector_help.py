@@ -14,16 +14,16 @@ def prior_box(feature_map, aspect_ratios,scale = None):
     prior_boxes = []
     m = len(feature_map)
     if  scale is None:
-        s_min = 0.09
-        s_max = 0.8
+        s_min = 0.2
+        s_max = 0.9
         s = [s_min + (k - 1)*(s_max - s_min)/(m - 1) for k in range(1, m + 2)]
     else:
         s = scale
     for k,f in enumerate(feature_map):
         for i in range(f):
             for j in range(f):
-                cx = (i + 0.5)/f
-                cy = (j + 0.5)/f
+                cx = (j + 0.5)/f
+                cy = (i + 0.5)/f
                 prior_boxes.append([cx,cy,s[k],s[k]])
                 prior_boxes.append([cx,cy,np.sqrt(s[k] * s[k+1]),np.sqrt(s[k]*s[k+1])])
                 for ar in aspect_ratios[k]:
@@ -93,9 +93,18 @@ def calculate_iou(boxes1, boxes2,mode='element_wise'):
                      np.minimum(boxes1[:,3] , boxes2[:,3].T)], axis = 2)
         min_xy = np.stack([np.maximum(boxes1[:,0] , boxes2[:,0].T),
                      np.maximum(boxes1[:,1] , boxes2[:,1].T)], axis = 2)
-        inner_area = (max_xy[:,:,0] - min_xy[:,:,0]) * (max_xy[:,:,1] - min_xy[:,:,1])
-        inner_area = np.where(inner_area < 0 ,0,inner_area)
+        
+        wh = max_xy - min_xy
+        inner_area = wh[...,0] * wh[...,1]
+        negative_mask = np.logical_or(wh[...,0]<0, wh[...,1]<0)
+        inner_area[negative_mask] = 0
+        bug = np.where(area1 + area2 - inner_area == 0)
+        if np.any(np.where(area1 + area2 - inner_area == 0)):
+            print("Inner area bug",bug)
+            print(boxes1[bug[0]],boxes2[bug[1]])
+            print(area1[bug],area2[bug],inner_area[bug])
         iou = inner_area / (area1 + area2 - inner_area)
+        
         return iou
             
 def compute_ghat(g,matched_priors,variances):

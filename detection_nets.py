@@ -64,37 +64,34 @@ def build_feature_pyramid_detection_net(base_model,source_layers,num_classes):
     
     return 'simple_detection_net_2',model
 
-def add_extra_layers(x, extra_cfg, use_l2=False):
+def add_extra_layers(x, extra_cfg,lite, use_l2=False):
     source_layers = []
     flag = False
-#     for k, v in enumerate(extra_cfg):
-#         if v == 'S':
-#             x = BasicRFB(x, extra_cfg[k+1], stride=2, scale = 1.0)
-#             source_layers += [x]
-#         else:
-#             x = BasicRFB(x, v, scale = 1.0)
-    x = BasicRFB(x, 512, stride=2, scale = 1.0,use_l2 = use_l2) 
-    source_layers += [x]
-    x = BasicConv(x,128,kernel_size = 1,stride = 1,use_l2 = use_l2) 
-    x = BasicConv(x,256,kernel_size = 3,stride = 2,use_l2 = use_l2)
-    source_layers += [x]
-    x = BasicConv(x,128,kernel_size = 1,stride = 1,use_l2 = use_l2)
-    x = BasicConv(x,256,kernel_size = 3,stride = 2,use_l2 = use_l2)
-    source_layers += [x]
-    x = BasicConv(x,64,kernel_size = 1,stride = 1,use_l2 = use_l2)
-    x = BasicConv(x,128,kernel_size = 3, stride=2,use_l2 = use_l2)
-    source_layers += [x]
-
+    for k, cfg in enumerate(extra_cfg):
+        filters,stride,scale,source = cfg 
+        x = BasicRFB(x,filters, stride= stride, scale = scale, lite =lite,use_l2=use_l2)
+        if source:
+            source_layers += [x]
+    conv = BasicConv
+    if lite:
+        conv = BasicSepConv
+    plain_source_1 = conv(x,256,kernel_size = 3,stride = 2, padding='same')
+    plain_source_2 = conv(plain_source_1,256,kernel_size = 3,stride = 1,padding='same')
+    plain_source_3 = conv(plain_source_2,128,kernel_size = 3,stride = 1, padding='valid')
+    source_layers += [plain_source_1,plain_source_2,plain_source_3]
     return source_layers
 
-def multibox(x, prior_num, num_classes,softmax = False):
+def multibox(x, prior_num, num_classes,softmax = False,lite = False):
     #Input a feature map layer , add locating layer and classificaton layer upon
     #Output shape should be (batch_size,#boxes,num_classes + 4)
     n_H,n_W = x.get_shape().as_list()[1:3]
     num_classes = num_classes + 1
-    loc_pred = Conv2D(prior_num * 4,kernel_size = 3 ,padding= 'same')(x)
+    conv = Conv2D
+    if lite:
+        conv = SeparableConv2D
+    loc_pred = conv(prior_num * 4,kernel_size = 3 ,padding= 'same')(x)
     loc_pred = Reshape((-1,4))(loc_pred)
-    conf = Conv2D(prior_num * num_classes, kernel_size = 3,padding = 'same')(x)
+    conf = conv(prior_num * num_classes, kernel_size = 3,padding = 'same')(x)
     conf = Reshape((-1, num_classes))(conf)
     if softmax:
         conf = Softmax()(conf)
@@ -106,10 +103,13 @@ def build_RFBNet( input_shape,
             source_layers,
             base_model,
             extra_config,
+            include_base,
             prior_config,
             num_classes,
             mean_color,
             swap_channels,
+            lite,
+            show_summary = False,
             use_l2 = 0.00005,
             return_predictor = False):
         """Applies network layers and ops on input image(s) x.
@@ -136,16 +136,18 @@ def build_RFBNet( input_shape,
         
         for layer_name in source_layers:
             source_layer = base_model.get_layer(layer_name)
-            out = BasicRFB_a(source_layer.output,512,stride = 1,scale=1.0,use_l2 = use_l2)            
-            sources.append(out)
-        
+            x = BasicRFB_a(source_layer.output,256,stride = 1,dilation_base = 2, scale=1.0,use_l2 = use_l2,lite=lite)
+            #out = BasicRFB_a(x.output,256,stride = 1,scale=1.0,use_l2 = use_l2)
+            sources.append(x)
+            
         last_layer_output = base_model.output
-        sources.append(last_layer_output)
-        sources += add_extra_layers(last_layer_output,extra_config,use_l2 = use_l2)
+        if include_base:
+            sources.append(last_layer_output)
+        sources += add_extra_layers(last_layer_output,extra_config,use_l2 = use_l2,lite=lite)
         predictor_size = []
         for k,x in enumerate(sources):
             predictor_size.append(x.get_shape().as_list()[1:3])
-            prediction_layer = multibox(x,prior_config[k],num_classes,softmax=True)
+            prediction_layer = multibox(x,prior_config[k],num_classes,softmax=True,lite=lite)
             prediction_layers.append(prediction_layer)
          
         output = Concatenate(axis = 1)(prediction_layers)
@@ -156,8 +158,31 @@ def build_RFBNet( input_shape,
         if return_predictor:
             print(np.array(predictor_size))
         return model
-    
-def preprocess(x,model,mean_color,swap_channels):
+def build_ssdlite(base_model,
+            prior_config,
+            source_layer_name_1,
+            num_classes):
+    base_model = load_mobilenetv2()
+#     source_layer_name_1 = 'block_16_expansion'
+    source_layer_1 = base_model.get_layer(source_layer_name_1).output
+    source_layer_2 = base_model.layers[-1].output
+    source_layer_3 = BasicSepConv(source_layer_2,512,kernel_size = 3,stride = 2, padding='same')
+    source_layer_4 = BasicSepConv(source_layer_3,256,kernel_size = 3,stride = 2, padding='same')
+    source_layer_5 = BasicSepConv(source_layer_4,256,kernel_size = 3,stride = 1,padding='same')
+    source_layer_6 = BasicSepConv(source_layer_5,128,kernel_size = 3,stride = 1, padding='valid')
+    source_layers = [source_layer_1,source_layer_2,source_layer_3,source_layer_4,source_layer_5,source_layer_6]
+    prediction_layers = []
+    predictor_size = []
+    for k,layer in enumerate(source_layers):
+        print(layer)
+        predictor_size.append(layer.get_shape().as_list()[1:3])
+        prediction_layer = multibox(layer,prior_config[k],num_classes,softmax=True,lite=True)
+        prediction_layers.append(prediction_layer)
+    print(predictor_size)
+    output = Concatenate(axis = 1)(prediction_layers)
+    model = Model(inputs=base_model.input, outputs=output)
+    return model
+def preprocess(input_shape,model,mean_color,swap_channels):
         def input_mean_normalization(tensor):
             return tensor - np.array(mean_color)
 
@@ -169,8 +194,9 @@ def preprocess(x,model,mean_color,swap_channels):
 
 
         # The following identity layer is only needed so that the subsequent lambda layers can be optional.
-        input_shape = x.get_shape().as_list()
+#         input_shape = x.get_shape().as_list()
       
+        x = Input(input_shape)
         x1 = x
         if not (mean_color is None):
             x1 = Lambda(input_mean_normalization, output_shape= input_shape, name='input_mean_normalization')(x1)
@@ -179,15 +205,10 @@ def preprocess(x,model,mean_color,swap_channels):
         x2 = model(x1)
         new_model = Model(x,x2)
         return new_model
-def build_RFB_Mobilev2_300(phase,
-                  mean_color,
-                  swap_channels,
-                  aspect_ratios,
-                  num_classes,
-                  return_predictor = False):
+def load_mobilenetv2(size =300):
     mobilev2_300_path = 'mobilenet_300x300.h5'
     if not os.path.isfile(mobilev2_300_path):
-        print('Transfering weights from old msodel(224x224x3) to new model(300x300x3)')
+        print('Transfering weights from old model(224x224x3) to new model(300x300x3)')
         base_model = keras.applications.mobilenetv2.MobileNetV2(input_shape =(224,224,3),include_top=False,weights='imagenet')
         #print(x.get_shape())
         #print(K.is_keras_tensor(x))
@@ -196,19 +217,45 @@ def build_RFB_Mobilev2_300(phase,
         #         for new_layer, layer in zip(new_model.layers[1:], base_model.layers[1:]):
 #             new_layer.set_weights(layer.get_weights())
         new_model.save(mobilev2_300_path)
-#         base_model = new_model
+        base_model = new_model
     else:
         base_model = load_model(mobilev2_300_path)
-#     base_model = keras.applications.mobilenetv2.MobileNetV2(input_shape =(300,300,3),include_top=False,weights=None)
+    return base_model
+
+
+def build_RFB_Mobilev2_300(phase,
+                  mean_color,
+                  swap_channels,
+                  aspect_ratios,
+                  num_classes,
+                  return_predictor = False):
+    base_model = load_mobilenetv2()
     prior_config =  [2 + len(ar) * 2 for ar in aspect_ratios]  # number of boxes per feature map location
+    source_layers = ["block_12_expand"]
+    
+    #Extra layer head: filters, stride, scale, source
+    extra_config = [[256,  2,  1,  True]]
     model = build_RFBNet(input_shape = (300,300,3),
                   phase = phase,
-                  source_layers = ['block_12_add'],
+                  source_layers = source_layers,
                   base_model = base_model,
-                  extra_config = ['S',512],
+                  extra_config = extra_config,
+                  include_base = True,
                   prior_config = prior_config,
                   num_classes = num_classes,
                   mean_color = mean_color,
+                  lite = True,
                   swap_channels = swap_channels,
                   return_predictor = return_predictor)
+    return model
+def build_ssdlite_300(aspect_ratios,
+               num_classes):
+    base_model = load_mobilenetv2()
+#     base_model.summary()
+    prior_config =  [2 + len(ar) * 2 for ar in aspect_ratios]  # number of boxes per feature map location
+    source_layer = "block_12_expand"
+    model = build_ssdlite(base_model = base_model,
+                   prior_config = prior_config,
+                   source_layer_name_1 = source_layer,
+                   num_classes = num_classes)
     return model

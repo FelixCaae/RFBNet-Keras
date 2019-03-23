@@ -9,7 +9,6 @@ def plot_history(history):
     plt.xlabel('Epoch')
     plt.legend(['Train', 'Test'], loc='upper left')
     plt.show()
-
 def draw_detection(frame,prediction,class_names,size = 'medium',color = 'green',use_cm = False,width = 2,show = True,draw_label = True,draw_score =False, water_mask=None):
     '''
     Input an image and prediction(class,score,xmin,ymin,xmax,ymax)

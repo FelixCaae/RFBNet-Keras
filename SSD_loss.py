@@ -189,7 +189,7 @@ class SSDLoss:
         
         class_loss = class_loss / tf.maximum(1.0,n_positive) * tf.to_float(batch_size)
         loc_loss = loc_loss / tf.maximum(1.0,n_positive) * tf.to_float(batch_size)
-        total_loss = class_loss + self.alpha * loc_loss
+
         #total_loss = (class_loss + self.alpha * loc_loss) / tf.maximum(1.0, n_positive) # In case `n_positive == 0`
         # Keras has the annoying habit of dividing the loss by the batch size, which sucks in our case
         # because the relevant criterion to average our loss over is the number of positive boxes in the batch

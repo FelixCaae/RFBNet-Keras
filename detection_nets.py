@@ -1,13 +1,30 @@
 from module import *
-from keras.layers import Conv2D,SeparableConv2D,Dense,Input,Flatten,Reshape,MaxPooling2D,AveragePooling2D,Activation,Softmax,ZeroPadding2D
-from keras.layers import Concatenate,Add,Multiply,Lambda
-from keras.layers import BatchNormalization,Dropout 
+from keras.layers import *
 from keras.models import Model,Sequential,load_model
 import keras.applications.mobilenetv2 
 from keras import backend as K
 import numpy as np
 import os
 import warnings
+
+def load_mobilenetv2(size =300):
+    mobilev2_300_path = 'mobilenet_300x300.h5'
+    if not os.path.isfile(mobilev2_300_path):
+        print('Transfering weights from old model(224x224x3) to new model(300x300x3)')
+        base_model = keras.applications.mobilenetv2.MobileNetV2(input_shape =(224,224,3),include_top=False,weights='imagenet')
+        #print(x.get_shape())
+        #print(K.is_keras_tensor(x))
+        new_model = keras.applications.mobilenetv2.MobileNetV2(input_shape = (300,300,3),include_top=False,weights=None)
+        new_model.set_weights(base_model.get_weights())
+        #         for new_layer, layer in zip(new_model.layers[1:], base_model.layers[1:]):
+#             new_layer.set_weights(layer.get_weights())
+        new_model.save(mobilev2_300_path)
+        base_model = new_model
+    else:
+        base_model = load_model(mobilev2_300_path)
+    return base_model
+
+
 def build_simple_model(base_model,source_layer,extractor,version_name):
     x = base_model.get_layer(source_layer).output
     for layer in extractor:
@@ -64,38 +81,57 @@ def build_feature_pyramid_detection_net(base_model,source_layers,num_classes):
     
     return 'simple_detection_net_2',model
 
-def add_extra_layers(x, extra_cfg,lite, use_l2=False):
-    source_layers = []
-    flag = False
-    for k, cfg in enumerate(extra_cfg):
-        filters,stride,scale,source = cfg 
-        x = BasicRFB(x,filters, stride= stride, scale = scale, lite =lite,use_l2=use_l2)
-        if source:
-            source_layers += [x]
+
+# def add_up_sampling_layers(source_layers):
+#     merged_layer_0 = source_layers[-1]
+#     #19 10 5 3 3 1
+# #     for layer in source_layers:
+#     upsampled_layer_1 = UpSampling2D(3)(merged_layer_0)
+#     conv_layer_1 = BasicSepConv(128,kernel_size = 3,stride = 1,padding ='same')(upsampled_layer_1)
+#     merged_layer_1 = Concatenate()([source_layers[-2],conv_layer_1])
+#     conv_layer_2 = BasicSepConv(128,kernel_size = 3,stride = 1,padding ='same')(merged_layer_1)
+#     merged_layer_2 = Concatenate(axis = 3)([source_layers[-3],conv_layer_2])
+#     upsampled_layer_3 = UpSampling2D(2)(merged_layer_2)
+#     cropped_layer_3 = Cropping2D(((0,1),(0,1)))(upsampled_layer_3)
+#     conv_layer_3 = BasicSepConv(cropped_layer_3,128,kernel_size=3,stride=1,padding='same')
+#     merged_layer_3 = Concatenate(axis = 3)([source_layers[-4],conv_layer_3])
+#     upsampled_layer_4 = UpSampling2D(2)(merged_layer_3)
+#     conv_layer_4 = BasicSepConv(upsampled_layer_4,128,kernel_size=3,stride=1,padding='same')
+#     merged_layer_4 = Concatenate(axis = 3)([source_layers[-5],conv_layer_4])
+#     upsampled_layer_5 = UpSampling2D(2)(merged_layer_4)
+#     cropped_layer_5 = Cropping2D(((0,1),(0,1)))(upsampled_layer_5)
+#     conv_layer_5 = BasicSepConv(cropped_layer_5,128,kernel_size=3,stride=1,padding='same')
+#     merged_layer_5 = Concatenate(axis = 3)([source_layers[-6],conv_layer_5])
+    
+    
+# #     merged_layers = [merged_layer_5,merged_layer_4,merged_layer_3,merged_layer_2,merged_layer_1,merged_layer_0]
+#     return merged_layers
+
+        
+
+def multibox(features, prior_config, num_classes,softmax = True,lite = True):
+    #Input a feature map layer , add locating layer and classificaton layer upon
+    #Output shape should be (batch_size,#boxes,num_classes + 4)
+    num_classes = num_classes + 1
     conv = BasicConv
     if lite:
         conv = BasicSepConv
-    plain_source_1 = conv(x,256,kernel_size = 3,stride = 2, padding='same')
-    plain_source_2 = conv(plain_source_1,256,kernel_size = 3,stride = 1,padding='same')
-    plain_source_3 = conv(plain_source_2,128,kernel_size = 3,stride = 1, padding='valid')
-    source_layers += [plain_source_1,plain_source_2,plain_source_3]
-    return source_layers
-
-def multibox(x, prior_num, num_classes,softmax = False,lite = False):
-    #Input a feature map layer , add locating layer and classificaton layer upon
-    #Output shape should be (batch_size,#boxes,num_classes + 4)
-    n_H,n_W = x.get_shape().as_list()[1:3]
-    num_classes = num_classes + 1
-    conv = Conv2D
-    if lite:
-        conv = SeparableConv2D
-    loc_pred = conv(prior_num * 4,kernel_size = 3 ,padding= 'same')(x)
-    loc_pred = Reshape((-1,4))(loc_pred)
-    conf = conv(prior_num * num_classes, kernel_size = 3,padding = 'same')(x)
-    conf = Reshape((-1, num_classes))(conf)
+    loc_all = []
+    conf_all = []
+    i = 0
+    for x,prior_num in zip(features,prior_config):
+        loc = conv(prior_num * 4,kernel_size = 3,name = 'loc_' + str(i))(x)
+        loc = Reshape((-1,4),name = 'reshape_loc_'+ str(i) )(loc)
+        conf = conv(prior_num * num_classes, kernel_size = 3,name = 'conf_' + str(i))(x)
+        conf = Reshape((-1, num_classes),name = 'reshape_conf_' + str(i))(conf)
+        loc_all.append(loc)
+        conf_all.append(conf)
+        i += 1
+    loc_all = Concatenate(axis = 1,name = 'mbox_loc_merge')(loc_all)
+    conf_all = Concatenate(axis = 1,name = 'mbox_conf_merge')(conf_all)
     if softmax:
-        conf = Softmax()(conf)
-    prediction = Concatenate()([conf,loc_pred])
+        conf_all = Softmax()(conf_all)
+    prediction = Concatenate(name = 'mbox_pred_merge')([conf_all,loc_all])
     return prediction
 
 def build_RFBNet( input_shape,
@@ -108,9 +144,10 @@ def build_RFBNet( input_shape,
             num_classes,
             mean_color,
             swap_channels,
-            lite,
+            base_index = -2,
+            lite=False,
             show_summary = False,
-            use_l2 = 0.00005,
+            l2_reg = 0.00005,
             return_predictor = False):
         """Applies network layers and ops on input image(s) x.
                      
@@ -130,34 +167,115 @@ def build_RFBNet( input_shape,
                     1: confidence layers, Shape: [batch*num_priors,num_classes]
                     2: localization layers, Shape: [batch,num_priors*4]
                     3: priorbox layers, Shape: [2,num_priors*4]
-        """        
-        sources = list()
-        prediction_layers = list()
+        """   
+        def add_extra_layers(x, extra_cfg,lite, l2_reg=0.00005):
+            source_layers = []
+            flag = False
+            conv = BasicConv
+            if lite:
+                conv = BasicSepConv
+            for k, cfg in enumerate(extra_cfg):
+                filters,expand_ratio,stride,dep_mul,source = cfg 
+                if expand_ratio != None:
+                    x = LiteRFB(x,filters,expand_ratio = expand_ratio, stride= stride, depth_multiplier = dep_mul,l2_reg=l2_reg, name = 'rfb_extras_'+str(k))
+                else:
+                    x = conv(filters,kernel_size = 3,stride =stride,padding = dep_mul, name = 'extra_' + str(k) )(x)
+                if source:
+                    source_layers += [x]
+            return source_layers
         
+        features = list()
+
+        # 1. Add feature map from mid model into sources
         for layer_name in source_layers:
-            source_layer = base_model.get_layer(layer_name)
-            x = BasicRFB_a(source_layer.output,256,stride = 1,dilation_base = 2, scale=1.0,use_l2 = use_l2,lite=lite)
-            #out = BasicRFB_a(x.output,256,stride = 1,scale=1.0,use_l2 = use_l2)
-            sources.append(x)
-            
-        last_layer_output = base_model.output
+            x = base_model.get_layer(layer_name).output
+            features.append(x)
+        
+        # 2. Add extra layers from base_model output
+        last_layer_output = base_model.layers[base_index].output
         if include_base:
-            sources.append(last_layer_output)
-        sources += add_extra_layers(last_layer_output,extra_config,use_l2 = use_l2,lite=lite)
-        predictor_size = []
-        for k,x in enumerate(sources):
-            predictor_size.append(x.get_shape().as_list()[1:3])
-            prediction_layer = multibox(x,prior_config[k],num_classes,softmax=True,lite=lite)
-            prediction_layers.append(prediction_layer)
-         
-        output = Concatenate(axis = 1)(prediction_layers)
+            features.append(last_layer_output)
+        features += add_extra_layers(last_layer_output,extra_config,l2_reg = l2_reg,lite=lite)
+        # 3. Add feature pyramid structure
+#         sources = add_up_sampling_layers(sources)
+        
+        # 4. Add RFBLite for layer from sources
+        for index in range(len(source_layers)):
+            features[index] = LiteRFB(features[index],170,expand_ratio= 0.25,depth_multiplier = 4,l2_reg = l2_reg,name = 'rfb_source_' + str(index))
+        
+        # 5. Add prediction layers 
+        output = multibox(features,prior_config,num_classes,lite=True,softmax=True)
         model = Model(inputs=base_model.input, outputs=output)
-        #returns = [model]
-#         x = Input(input_shape)
-#         model = preprocess(x,model,mean_color,swap_channels)
         if return_predictor:
-            print(np.array(predictor_size))
+            print(np.array([feature.shape.as_list()[1:3] for feature in features]))
         return model
+
+def build_tiny_dsod(input_shape,
+              num_classes,
+              prior_config,
+              model_config,
+              return_predictor = True):
+    inp = Input(input_shape)
+    stem = Sequential([BasicConv(64,kernel_size = 3,stride = 2),
+                 BasicConv(64,kernel_size = 1,stride = 1),
+                 BasicDepConv(kernel_size = 3,stride = 1),
+                 BasicConv(128,kernel_size = 1,stride = 1),
+                 BasicDepConv(kernel_size = 3,stride = 1),
+                 MaxPooling2D(pool_size = 2,strides = 2,padding='same')],name = 'stem')
+    x = stem(inp)
+    def dense_stage(x, g, n):
+        for i in range(0,n):
+            x_conv = BasicConv(g,kernel_size = 1)(x)
+            x_dw = BasicDepConv(kernel_size = 3)(x_conv)
+            x =  Concatenate()([x,x_dw])
+        return x 
+    def transition(c, p):
+        transition_layer = Sequential()
+        transition_layer.add(BasicConv(c,kernel_size=1))
+        if p:
+            transition_layer.add(MaxPooling2D(pool_size = 2,strides = 2,padding='same'))
+        return transition_layer
+    def down_sample(x):
+        x_0 = MaxPooling2D(pool_size = 2,strides = 2,padding = 'same')(x)
+        x_0 = BasicConv(64, kernel_size = 1)(x_0)
+        x_1 = BasicConv(64, kernel_size = 1)(x)
+        x_1 = BasicDepConv(kernel_size = 3,stride = 2,padding = 'same')(x_1)
+        return Concatenate()([x_0,x_1])
+    def up_sample(x):
+        x = UpSampling2D(2)(x)
+        x = BasicDepConv(kernel_size = 3)(x)
+        return x
+    def pad(x):
+        if int(x.shape[2])%2 != 0:
+            x = ZeroPadding2D(((0,1),(0,1)))(x)
+        return x
+    def crop(x0,x1):
+        if int(x0.shape[1]) != int(x1.shape[1]):
+            x0 = Cropping2D(((0,1),(0,1)))(x0)
+        return x0
+    
+    transition_layers = []
+    for g,n,c,p in model_config:
+        dense = dense_stage(x,g,n)
+        x = transition(c,p)(dense)
+        transition_layers.append(x)
+    down_layers = [transition_layers[1],transition_layers[3]]
+    x = Concatenate()([down_sample(transition_layers[1]), transition_layers[3]])
+    for i in range(4):
+        x = down_sample(x)
+        down_layers.append(x)
+    x = down_layers[-1]
+    features = [x]
+    for layer in down_layers[-2::-1]:
+        x = up_sample(x)
+        x = Add()([crop(x,layer),layer])
+        features.append(x)
+    features.reverse()
+    prediction = multibox(features,prior_config,num_classes)
+    model = Model(inputs=inp, outputs=prediction)
+    if return_predictor:
+        print(np.array([feature.shape.as_list()[1:3] for feature in features]))
+    return model
 def build_ssdlite(base_model,
             prior_config,
             source_layer_name_1,
@@ -166,22 +284,17 @@ def build_ssdlite(base_model,
 #     source_layer_name_1 = 'block_16_expansion'
     source_layer_1 = base_model.get_layer(source_layer_name_1).output
     source_layer_2 = base_model.layers[-1].output
-    source_layer_3 = BasicSepConv(source_layer_2,512,kernel_size = 3,stride = 2, padding='same')
-    source_layer_4 = BasicSepConv(source_layer_3,256,kernel_size = 3,stride = 2, padding='same')
-    source_layer_5 = BasicSepConv(source_layer_4,256,kernel_size = 3,stride = 1,padding='same')
-    source_layer_6 = BasicSepConv(source_layer_5,128,kernel_size = 3,stride = 1, padding='valid')
+    source_layer_3 = BasicSepConv(512,kernel_size = 3,stride = 2, padding='same',name = 'extra_3')(source_layer_2)
+    source_layer_4 = BasicSepConv(256,kernel_size = 3,stride = 2, padding='same',name = 'extra_4')(source_layer_3)
+    source_layer_5 = BasicSepConv(256,kernel_size = 3,stride = 1,padding='same',name = 'extra_5')(source_layer_4)
+    source_layer_6 = BasicSepConv(128,kernel_size = 3,stride = 1, padding='valid',name = 'extra_6')(source_layer_5)
     source_layers = [source_layer_1,source_layer_2,source_layer_3,source_layer_4,source_layer_5,source_layer_6]
     prediction_layers = []
-    predictor_size = []
-    for k,layer in enumerate(source_layers):
-        print(layer)
-        predictor_size.append(layer.get_shape().as_list()[1:3])
-        prediction_layer = multibox(layer,prior_config[k],num_classes,softmax=True,lite=True)
-        prediction_layers.append(prediction_layer)
-    print(predictor_size)
-    output = Concatenate(axis = 1)(prediction_layers)
-    model = Model(inputs=base_model.input, outputs=output)
+    prediction = multibox(source_layers,prior_config,num_classes,softmax=True,lite=True)
+    model = Model(inputs=base_model.input, outputs=prediction)
     return model
+
+
 def preprocess(input_shape,model,mean_color,swap_channels):
         def input_mean_normalization(tensor):
             return tensor - np.array(mean_color)
@@ -205,57 +318,3 @@ def preprocess(input_shape,model,mean_color,swap_channels):
         x2 = model(x1)
         new_model = Model(x,x2)
         return new_model
-def load_mobilenetv2(size =300):
-    mobilev2_300_path = 'mobilenet_300x300.h5'
-    if not os.path.isfile(mobilev2_300_path):
-        print('Transfering weights from old model(224x224x3) to new model(300x300x3)')
-        base_model = keras.applications.mobilenetv2.MobileNetV2(input_shape =(224,224,3),include_top=False,weights='imagenet')
-        #print(x.get_shape())
-        #print(K.is_keras_tensor(x))
-        new_model = keras.applications.mobilenetv2.MobileNetV2(input_shape = (300,300,3),include_top=False,weights=None)
-        new_model.set_weights(base_model.get_weights())
-        #         for new_layer, layer in zip(new_model.layers[1:], base_model.layers[1:]):
-#             new_layer.set_weights(layer.get_weights())
-        new_model.save(mobilev2_300_path)
-        base_model = new_model
-    else:
-        base_model = load_model(mobilev2_300_path)
-    return base_model
-
-
-def build_RFB_Mobilev2_300(phase,
-                  mean_color,
-                  swap_channels,
-                  aspect_ratios,
-                  num_classes,
-                  return_predictor = False):
-    base_model = load_mobilenetv2()
-    prior_config =  [2 + len(ar) * 2 for ar in aspect_ratios]  # number of boxes per feature map location
-    source_layers = ["block_12_expand"]
-    
-    #Extra layer head: filters, stride, scale, source
-    extra_config = [[256,  2,  1,  True]]
-    model = build_RFBNet(input_shape = (300,300,3),
-                  phase = phase,
-                  source_layers = source_layers,
-                  base_model = base_model,
-                  extra_config = extra_config,
-                  include_base = True,
-                  prior_config = prior_config,
-                  num_classes = num_classes,
-                  mean_color = mean_color,
-                  lite = True,
-                  swap_channels = swap_channels,
-                  return_predictor = return_predictor)
-    return model
-def build_ssdlite_300(aspect_ratios,
-               num_classes):
-    base_model = load_mobilenetv2()
-#     base_model.summary()
-    prior_config =  [2 + len(ar) * 2 for ar in aspect_ratios]  # number of boxes per feature map location
-    source_layer = "block_12_expand"
-    model = build_ssdlite(base_model = base_model,
-                   prior_config = prior_config,
-                   source_layer_name_1 = source_layer,
-                   num_classes = num_classes)
-    return model

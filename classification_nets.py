@@ -99,4 +99,5 @@ def build_shufflenet_v2(input_shape):
     out = Dense(output_num, activation= 'softmax')(out)
     model = Model(inputs=base_model.input, outputs=out)  
     return 'shufflenet_v2',model
+
 #multi_gpu_model(model, gpus=1, cpu_merge=True, cpu_relocation=False)

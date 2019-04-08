@@ -2,7 +2,7 @@ import numpy as np
 from cv2.dnn import NMSBoxes
 from copy import deepcopy
 #import cv2
-def prior_box(feature_map, aspect_ratios,scale = None):
+def prior_box(feature_map, aspect_ratios,clip = True,scale = None):
     '''
     Calculate the coordinates of prior boxes according to shape of feature maps、aspect ratios
     Input:
@@ -30,7 +30,14 @@ def prior_box(feature_map, aspect_ratios,scale = None):
                     prior_boxes.append([cx,cy,s[k] * np.sqrt(ar), s[k] / np.sqrt(ar)])
                     prior_boxes.append([cx,cy,s[k] / np.sqrt(ar), s[k] * np.sqrt(ar)])
     
-    return np.array(prior_boxes)
+    prior_boxes = np.array(prior_boxes)
+    if clip:
+        prior_corner_boxes = coords_convert(prior_boxes)
+        prior_corner_boxes[:,[0,1]] = np.where(prior_corner_boxes[:,[0,1]] < 0 ,0,prior_corner_boxes[:,[0,1]])
+        prior_corner_boxes[:,[2,3]] = np.where(prior_corner_boxes[:,[2,3]] > 1 ,1,prior_corner_boxes[:,[2,3]])
+        prior_boxes = coords_convert(prior_corner_boxes,"corners2centroids")
+    return prior_boxes
+    
 def coords_convert(input_boxes,coding = "centroids2corners"):
     '''
     Convert a group of boxes in format of corners(x_min,y_min,x_max,y_max) to centroids(cx,cy,wx,wy)
@@ -192,6 +199,7 @@ def process_y(priors,ground_truth,variances,num_classes,input_H,input_W,iou_thre
         
         #2. Find a matched target for each prior 
         max_iou = np.max(iou,axis = 1)
+#         print(np.max(iou,axis =0),np.argmax(iou,axis=0))
         #print(np.where(max_iou > iou_threshold))
         unmatched_priors = max_iou < iou_threshold
         #Set 1 for first element in unmatched rows 
@@ -275,51 +283,62 @@ def post_process(y_pred_no_process,priors,variances,num_classes,input_W,input_H,
             
     return y_pred 
 
-
-
-## Calculate accuracy. 
-def evaluate(y_pred,y_test,iou_thresh = 0.5,metrics = ['precision','recall']):
-    '''
-    Given process prediction,ground truth and iou thresh. Do some evaluation according to metrics 
-    Possible metrics:
-      mAP_07,
-      mAP_12,
-      precision,
-      recall
-    '''
-    true_pos = 0  #true positive
-    pred_pos = 0   #all predicted positive
-    truth_pos = 0 #all true positive
-    for pred,truth in zip(y_pred,y_test):
-        pred_pos += len(pred)
-        truth_pos += len(truth)
-        truth = np.array(truth)
-        pred = np.array(pred)
-        if len(pred) == 0:
-            continue
-        #print(truth.shape,pred.shape)
-        truth_boxes = truth[:,-4:]
-        truth_class = np.expand_dims(truth[:,0],0).T
-        pred_boxes = pred[:,-4:]
-        pred_class = np.expand_dims(pred[:,0],1)
-        iou = calculate_iou(pred_boxes,truth_boxes,mode = 'outer_product')
-        iou_match = iou > iou_thresh
-        classes_match = pred_class == truth_class 
-        match = np.logical_and(iou_match, classes_match)
-        print(np.sum(match))
-        matched_pred_list = []
-        for i in range(len(truth)):
-            matched_pred = np.where(match[:,i] == True)[0]
-            # To be simple, we select first element as matched pred
-            matched_pred = list(set(matched_pred) - set(matched_pred_list))  
-            if len(matched_pred) != 0:
-                matched_pred_list.append(matched_pred[0])
-        true_pos += len(matched_pred_list)
-    
-    result = []
-    if 'precision' in metrics:
-        result.append(true_pos / pred_pos)
-    if 'recall' in metrics:
-        result.append(true_pos / truth_pos)
+class LabelEncoder:
+    def __init__(self,num_classes,priors,variances,input_H,input_W):
+        self.num_classes = num_classes
+        self.priors = priors
+        self.input_H = input_H
+        self.input_W = input_W
+        self.variances = variances
         
-    return result
+    def __call__(self,labels,diagnostics = False):
+        return process_y(self.priors, labels,self.variances,self.num_classes,self.input_H,self.input_W)
+    
+
+
+# ## Calculate accuracy. 
+# def evaluate(y_pred,y_test,iou_thresh = 0.5,metrics = ['precision','recall']):
+#     '''
+#     Given process prediction,ground truth and iou thresh. Do some evaluation according to metrics 
+#     Possible metrics:
+#       mAP_07,
+#       mAP_12,
+#       precision,
+#       recall
+#     '''
+#     true_pos = 0  #true positive
+#     pred_pos = 0   #all predicted positive
+#     truth_pos = 0 #all true positive
+#     for pred,truth in zip(y_pred,y_test):
+#         pred_pos += len(pred)
+#         truth_pos += len(truth)
+#         truth = np.array(truth)
+#         pred = np.array(pred)
+#         if len(pred) == 0:
+#             continue
+#         #print(truth.shape,pred.shape)
+#         truth_boxes = truth[:,-4:]
+#         truth_class = np.expand_dims(truth[:,0],0).T
+#         pred_boxes = pred[:,-4:]
+#         pred_class = np.expand_dims(pred[:,0],1)
+#         iou = calculate_iou(pred_boxes,truth_boxes,mode = 'outer_product')
+#         iou_match = iou > iou_thresh
+#         classes_match = pred_class == truth_class 
+#         match = np.logical_and(iou_match, classes_match)
+#         print(np.sum(match))
+#         matched_pred_list = []
+#         for i in range(len(truth)):
+#             matched_pred = np.where(match[:,i] == True)[0]
+#             # To be simple, we select first element as matched pred
+#             matched_pred = list(set(matched_pred) - set(matched_pred_list))  
+#             if len(matched_pred) != 0:
+#                 matched_pred_list.append(matched_pred[0])
+#         true_pos += len(matched_pred_list)
+    
+#     result = []
+#     if 'precision' in metrics:
+#         result.append(true_pos / pred_pos)
+#     if 'recall' in metrics:
+#         result.append(true_pos / truth_pos)
+        
+#     return result

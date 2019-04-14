@@ -9,7 +9,17 @@ def plot_history(history):
     plt.xlabel('Epoch')
     plt.legend(['Train', 'Test'], loc='upper left')
     plt.show()
-def draw_detection(frame,prediction,class_names,size = 'medium',color = 'green',use_cm = False,width = 2,show = True,draw_label = True,draw_score =False, water_mask=None):
+def draw_detection(frame,
+             prediction,
+             class_names,
+             size = 'medium',
+             color = 'green',
+             pred_format = {'class':0,'score':1,'xmin':2,'ymin':3,'xmax':4,'ymax':5},
+             width = 2,
+             show = True,
+             draw_label = True,
+             draw_score =False,
+             water_mask=None):
     '''
     Input an image and prediction(class,score,xmin,ymin,xmax,ymax)
     or label(class,xmin,ymin,xmax,ymax)  
@@ -21,17 +31,24 @@ def draw_detection(frame,prediction,class_names,size = 'medium',color = 'green',
     if show:
         plt.imshow(frame)
     
+    class_pos = pred_format["class"]
+    xmin_pos = pred_format["xmin"]
+    ymin_pos = pred_format["ymin"]
+    xmax_pos = pred_format["xmax"]
+    ymax_pos = pred_format["ymax"]
+    
     #colors = plt.cm.hsv(np.linspace(0, 1, n_classes+1)).tolist()
     current_axis = plt.gca()
     draw_color = color
     for box in prediction:
-        class_id = int(box[0])
-        if use_cm:
+        class_id = int(box[class_pos])
+        if type(color)==type(list()):
             draw_color = color[class_id]
-        xmin,ymin,xmax,ymax = box[-4:]
+        xmin,ymin,xmax,ymax = box[xmin_pos],box[ymin_pos],box[xmax_pos],box[ymax_pos]
         current_axis.add_patch(plt.Rectangle((xmin, ymin), xmax-xmin, ymax-ymin, color= draw_color, fill=False, linewidth=2)) 
         if draw_score:
-            score = box[1]
+            score_pos = pred_format["score"]
+            score = box[score_pos]
             label = "%s %.2f"%(class_names[class_id],score)
         else:
             label = class_names[class_id]

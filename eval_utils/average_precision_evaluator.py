@@ -32,7 +32,7 @@ from ssd_encoder_decoder.ssd_output_decoder import decode_detections
 from data_generator.object_detection_2d_misc_utils import apply_inverse_transforms
 from detector_help import post_process
 from bounding_box_utils.bounding_box_utils import iou
-
+from debug_model import mask_prediction
 class Evaluator:
     '''
     Computes the mean average precision of the given Keras SSD model on the given dataset.
@@ -98,6 +98,9 @@ class Evaluator:
                  batch_size,
                  priors,
                  variances,
+                 predictor_sizes,
+                 prior_config,
+                 select_features = [0,1,2,3,4,5],
                  data_generator_mode='resize',
                  round_confidences=False,
                  matching_iou_threshold=0.5,
@@ -193,6 +196,7 @@ class Evaluator:
                                 img_width=img_width,
                                 batch_size=batch_size,
                                 data_generator_mode=data_generator_mode,
+                                select_features=select_features,
                                 priors=priors,
                                 variances=variances,
                                 decoding_confidence_thresh=decoding_confidence_thresh,
@@ -266,6 +270,7 @@ class Evaluator:
                            batch_size,
                            priors,
                            variances,
+                           select_features,
                            data_generator_mode='resize',
                            decoding_confidence_thresh=0.01,
                            decoding_iou_threshold=0.45,
@@ -383,6 +388,7 @@ class Evaluator:
             batch_X, batch_image_ids, batch_eval_neutral, batch_inverse_transforms, batch_orig_labels = next(generator)
             # Predict.
             y_pred = self.model.predict(batch_X)
+#             y_pred_mask = mask_prediction(y_pred,select_features,predictor_sizes,prior_config,num_classes): 
             # If the model was created in 'training' mode, the raw predictions need to
             # be decoded and filtered, otherwise that's already taken care of.
             if self.model_mode == 'training':
@@ -395,6 +401,7 @@ class Evaluator:
                                img_width,
                                score_thresh = decoding_confidence_thresh,
                                iou_thresh = decoding_iou_threshold)
+#                 y_pred = mask_prediction(y_pred,
 #                 y_pred = decode_detections(y_pred,priors,
 #                                            confidence_thresh=decoding_confidence_thresh,
 #                                            iou_threshold=decoding_iou_threshold,
@@ -622,7 +629,8 @@ class Evaluator:
         for class_id in range(1, self.n_classes + 1):
 
             predictions = self.prediction_results[class_id]
-
+            # Filter the predictions by select features
+            
             # Store the matching results in these lists:
             true_pos = np.zeros(len(predictions), dtype=np.int) # 1 for every prediction that is a true positive, 0 otherwise
             false_pos = np.zeros(len(predictions), dtype=np.int) # 1 for every prediction that is a false positive, 0 otherwise

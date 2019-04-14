@@ -20,10 +20,10 @@ def prior_box(feature_map, aspect_ratios,clip = True,scale = None):
     else:
         s = scale
     for k,f in enumerate(feature_map):
-        for i in range(f):
-            for j in range(f):
-                cx = (j + 0.5)/f
-                cy = (i + 0.5)/f
+        for i in range(f[0]):
+            for j in range(f[1]):
+                cx = (j + 0.5)/f[1]
+                cy = (i + 0.5)/f[0]
                 prior_boxes.append([cx,cy,s[k],s[k]])
                 prior_boxes.append([cx,cy,np.sqrt(s[k] * s[k+1]),np.sqrt(s[k]*s[k+1])])
                 for ar in aspect_ratios[k]:
@@ -220,7 +220,13 @@ def process_y(priors,ground_truth,variances,num_classes,input_H,input_W,iou_thre
         
     return y
 
-def post_process(y_pred_no_process,priors,variances,num_classes,input_W,input_H,top_k = 200,score_thresh = 0.01,iou_thresh = 0.5):
+def prior_id_rank(prior_config,feature_map):
+    predictor_sizes = [size[0] * size[1] * prior_config[k] for k,size in enumerate(feature_map)]
+    prior_pyramid = [np.sum(predictor_sizes[: k + 1]) for k in range(len(predictor_sizes))]
+    prior_pyramid.insert(0,0)
+    return prior_pyramid
+
+def post_process(y_pred_no_process,priors,variances,num_classes,input_W,input_H,priors_pyramid = None,top_k = 200,score_thresh = 0.01,iou_thresh = 0.5):
     '''
     A for-loop implemention
     Input: y_pred_no_process (batch_size,#priors,#classes + 4)
@@ -230,58 +236,53 @@ def post_process(y_pred_no_process,priors,variances,num_classes,input_W,input_H,
     '''
     batch_size = y_pred_no_process.shape[0]
     y_pred = [] #np.zeros((batch_size,num_classes,top_k,1 + 4))
-    
-#     bboxes = y_pred_no_process[:,:,-4:]
-#     classes = np.argmax(y_pred_no_process[:,:,:-4], axis = 2)
-#     conf = np.max(y_pred_no_process[:,:,:-4], axis = 2)
     i = 0
     for pred in y_pred_no_process:
-        #Do three things for boxes processing 
-        #1. Take the offsets 
-        #2. Convert the format from centroids to corners
-        #3. Multiply img size to get the absolute coordinates 
+        
+        #Get loc_pred of one image and compute the bbox coordinates realated to it.
         loc = pred[:,-4:]       
         bboxes = coords_convert(compute_coords(loc,priors,variances),"centroids2corners")    
+        #Transform these coords from [0,1] range to [0,input_H] range
         bboxes *= [input_W,input_H,input_W,input_H]
         
-        #Do two things for conf processing
-        #1. Take confidence scores
-        #2. Calculate which class has highest score
-        #3. Collect highest scores for each boungding box
+        #Get confidences and calculate the index of highest confidence of each row(except the first column) as class_id
         conf_raw = pred[:,:-4]   
+        #We don`t use the first column because it stands for background, now we just get the highest score from all real 
+        #classes, and left the filtering work behind.
         classes = np.argmax(conf_raw[:,1:], axis= 1) + 1
         conf = conf_raw[:,1:].max(axis= 1)
-        #classes[conf > 1 - score_thresh] = 0
-        #print(classes)
         
         detections = []
         for c in range(1,num_classes + 1):
-            #Do NMS for all predictions with same predicted class and add them into y_pred
-           
-            #c_ prefix means this variable is belong to some certain class. 
+            #Do NMS for each class and add them into y_pred with format [class_id xmin ymin xmax ymax map_id(if priors_pyramid is used)]
+            #c is abbrevation of class. 
             c_mask = classes==c
             c_conf = conf[c_mask]
             c_boxes = bboxes[c_mask]
-            c_classes = deepcopy(classes[c_mask]) 
-            #print('c_classes', c_classes)
-            #This is an important step which may cost remarkable time
-            keep = np.arange(0,len(c_classes))
+            c_classes = classes[c_mask]
+            #NMS use format of xmin,ymin,w,h
             c_boxes_copy = deepcopy(c_boxes)
             c_boxes_copy[:,2:] -= c_boxes_copy[:,:2]
             keep = NMSBoxes(c_boxes_copy.tolist(), c_conf.tolist(),score_thresh,iou_thresh,top_k = top_k)
-            
             if len(keep) == 0: #keep might be () if no element is kept
                 continue
-            keep = keep[:,0]
-       
-            #keep = np.arange(0,len(c_classes))
-            detections.append(np.concatenate([c_classes[keep,np.newaxis],c_conf[keep,np.newaxis],c_boxes[keep]],axis=1))
+            decode_result = [c_classes[keep],c_conf[keep],c_boxes[keep.squeeze(axis=1)]]
+            if priors_pyramid is not None:
+                #First select prior_id of c_mask and then use 'keep' to filter.
+                prior_id = np.where(c_mask == True)[0][keep]
+                #Find the last 'true' of the comparation result of prior_id > priors_pyramid 
+                map_id = np.argmin(prior_id > priors_pyramid,axis=1) 
+                decode_result.append(map_id[:,np.newaxis])
+                
+            detections.append(np.concatenate(decode_result,axis=1))
+        # Append all decoded prediction of an image to y_ped
         if len(detections) > 0:
             y_pred.append(np.concatenate(detections))
         else:
             y_pred.append([])
             
     return y_pred 
+
 
 class LabelEncoder:
     def __init__(self,num_classes,priors,variances,input_H,input_W):

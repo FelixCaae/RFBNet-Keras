@@ -38,7 +38,7 @@ class BasicConv(BasicModule):
         if name is not None:
             conv_name = name + '_conv'
             bn_name = name + '_bn'
-            avt_name = name + '_' + activation
+            avt_name = name + '_' + activation if activation else None
         else:
             conv_name = None
             bn_name = None
@@ -77,9 +77,9 @@ class BasicSepConv(BasicModule):
           use_bias=False):
         l2 = regularizers.l2(l2_reg) if (l2_reg is not None) else None
         if name is not None:
-            conv_name = name + '_conv'
+            conv_name = name + '_sep'
             bn_name = name + '_bn'
-            avt_name = name + '_' + activation
+            avt_name = name + '_' + activation if activation else None
         else:
             conv_name = None
             bn_name = None
@@ -119,9 +119,9 @@ class BasicDepConv(BasicModule):
     #Seperable Convolution Layer
         l2 = regularizers.l2(l2_reg) if (l2_reg is not None) else None
         if name is not None:
-            conv_name = name + '_dwconv'
+            conv_name = name + '_dep'
             bn_name = name + '_bn'
-            avt_name = name + '_' + activation
+            avt_name = name + '_' + activation  if activation else None
         else:
             conv_name = None
             bn_name = None
@@ -358,56 +358,94 @@ class BasicDepConv(BasicModule):
 #     out = Activation('relu')(out)
 #     return out
                
-def LiteRFB( inp,
-         out_planes, 
-         stride = 1,
+def LiteRFB_c(inp,
+         name,
          expand_ratio = 1,
          depth_multiplier = 1,
          dilation_base = 1,
          scale = 1,
          l2_reg = 0.00005,
-         pooling ='max',
-         name = None):
+         ):
+  
     '''
     Lite RFB_a module
-    Modified:
-    1. Only two branches,each contains a 3x3 dw_conv with dilation rate 1 and 3.
-    2. Do a inverted residual for input and output.So the output is not activated.
+    1. Used an inverted bottleneck 
     '''
+    stride = 1
     #1. Prepare some names and input
     conv = BasicConv
     conv_d = BasicDepConv
     conv_sep = BasicSepConv
+    in_planes = inp.get_shape().as_list()[3] 
+    expanded_planes = int(in_planes * expand_ratio)
     branch_num = 3
-    in_planes = inp.get_shape().as_list()[3]
-    inter_planes = int(in_planes * expand_ratio)
-    out_branch_planes = out_planes #// branch_num
-#     if name is None:
-#         name = 'LiteRFB'
+    in_branch_planes = expanded_planes // branch_num
+    out_branch_planes = in_planes // branch_num
+    out_branch_planes_pad = in_planes - (out_branch_planes * (branch_num - 1))
+    
     #2. Make sequential models for each branca
-    if expand_ratio != 1:
-        inp = conv(inter_planes,kernel_size = 1,l2_reg = l2_reg,name = name + '_expand')(inp)
-#     inp = conv_d(kernel_size = 3,stride = 1,l2_reg =l2_reg,name = '_expand_dw')(inp)
-    #branch 0
-    branch_0 = conv_sep(out_planes,kernel_size=3, stride=stride,dilation=dilation_base,depth_multiplier =depth_multiplier ,l2_reg = l2_reg,name= name +'_conv1_1')(inp)
-    branch_1 = conv_sep(kernel_size = 3,stride = 1,l2_reg = l2_reg,name = name + '_conv2_1')(inp)
-    branch_1 = conv_sep(kernel_size = 3,stride = stride,dilation=dilation_base + 2,depth_multiplier=depth_multiplier,l2_reg = l2_reg,name = name + '_conv2_2')(branch_1)
-    branch_2 = conv_sep(kernel_size = 3,stride = 1,l2_reg = l2_reg,name = name + '_conv3_1')(inp)
-    branch_2 = conv_sep(kernel_size = 3,stride = 1,l2_reg = l2_reg,name = name + '_conv3_2')(branch_2)
-    branch_2 = conv_sep(kernel_size = 3,stride = stride,dilation=dilation_base + 4,depth_multiplier=depth_multiplier,l2_reg = l2_reg,name = name + '_conv3_3')(branch_2)
-#     #4. Do the residual work
-#     #Original Conv Linear 
-#     # out = conv(out_planes, kernel_size=1, stride=1, activation= None,l2_reg = l2_reg)(out)
-#     inp_pool = inp #Define this to make convenience for late layers 
-#     if stride !=1 :
-#         if pooling == 'max':
-#             inp_pool = MaxPooling2D(stride,padding='same',name = name + '_maxpool')(inp)
-#         elif pooling == 'avg':
-#             inp_pool = AveragePooling2D(stride,padding='same',name = name + '_avgpool')(inp)
-#     inp_conv = conv(inter_planes,kernel_size = 1, l2_reg = l2_reg,name = name + '_conv3_1')(inp_pool)
-    out = Add(name = name + '_merge')([branch_0,branch_1,branch_2])#branch_1(inp),
-    out = conv(out_planes,kernel_size = 3,stride = 1,l2_reg = l2_reg,name = name + '_project')(out)
-#     out = Activation('relu',name = name + '_out')(out)
-    return out
 
+    inp_conv_0 = conv(out_branch_planes,kernel_size = 1,l2_reg = l2_reg,name = name + '_conv1_1')(inp)
+    inp_conv_1 = conv(in_branch_planes,kernel_size = 1,l2_reg = l2_reg,name = name + '_conv2_1')(inp)
+    inp_conv_2 = conv(in_branch_planes,kernel_size = 1,l2_reg = l2_reg,name = name + '_conv3_1')(inp)
+      
+    branch_0 = conv_d(kernel_size=3, stride=stride,dilation=dilation_base,l2_reg = l2_reg,activation = None,use_bn = False,name= name +'_conv1_2')(inp_conv_0)
+    branch_1 = conv_sep(out_branch_planes,kernel_size = 3,stride = 1,l2_reg = l2_reg,depth_multiplier =depth_multiplier ,name = name + '_conv2_2')(inp_conv_1)
+    branch_1 = conv_d(kernel_size = 3,stride = stride,dilation=dilation_base + 2,l2_reg = l2_reg, activation = None,use_bn = False,name = name + '_conv2_2')(branch_1)
+    branch_2 = conv_sep(in_branch_planes,kernel_size = 3,stride = 1,l2_reg = l2_reg,depth_multiplier=depth_multiplier,name = name + '_conv3_2')(inp_conv_2)
+    branch_2 = conv_sep(out_branch_planes_pad,kernel_size = 3,stride = 1,l2_reg = l2_reg,depth_multiplier=depth_multiplier,name = name + '_conv3_3')(branch_2)
+    branch_2 = conv_d(kernel_size = 3,stride = stride,dilation=dilation_base + 4,l2_reg = l2_reg,activation = None,use_bn = False,name = name + '_conv3_4')(branch_2)
+    
+    #4. Do the residual work
+#     print(branch_0,branch_1,branch_2)
+    rfb = Concatenate(name = name + '_concatenate')([branch_0,branch_1,branch_2])#branch_1(inp),
+#     if expand_ratio != 1:
+#         rfb_project = conv(in_planes,kernel_size =1,name = name + '_project')(rfb)
+#     else:
+#         rfb_project = rfb
+    rfb_residual = Add(name = name + '_residual')([rfb,inp])
+    rfb_relu = Activation('relu',name = name + '_relu')(rfb_residual)
+    rfb_bn = BatchNormalization(axis = -1,name = name + '_bn')(rfb_relu)
+    return rfb_bn
+               
+def LiteRFB_d(x,
+         out_planes,
+         name,
+         dilation_base = 1,
+         dilation_rate = 2,
+         only_bone = False,
+         scale = 1,
+         l2_reg = 0.00005,
+         ):
+  
+    '''
+    Lite RFB_a module
+    1. Used an inverted bottleneck 
+    '''
+    stride = 1
+    #1. Prepare some names and input
+    conv = BasicConv
+    conv_dw = BasicDepConv
+    conv_sep = BasicSepConv
+    in_planes = x.get_shape().as_list()[3] 
+    branch_num = 2
+    branch_planes = out_planes // branch_num
+    #2. Make sequential models for each branca
+
+    branch_0 = conv_sep(branch_planes,kernel_size=3, stride=stride,dilation=dilation_base,l2_reg = l2_reg,name= name +'_conv1_1')(x)
+    if not only_bone:
+        branch_1 = conv_sep(branch_planes,kernel_size = 3,stride = 1,l2_reg = l2_reg,name = name + '_conv2_1')(x)
+        branch_1 = conv_dw(kernel_size = 3,stride = stride,dilation=dilation_base + dilation_rate,l2_reg = l2_reg,name = name + '_conv2_2')(branch_1)
+    else:
+        branch_1 = conv_sep(branch_planes,kernel_size = 3,stride = stride,dilation=dilation_base + dilation_rate,l2_reg = l2_reg,name = name + '_conv2_1')(x)
+
+    
+    #4. Do the residual work
+#     print(branch_0,branch_1,branch_2)
+    out = Concatenate(name = name + '_concatenate')([branch_0,branch_1])#branch_1(inp),
+#     if expand_ratio != 1:
+#         rfb_project = conv(in_planes,kernel_size =1,name = name + '_project')(rfb)
+#     else:
+#         rfb_project = rfb
+    return out
 

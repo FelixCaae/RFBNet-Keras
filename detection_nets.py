@@ -134,17 +134,18 @@ def multibox(features, prior_config, num_classes,softmax = True,lite = True):
     prediction = Concatenate(name = 'mbox_pred_merge')([conf_all,loc_all])
     return prediction
 
-def build_RFBNet( input_shape,
+def build_RFBLite( input_shape,
             phase,
             source_layers,
             base_model,
             extra_config,
+            source_config,
             include_base,
             prior_config,
             num_classes,
-            mean_color,
-            swap_channels,
-            base_index = -2,
+            source_expand_ratio = 6,
+            source_dep_mul = 4,
+            base_index = -4,
             lite=False,
             show_summary = False,
             l2_reg = 0.00005,
@@ -175,11 +176,19 @@ def build_RFBNet( input_shape,
             if lite:
                 conv = BasicSepConv
             for k, cfg in enumerate(extra_cfg):
-                filters,expand_ratio,stride,dep_mul,source = cfg 
-                if expand_ratio != None:
-                    x = LiteRFB(x,filters,expand_ratio = expand_ratio, stride= stride, depth_multiplier = dep_mul,l2_reg=l2_reg, name = 'rfb_extras_'+str(k))
+                if cfg[0] == 'literfb_d':
+                    filters,dil_base,dil_rate,only_bone,source = cfg [1:]
+                    x = LiteRFB_d(x,
+                             filters,
+                             'rfb_extra_'+str(k),
+                             l2_reg=l2_reg,
+                             dilation_base=dil_base,
+                             dilation_rate=dil_rate,
+                             only_bone=only_bone)
                 else:
-                    x = conv(filters,kernel_size = 3,stride =stride,padding = dep_mul, name = 'extra_' + str(k) )(x)
+                    print(cfg)
+                    filters,stride,padding,source = cfg
+                    x = conv(filters,kernel_size = 3,stride =stride,padding = padding, name = 'plain_extra_' + str(k) )(x)
                 if source:
                     source_layers += [x]
             return source_layers
@@ -200,9 +209,20 @@ def build_RFBNet( input_shape,
 #         sources = add_up_sampling_layers(sources)
         
         # 4. Add RFBLite for layer from sources
-        for index in range(len(source_layers)):
-            features[index] = LiteRFB(features[index],170,expand_ratio= 0.25,depth_multiplier = 4,l2_reg = l2_reg,name = 'rfb_source_' + str(index))
-        
+        for k,cfg in enumerate(source_config):
+            if cfg[0] == 'literfb_d':
+                filters,only_bone,dil_base,dil_rate = cfg [1:]
+                features[k] = LiteRFB_d(features[k],
+                                   filters, 
+                                   'rfb_source_'+str(k),
+                                   l2_reg=l2_reg,
+                                   dilation_base=dil_base,
+                                   dilation_rate=dil_rate,
+                                   only_bone=only_bone)  
+            else:
+                filters,kernel_size,stride = cfg
+                features[k] = BasicSepConv(filters,kernel_size = 3,stride =stride,padding = padding, name = 'plain_extra_' + str(k) )(features[k])
+            
         # 5. Add prediction layers 
         output = multibox(features,prior_config,num_classes,lite=True,softmax=True)
         model = Model(inputs=base_model.input, outputs=output)
@@ -287,6 +307,26 @@ def build_ssdlite(base_model,
     source_layer_3 = BasicSepConv(512,kernel_size = 3,stride = 2, padding='same',name = 'extra_3')(source_layer_2)
     source_layer_4 = BasicSepConv(256,kernel_size = 3,stride = 2, padding='same',name = 'extra_4')(source_layer_3)
     source_layer_5 = BasicSepConv(256,kernel_size = 3,stride = 1,padding='same',name = 'extra_5')(source_layer_4)
+    source_layer_6 = BasicSepConv(128,kernel_size = 3,stride = 1, padding='valid',name = 'extra_6')(source_layer_5)
+    source_layers = [source_layer_1,source_layer_2,source_layer_3,source_layer_4,source_layer_5,source_layer_6]
+    prediction_layers = []
+    prediction = multibox(source_layers,prior_config,num_classes,softmax=True,lite=True)
+    model = Model(inputs=base_model.input, outputs=prediction)
+    return model
+
+def build_ssdlite_L(base_model,
+            prior_config,
+            source_layer_name_1,
+            source_layer_name_2,
+            num_classes):
+    base_model = load_mobilenetv2()
+#     source_layer_name_1 = 'block_16_expansion'
+    source_layer_1 = base_model.get_layer(source_layer_name_1).output
+    source_layer_2 = base_model.get_layer(source_layer_name_2).output
+    base_layer = base_model.layers[-4].output
+    source_layer_3 = BasicSepConv(512,kernel_size = 3,stride = 1, padding='same',name = 'extra_3')(base_layer)
+    source_layer_4 = BasicSepConv(256,kernel_size = 3,stride = 2, padding='same',name = 'extra_4')(source_layer_3)
+    source_layer_5 = BasicSepConv(256,kernel_size = 3,stride = 2,padding='same',name = 'extra_5')(source_layer_4)
     source_layer_6 = BasicSepConv(128,kernel_size = 3,stride = 1, padding='valid',name = 'extra_6')(source_layer_5)
     source_layers = [source_layer_1,source_layer_2,source_layer_3,source_layer_4,source_layer_5,source_layer_6]
     prediction_layers = []

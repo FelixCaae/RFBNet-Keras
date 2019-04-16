@@ -1,13 +1,14 @@
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
-def plot_history(history):
+def plot_history(history,save_path):
     plt.plot(history.history['loss'])
     plt.plot(history.history['val_loss'])
     plt.title('Model loss')
     plt.ylabel('Loss')
     plt.xlabel('Epoch')
     plt.legend(['Train', 'Test'], loc='upper left')
+    plt.savefig(save_path)
     plt.show()
 def draw_detection(frame,
              prediction,

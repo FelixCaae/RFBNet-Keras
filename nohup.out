@@ -23,3 +23,2001 @@
 [C 21:19:09.102 NotebookApp] received signal 15, stopping
 [I 21:19:09.103 NotebookApp] Shutting down 1 kernel
 [I 21:19:09.405 NotebookApp] Kernel shutdown: df37c7fd-06f4-4210-aa38-f647886134e0
+[I 22:50:22.522 NotebookApp] Writing notebook server cookie secret to /run/user/1009/jupyter/notebook_cookie_secret
+[I 22:50:23.658 NotebookApp] Serving notebooks from local directory: /home/cai
+[I 22:50:23.659 NotebookApp] The Jupyter Notebook is running at:
+[I 22:50:23.659 NotebookApp] http://(IRIP4001 or 127.0.0.1):8888/
+[I 22:50:23.659 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 22:52:46.769 NotebookApp] Clearing invalid/expired login cookie username-10-134-171-250-8888
+[I 22:52:46.771 NotebookApp] 302 GET /tree/project/RFBNet-Keras (192.168.13.205) 3.49ms
+[I 22:52:48.582 NotebookApp] 302 POST /login?next=%2Ftree%2Fproject%2FRFBNet-Keras (192.168.13.205) 1.80ms
+[W 22:52:48.604 NotebookApp] 404 GET /tree/project/RFBNet-Keras (192.168.13.205) 16.35ms referer=http://10.134.171.250:8888/login?next=%2Ftree%2Fproject%2FRFBNet-Keras
+[I 22:52:51.621 NotebookApp] 302 GET / (192.168.13.205) 0.69ms
+[W 22:53:08.976 NotebookApp] Notebook project/RFB-Keras/rfbnet_mobile_300.ipynb is not trusted
+[W 22:53:09.024 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414225022 (192.168.13.205) 14.06ms referer=http://10.134.171.250:8888/notebooks/project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 22:53:10.129 NotebookApp] Kernel started: ff20b92b-8597-4175-b97c-07de01e24696
+[I 22:53:11.004 NotebookApp] Adapting to protocol v5.1 for kernel ff20b92b-8597-4175-b97c-07de01e24696
+2019-04-14 22:53:52.122129: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-14 22:53:54.563548: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6325
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-04-14 22:53:54.774825: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6325
+pciBusID: 0000:04:00.0
+totalMemory: 10.92GiB freeMemory: 10.76GiB
+2019-04-14 22:53:54.776682: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1
+2019-04-14 22:53:59.838413: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-14 22:53:59.838497: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 
+2019-04-14 22:53:59.838507: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y 
+2019-04-14 22:53:59.838512: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N 
+2019-04-14 22:53:59.839113: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10408 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2019-04-14 22:53:59.851490: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10409 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+[I 22:55:10.076 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 22:57:10.063 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[W 22:58:22.254 NotebookApp] Clearing invalid/expired login cookie username-10-134-171-250-8888
+[W 22:58:22.255 NotebookApp] Forbidden
+[W 22:58:22.255 NotebookApp] 403 GET /api/contents/attentionSolution/main-Copy1.ipynb?content=0&_=1554814904734 (10.134.138.192) 2.51ms referer=http://10.134.171.250:8888/notebooks/attentionSolution/main-Copy1.ipynb
+[I 22:59:10.080 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[W 23:00:04.760 NotebookApp] Forbidden
+[W 23:00:04.760 NotebookApp] 403 PUT /api/contents/attentionSolution/main-Copy1.ipynb (10.134.138.192) 451.23ms referer=http://10.134.171.250:8888/notebooks/attentionSolution/main-Copy1.ipynb
+[I 23:01:10.788 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:03:10.797 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:05:10.787 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:07:10.796 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:09:10.791 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:11:10.793 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:13:10.803 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:15:10.791 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:17:10.796 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:19:10.795 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:21:10.796 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:23:10.798 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:25:10.802 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:27:10.796 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:29:10.806 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:31:10.795 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:33:10.804 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:35:10.800 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:37:10.798 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:39:10.800 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:41:10.805 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:43:10.806 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:45:10.797 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:47:10.804 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:49:10.798 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:51:10.801 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:53:10.803 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:55:10.803 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:57:10.807 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 23:59:10.805 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:01:10.807 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:03:10.806 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:05:10.814 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:07:10.808 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:09:10.811 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:11:10.810 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:13:10.809 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:15:10.811 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:17:10.806 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:19:10.811 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:21:10.814 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:23:10.808 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:25:10.816 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:27:10.815 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:29:10.816 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:31:10.816 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:33:10.815 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:35:10.081 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:37:10.084 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:39:10.086 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:41:10.085 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:43:10.081 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:45:10.089 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:47:10.087 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:49:10.084 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 00:51:10.089 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[W 00:54:11.008 NotebookApp] WebSocket ping timeout after 119996 ms.
+[E 00:54:12.007 NotebookApp] Uncaught exception in ZMQStream callback
+    Traceback (most recent call last):
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 00:54:12.042 NotebookApp] Uncaught exception in zmqstream callback
+    Traceback (most recent call last):
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+        self._handle_recv()
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+        self._run_callback(callback, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(35, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(35, 1)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/events.py", line 125, in _run
+    self._callback(*self._args)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/platform/asyncio.py", line 122, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+    self._handle_recv()
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+    self.on_recv(lambda msg: callback(self, msg), copy=copy)
+  File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+    super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+  File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+    self.write_message(msg, binary=isinstance(msg, bytes))
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[I 00:54:16.010 NotebookApp] Starting buffering for ff20b92b-8597-4175-b97c-07de01e24696:c5f0423835704f8f95babd8372d5a861
+[I 09:15:34.802 NotebookApp] Adapting to protocol v5.1 for kernel ff20b92b-8597-4175-b97c-07de01e24696
+[I 09:15:34.803 NotebookApp] Restoring connection for ff20b92b-8597-4175-b97c-07de01e24696:c5f0423835704f8f95babd8372d5a861
+[I 09:15:34.804 NotebookApp] Replaying 28485 buffered messages
+[W 09:15:36.630 NotebookApp] IOPub message rate exceeded.
+    The notebook server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--NotebookApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    NotebookApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    NotebookApp.rate_limit_window=3.0 (secs)
+    
+[W 09:15:38.238 NotebookApp] iopub messages resumed
+[W 09:15:39.910 NotebookApp] IOPub message rate exceeded.
+    The notebook server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--NotebookApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    NotebookApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    NotebookApp.rate_limit_window=3.0 (secs)
+    
+[W 09:15:41.558 NotebookApp] iopub messages resumed
+[W 09:15:43.360 NotebookApp] IOPub message rate exceeded.
+    The notebook server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--NotebookApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    NotebookApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    NotebookApp.rate_limit_window=3.0 (secs)
+    
+[W 09:15:44.991 NotebookApp] iopub messages resumed
+[W 09:15:46.679 NotebookApp] IOPub message rate exceeded.
+    The notebook server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--NotebookApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    NotebookApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    NotebookApp.rate_limit_window=3.0 (secs)
+    
+[W 09:15:49.181 NotebookApp] iopub messages resumed
+[I 09:17:09.273 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:19:09.270 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:21:09.260 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:23:09.254 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:25:09.237 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:27:09.251 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:29:09.239 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:31:09.239 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:33:09.242 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:35:09.237 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:37:09.250 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:39:10.035 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:41:09.662 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:43:09.878 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:45:09.564 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:47:10.197 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:49:09.763 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:51:09.769 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:53:09.253 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:55:09.249 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:57:09.258 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 09:59:09.256 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:01:09.257 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:03:09.265 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:05:09.257 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:07:09.258 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:09:09.242 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:11:09.262 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:13:09.259 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:15:09.260 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:17:09.259 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:19:09.258 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:21:09.253 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:23:09.260 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:25:09.258 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:27:09.266 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:29:09.263 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:31:09.255 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:33:09.255 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:35:09.267 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:37:09.266 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:39:09.267 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:41:09.261 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:43:09.258 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:45:09.271 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:47:09.261 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:49:09.288 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:51:09.259 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:53:09.260 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:55:09.276 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:57:09.273 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:59:09.275 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:01:09.260 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:03:09.271 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:05:09.273 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:07:09.275 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:09:09.289 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:11:09.273 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:13:09.275 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:15:09.283 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:17:09.284 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:19:09.275 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:21:09.280 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:23:09.274 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:25:09.282 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:27:09.281 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:29:09.280 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:31:09.282 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:33:09.301 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:35:09.278 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:37:09.285 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:39:09.294 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:41:09.278 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:43:09.287 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:45:09.285 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:47:09.270 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:49:09.285 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:51:09.271 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:53:09.272 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:55:09.269 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:57:09.271 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:59:09.280 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:01:09.229 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:03:08.559 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:04:53.718 NotebookApp] Copying project/RFB-Keras/rfbnet_mobile_300.ipynb to /project/RFB-Keras
+[W 12:04:57.667 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414225022 (192.168.13.205) 2.69ms referer=http://10.134.171.250:8888/notebooks/project/RFB-Keras/rfbnet_mobile_300-Copy1.ipynb
+[I 12:04:58.779 NotebookApp] Kernel started: 811d6b63-17bc-4ea7-b7e0-e498796b923c
+[I 12:04:59.668 NotebookApp] Adapting to protocol v5.1 for kernel 811d6b63-17bc-4ea7-b7e0-e498796b923c
+[I 12:05:09.279 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:06:39.403 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 12:06:42.631 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 12:07:09.269 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:08:02.480 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 12:08:08.032 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 12:08:10.285 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+2019-04-15 12:08:27.769461: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-15 12:08:29.377331: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6325
+pciBusID: 0000:03:00.0
+totalMemory: 10.92GiB freeMemory: 271.19MiB
+2019-04-15 12:08:29.613283: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6325
+pciBusID: 0000:04:00.0
+totalMemory: 10.92GiB freeMemory: 10.56GiB
+2019-04-15 12:08:29.613465: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1
+2019-04-15 12:08:30.422818: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-15 12:08:30.422866: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 
+2019-04-15 12:08:30.422872: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y 
+2019-04-15 12:08:30.422877: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N 
+2019-04-15 12:08:30.423204: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 207 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2019-04-15 12:08:30.425520: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10209 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+2019-04-15 12:08:30.470140: E tensorflow/stream_executor/cuda/cuda_driver.cc:806] failed to allocate 207.19M (217251840 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+[I 12:08:59.272 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 12:09:09.273 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:11:09.274 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:13:09.276 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:15:09.283 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:17:09.389 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:19:09.288 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:21:09.274 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:23:09.288 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:25:09.286 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:27:09.275 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:29:09.286 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:31:09.298 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:33:09.292 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:35:08.557 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:37:08.543 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:39:04.938 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 12:39:05.169 NotebookApp] Starting buffering for ff20b92b-8597-4175-b97c-07de01e24696:c5f0423835704f8f95babd8372d5a861
+[I 12:39:05.169 NotebookApp] Starting buffering for 811d6b63-17bc-4ea7-b7e0-e498796b923c:abde0bace9a94f4f8776e38986b45b39
+[I 15:35:32.711 NotebookApp] 302 GET / (192.168.13.205) 1.10ms
+[W 15:35:39.387 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414225022 (192.168.13.205) 3.08ms referer=http://10.134.171.250:8888/notebooks/project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 15:35:40.390 NotebookApp] Adapting to protocol v5.1 for kernel 811d6b63-17bc-4ea7-b7e0-e498796b923c
+[I 15:36:43.538 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 15:39:40.374 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 15:43:40.389 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 15:45:36.280 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 15:46:33.865 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[W 15:47:35.655 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414225022 (192.168.13.205) 2.78ms referer=http://10.134.171.250:8888/notebooks/project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 15:47:36.967 NotebookApp] Adapting to protocol v5.1 for kernel ff20b92b-8597-4175-b97c-07de01e24696
+[I 15:47:36.968 NotebookApp] Discarding 10617 buffered messages for ff20b92b-8597-4175-b97c-07de01e24696:c5f0423835704f8f95babd8372d5a861
+[I 15:47:40.545 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 15:49:40.360 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+2019-04-15 15:53:10.483868: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1
+2019-04-15 15:53:10.629169: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-15 15:53:10.629206: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 
+2019-04-15 15:53:10.629214: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y 
+2019-04-15 15:53:10.629219: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N 
+2019-04-15 15:53:10.629600: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 207 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2019-04-15 15:53:10.630416: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10209 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+[I 15:53:40.364 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 15:53:44.567 NotebookApp] Starting buffering for 811d6b63-17bc-4ea7-b7e0-e498796b923c:ceb251a84cd2442b84094b2fcbee5afa
+[I 15:53:47.483 NotebookApp] Kernel restarted: 811d6b63-17bc-4ea7-b7e0-e498796b923c
+[I 15:53:48.663 NotebookApp] Adapting to protocol v5.1 for kernel 811d6b63-17bc-4ea7-b7e0-e498796b923c
+[I 15:53:48.664 NotebookApp] Restoring connection for 811d6b63-17bc-4ea7-b7e0-e498796b923c:ceb251a84cd2442b84094b2fcbee5afa
+[I 15:53:48.664 NotebookApp] Replaying 6 buffered messages
+2019-04-15 15:53:57.101382: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-15 15:53:58.417237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6325
+pciBusID: 0000:04:00.0
+totalMemory: 10.92GiB freeMemory: 10.56GiB
+2019-04-15 15:53:58.417288: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-04-15 15:53:58.783354: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-15 15:53:58.783409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-04-15 15:53:58.783419: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-04-15 15:53:58.783741: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10209 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+[I 15:55:16.550 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 15:55:18.086 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 15:59:40.362 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[I 16:04:26.964 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300-copy.ipynb
+[W 16:04:38.796 NotebookApp] Notebook project/RFB-Keras/ssdlite_mobilenetv2_300.ipynb is not trusted
+[W 16:04:38.824 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414225022 (192.168.13.205) 2.45ms referer=http://10.134.171.250:8888/notebooks/project/RFB-Keras/ssdlite_mobilenetv2_300.ipynb
+[I 16:04:39.644 NotebookApp] Kernel started: 89000c9a-ffea-465e-8908-d6f4c30223b5
+[I 16:04:40.353 NotebookApp] Adapting to protocol v5.1 for kernel 89000c9a-ffea-465e-8908-d6f4c30223b5
+[I 16:04:49.353 NotebookApp] Starting buffering for 811d6b63-17bc-4ea7-b7e0-e498796b923c:ceb251a84cd2442b84094b2fcbee5afa
+[I 16:04:51.163 NotebookApp] Kernel shutdown: 811d6b63-17bc-4ea7-b7e0-e498796b923c
+2019-04-15 16:05:08.985083: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-04-15 16:05:10.344304: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.6325
+pciBusID: 0000:04:00.0
+totalMemory: 10.92GiB freeMemory: 10.56GiB
+2019-04-15 16:05:10.344381: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-04-15 16:05:10.728609: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-15 16:05:10.728663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-04-15 16:05:10.728672: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-04-15 16:05:10.729015: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10209 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+[I 16:05:23.479 NotebookApp] Saving file at /project/RFB-Keras/ssdlite_mobilenetv2_300.ipynb
+[I 16:05:30.946 NotebookApp] Saving file at /project/RFB-Keras/ssdlite_mobilenetv2_300.ipynb
+[I 16:06:24.108 NotebookApp] Saving file at /project/RFB-Keras/detection_nets.py
+[I 16:06:31.520 NotebookApp] Saving file at /project/RFB-Keras/detection_nets.py
+[I 16:06:38.951 NotebookApp] Saving file at /project/RFB-Keras/detection_nets.py
+[I 16:06:49.487 NotebookApp] Saving file at /project/RFB-Keras/ssdlite_mobilenetv2_300.ipynb
+2019-04-15 16:06:56.692998: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-04-15 16:06:56.693067: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-15 16:06:56.693079: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-04-15 16:06:56.693084: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-04-15 16:06:56.693239: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10209 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+[I 16:08:39.658 NotebookApp] Saving file at /project/RFB-Keras/ssdlite_mobilenetv2_300.ipynb
+2019-04-15 16:17:12.121942: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-04-15 16:17:12.122025: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-15 16:17:12.122033: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-04-15 16:17:12.122038: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-04-15 16:17:12.122194: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10209 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+[I 16:18:39.655 NotebookApp] Saving file at /project/RFB-Keras/ssdlite_mobilenetv2_300.ipynb
+[W 16:25:51.415 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414225022 (192.168.13.205) 2.85ms referer=http://10.134.171.250:8888/notebooks/project/kitti-RFB/train_RFB_mobilev2.ipynb
+[I 16:25:52.113 NotebookApp] Kernel started: 935e7045-18be-429b-90d8-915522c87117
+[I 16:25:52.803 NotebookApp] Adapting to protocol v5.1 for kernel 935e7045-18be-429b-90d8-915522c87117
+[I 16:26:58.765 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:27:02.150 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:27:13.625 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:27:33.839 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:27:52.556 NotebookApp] Saving file at /project/kitti-RFB/train_RFB_mobilev2.ipynb
+[I 16:27:55.396 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:28:11.163 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:28:51.787 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:29:56.628 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:30:34.416 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:30:42.122 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:30:52.955 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:30:59.110 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:31:08.218 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:33:52.599 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:33:55.513 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:33:56.517 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:33:58.080 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:33:59.093 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:33:59.987 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:34:12.474 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:34:14.643 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:34:16.026 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:34:18.773 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:34:24.414 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:34:25.764 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:34:30.195 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:34:35.833 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:34:37.007 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:35:11.241 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:35:12.033 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:35:13.732 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:35:18.631 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:35:29.079 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:35:30.985 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:35:57.743 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:36:02.698 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:36:05.129 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:37:04.370 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:37:24.470 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:39:52.562 NotebookApp] Saving file at /project/kitti-RFB/train_RFB_mobilev2.ipynb
+[I 16:41:52.565 NotebookApp] Saving file at /project/kitti-RFB/train_RFB_mobilev2.ipynb
+[I 16:42:23.519 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:42:31.147 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:42:34.538 NotebookApp] Starting buffering for 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[I 16:42:36.252 NotebookApp] Kernel restarted: 935e7045-18be-429b-90d8-915522c87117
+[I 16:42:36.907 NotebookApp] Adapting to protocol v5.1 for kernel 935e7045-18be-429b-90d8-915522c87117
+[I 16:42:36.908 NotebookApp] Restoring connection for 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[I 16:42:36.908 NotebookApp] Replaying 6 buffered messages
+[I 16:43:25.817 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:43:30.078 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:43:34.288 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:43:39.519 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:43:40.489 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:43:52.542 NotebookApp] Saving file at /project/kitti-RFB/train_RFB_mobilev2.ipynb
+[I 16:44:23.940 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:44:26.624 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:44:43.458 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:44:47.727 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:46:27.792 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:46:35.567 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:49:38.573 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:51:03.991 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:51:27.986 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:51:32.954 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+[I 16:55:14.600 NotebookApp] Saving file at /project/kitti-RFB/models/RFB_Net_mobilev2.py
+2019-04-15 16:55:42.837720: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-04-15 16:55:42.837791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-15 16:55:42.837798: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-04-15 16:55:42.837803: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-04-15 16:55:42.837936: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10209 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+[I 16:56:39.682 NotebookApp] Saving file at /project/RFB-Keras/ssdlite_mobilenetv2_300.ipynb
+[W 16:58:36.909 NotebookApp] WebSocket ping timeout after 119997 ms.
+[W 16:58:36.970 NotebookApp] WebSocket ping timeout after 119998 ms.
+[E 16:58:37.312 NotebookApp] Uncaught exception in ZMQStream callback
+    Traceback (most recent call last):
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 16:58:37.313 NotebookApp] Uncaught exception in zmqstream callback
+    Traceback (most recent call last):
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+        self._handle_recv()
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+        self._run_callback(callback, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(35, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(35, 1)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/events.py", line 125, in _run
+    self._callback(*self._args)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/platform/asyncio.py", line 122, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+    self._handle_recv()
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+    self.on_recv(lambda msg: callback(self, msg), copy=copy)
+  File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+    super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+  File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+    self.write_message(msg, binary=isinstance(msg, bytes))
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[W 16:58:40.356 NotebookApp] WebSocket ping timeout after 119997 ms.
+[I 16:58:41.912 NotebookApp] Starting buffering for 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[I 16:58:41.971 NotebookApp] Starting buffering for ff20b92b-8597-4175-b97c-07de01e24696:6002cfd60066475e8eca69709a3517e2
+[I 16:58:45.359 NotebookApp] Starting buffering for 89000c9a-ffea-465e-8908-d6f4c30223b5:f1c4eeb04c8c46e5887b06741a1b0552
+[I 17:56:23.668 NotebookApp] Adapting to protocol v5.1 for kernel 935e7045-18be-429b-90d8-915522c87117
+[I 17:56:23.670 NotebookApp] Restoring connection for 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[I 17:56:23.732 NotebookApp] Adapting to protocol v5.1 for kernel ff20b92b-8597-4175-b97c-07de01e24696
+[I 17:56:23.736 NotebookApp] Restoring connection for ff20b92b-8597-4175-b97c-07de01e24696:6002cfd60066475e8eca69709a3517e2
+[I 17:56:23.737 NotebookApp] Replaying 3242 buffered messages
+[W 17:56:25.591 NotebookApp] IOPub message rate exceeded.
+    The notebook server will temporarily stop sending output
+    to the client in order to avoid crashing it.
+    To change this limit, set the config variable
+    `--NotebookApp.iopub_msg_rate_limit`.
+    
+    Current values:
+    NotebookApp.iopub_msg_rate_limit=1000.0 (msgs/sec)
+    NotebookApp.rate_limit_window=3.0 (secs)
+    
+[I 17:56:25.753 NotebookApp] Adapting to protocol v5.1 for kernel 89000c9a-ffea-465e-8908-d6f4c30223b5
+[I 17:56:25.754 NotebookApp] Restoring connection for 89000c9a-ffea-465e-8908-d6f4c30223b5:f1c4eeb04c8c46e5887b06741a1b0552
+[W 17:56:28.039 NotebookApp] iopub messages resumed
+[W 17:56:42.588 NotebookApp] Replacing stale connection: 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[I 17:56:47.590 NotebookApp] Starting buffering for 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[I 17:56:47.591 NotebookApp] Adapting to protocol v5.1 for kernel 935e7045-18be-429b-90d8-915522c87117
+[I 17:56:47.592 NotebookApp] Restoring connection for 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[W 17:56:47.618 NotebookApp] Replacing stale connection: ff20b92b-8597-4175-b97c-07de01e24696:6002cfd60066475e8eca69709a3517e2
+[E 17:56:48.421 NotebookApp] Uncaught exception in ZMQStream callback
+    Traceback (most recent call last):
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 17:56:48.422 NotebookApp] Uncaught exception in zmqstream callback
+    Traceback (most recent call last):
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+        self._handle_recv()
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+        self._run_callback(callback, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(35, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(35, 1)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/events.py", line 125, in _run
+    self._callback(*self._args)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/platform/asyncio.py", line 122, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+    self._handle_recv()
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+    self.on_recv(lambda msg: callback(self, msg), copy=copy)
+  File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+    super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+  File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+    self.write_message(msg, binary=isinstance(msg, bytes))
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[I 17:56:52.620 NotebookApp] Starting buffering for ff20b92b-8597-4175-b97c-07de01e24696:6002cfd60066475e8eca69709a3517e2
+[I 17:56:52.622 NotebookApp] Adapting to protocol v5.1 for kernel ff20b92b-8597-4175-b97c-07de01e24696
+[I 17:56:52.623 NotebookApp] Restoring connection for ff20b92b-8597-4175-b97c-07de01e24696:6002cfd60066475e8eca69709a3517e2
+[I 17:56:52.623 NotebookApp] Replaying 4 buffered messages
+[W 17:56:52.721 NotebookApp] Replacing stale connection: 89000c9a-ffea-465e-8908-d6f4c30223b5:f1c4eeb04c8c46e5887b06741a1b0552
+[E 17:56:55.756 NotebookApp] Exception in callback <bound method WebSocketMixin.send_ping of ZMQChannelsHandler(89000c9a-ffea-465e-8908-d6f4c30223b5)>
+    Traceback (most recent call last):
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/ioloop.py", line 1229, in _run
+        return self.callback()
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 189, in send_ping
+        self.ping(b'')
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 366, in ping
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[I 17:56:57.723 NotebookApp] Starting buffering for 89000c9a-ffea-465e-8908-d6f4c30223b5:f1c4eeb04c8c46e5887b06741a1b0552
+[I 17:56:57.724 NotebookApp] Adapting to protocol v5.1 for kernel 89000c9a-ffea-465e-8908-d6f4c30223b5
+[I 17:56:57.726 NotebookApp] Restoring connection for 89000c9a-ffea-465e-8908-d6f4c30223b5:f1c4eeb04c8c46e5887b06741a1b0552
+[I 17:58:39.777 NotebookApp] Saving file at /project/RFB-Keras/ssdlite_mobilenetv2_300.ipynb
+[I 18:21:34.138 NotebookApp] 302 GET / (10.139.7.108) 1.35ms
+[I 18:21:34.244 NotebookApp] 302 GET / (10.139.7.108) 0.77ms
+[I 18:21:34.311 NotebookApp] 302 GET / (10.139.7.108) 0.77ms
+[I 18:21:34.382 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[I 18:21:49.997 NotebookApp] 302 GET / (10.139.7.108) 0.96ms
+[I 18:21:50.110 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[I 18:21:50.228 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[W 18:21:50.347 NotebookApp] 404 GET /login.php (10.139.7.108) 3.02ms referer=None
+[W 18:21:50.457 NotebookApp] 404 GET /this_server/all_settings.shtml (10.139.7.108) 2.45ms referer=None
+[I 18:21:50.562 NotebookApp] 302 GET / (10.139.7.108) 1.23ms
+[I 18:21:50.658 NotebookApp] 302 GET /tree (10.139.7.108) 0.90ms
+[W 18:21:50.767 NotebookApp] 404 GET /authenticate/login (10.139.7.108) 3.18ms referer=None
+[W 18:21:50.885 NotebookApp] 404 GET /start.js (10.139.7.108) 2.17ms referer=None
+[I 18:21:50.981 NotebookApp] 302 GET /tmui/ (10.139.7.108) 0.96ms
+[W 18:21:51.190 NotebookApp] 404 GET /netmri/config/userAdmin/login.tdf (10.139.7.108) 2.14ms referer=None
+[W 18:21:51.292 NotebookApp] 404 GET /scgi-bin/platform.cgi (10.139.7.108) 2.01ms referer=None
+[W 18:21:51.394 NotebookApp] 404 GET /admin/login.do (10.139.7.108) 2.89ms referer=None
+[W 18:21:51.496 NotebookApp] 404 GET /en/main.js (10.139.7.108) 2.11ms referer=None
+[I 18:21:51.582 NotebookApp] 302 GET / (10.139.7.108) 0.86ms
+[W 18:21:51.600 NotebookApp] 404 GET /mgmt/login?dest=%2Fmgmt%2Fgui%3Fp%3Dhome&reason=&username= (10.139.7.108) 2.47ms referer=None
+[W 18:21:51.687 NotebookApp] 404 GET /aboutprinter.html (10.139.7.108) 3.27ms referer=None
+[W 18:21:51.711 NotebookApp] 404 GET /dms2/Login.jsp (10.139.7.108) 1.83ms referer=None
+[W 18:21:51.791 NotebookApp] 404 GET /properties/configuration.php?tab=Status (10.139.7.108) 2.53ms referer=None
+[I 18:21:51.898 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[W 18:21:51.914 NotebookApp] 404 GET /home.htm (10.139.7.108) 2.02ms referer=None
+[I 18:21:51.997 NotebookApp] 302 GET / (10.139.7.108) 0.83ms
+[W 18:21:52.017 NotebookApp] 404 GET /sws/data/sws_data.js (10.139.7.108) 2.27ms referer=None
+[I 18:21:52.097 NotebookApp] 302 GET /tree (10.139.7.108) 1.07ms
+[W 18:21:52.129 NotebookApp] 404 GET /wcd/system.xml (10.139.7.108) 1.79ms referer=None
+[W 18:21:52.243 NotebookApp] 404 GET /js/Device.js (10.139.7.108) 1.67ms referer=None
+[I 18:21:52.349 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:21:52.376 NotebookApp] 404 GET /ptz.htm (10.139.7.108) 1.85ms referer=None
+[I 18:21:52.462 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[W 18:21:52.483 NotebookApp] 404 GET /admin/login.jsp (10.139.7.108) 2.06ms referer=None
+[I 18:21:52.534 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:21:52.557 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[I 18:21:52.656 NotebookApp] Malformed HTTP message from 10.139.7.108: Malformed HTTP version in HTTP Request-Line: 'Secure-HTTP/1.4'
+[W 18:21:52.698 NotebookApp] 404 GET /properties/description.dhtml (10.139.7.108) 2.55ms referer=None
+[W 18:21:52.706 NotebookApp] 404 GET /login.html (10.139.7.108) 2.94ms referer=None
+[I 18:21:52.756 NotebookApp] 302 GET / (10.139.7.108) 0.69ms
+[W 18:21:52.805 NotebookApp] 404 GET /properties/configuration.php?tab=Status (10.139.7.108) 2.66ms referer=None
+[W 18:21:52.816 NotebookApp] 404 GET /index.html (10.139.7.108) 2.01ms referer=None
+[W 18:21:52.855 NotebookApp] 404 GET /admin_ui/mas/ent/login.html (10.139.7.108) 2.03ms referer=None
+[W 18:21:52.915 NotebookApp] 404 GET /header.php?tab=status (10.139.7.108) 2.32ms referer=None
+[W 18:21:52.924 NotebookApp] 404 GET /MSWSMTP/Common/Authentication/Logon.aspx (10.139.7.108) 1.85ms referer=None
+[I 18:21:52.981 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:21:53.038 NotebookApp] 302 GET / (10.139.7.108) 0.51ms
+[I 18:21:53.055 NotebookApp] 302 GET / (10.139.7.108) 0.92ms
+[W 18:21:53.157 NotebookApp] 404 GET /xmldata?item=All (10.139.7.108) 1.51ms referer=None
+[I 18:21:53.170 NotebookApp] 302 GET // (10.139.7.108) 0.61ms
+[W 18:21:53.223 NotebookApp] 404 GET /sitemap.xml (10.139.7.108) 2.46ms referer=None
+[W 18:21:53.265 NotebookApp] 404 GET /commoncgi/servlet/CCGIServlet?ApHost=PDT_InterScan_NT&CGIAlias=PDT_InterScan_NT&File=logout.htm (10.139.7.108) 2.69ms referer=None
+[I 18:21:53.267 NotebookApp] 302 GET / (10.139.7.108) 0.60ms
+[W 18:21:53.328 NotebookApp] 404 GET /.cobalt (10.139.7.108) 1.50ms referer=None
+[I 18:21:53.375 NotebookApp] 302 GET / (10.139.7.108) 0.38ms
+[I 18:21:53.375 NotebookApp] Malformed HTTP message from 10.139.7.108: Malformed HTTP version in HTTP Request-Line: 'request'
+[W 18:21:53.438 NotebookApp] 404 GET /admin.back (10.139.7.108) 1.96ms referer=None
+[W 18:21:53.479 NotebookApp] 404 GET http://rfi.nessus.org/check_proxy.html (10.139.7.108) 2.78ms referer=None
+[W 18:21:53.482 NotebookApp] 404 GET /intruvert/jsp/admin/Login.jsp (10.139.7.108) 1.99ms referer=None
+[W 18:21:53.549 NotebookApp] 404 GET /file (10.139.7.108) 2.22ms referer=None
+[I 18:21:53.613 NotebookApp] 302 GET / (10.139.7.108) 0.78ms
+[I 18:21:53.614 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:21:53.672 NotebookApp] 404 GET /wavemaster.internal (10.139.7.108) 2.66ms referer=None
+[I 18:21:53.734 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[W 18:21:53.737 NotebookApp] 404 GET /Home.do (10.139.7.108) 2.67ms referer=None
+[I 18:21:53.780 NotebookApp] 302 GET / (10.139.7.108) 0.74ms
+[I 18:21:53.842 NotebookApp] 302 GET /tree (10.139.7.108) 1.00ms
+[I 18:21:53.852 NotebookApp] Malformed HTTP message from 10.139.7.108: Malformed HTTP request line
+[W 18:21:53.896 NotebookApp] 405 XOMLIO / (10.139.7.108) 0.84ms referer=None
+[I 18:21:53.947 NotebookApp] Malformed HTTP message from 10.139.7.108: Malformed HTTP request line
+[I 18:21:55.262 NotebookApp] 302 GET / (10.139.7.108) 0.86ms
+[W 18:21:55.366 NotebookApp] 405 OPTIONS / (10.139.7.108) 1.12ms referer=None
+[W 18:21:55.475 NotebookApp] 404 GET /7gRjQnBKYHIX.html (10.139.7.108) 2.58ms referer=None
+[W 18:21:55.564 NotebookApp] 404 GET /7gRjQnBKYHIX.cgi (10.139.7.108) 2.71ms referer=None
+[W 18:21:55.672 NotebookApp] 404 GET /7gRjQnBKYHIX.sh (10.139.7.108) 1.97ms referer=None
+[W 18:21:55.788 NotebookApp] 404 GET /7gRjQnBKYHIX.pl (10.139.7.108) 2.59ms referer=None
+[W 18:21:55.902 NotebookApp] 404 GET /7gRjQnBKYHIX.inc (10.139.7.108) 4.14ms referer=None
+[W 18:21:56.017 NotebookApp] 404 GET /7gRjQnBKYHIX.shtml (10.139.7.108) 2.75ms referer=None
+[W 18:21:56.135 NotebookApp] 404 GET /7gRjQnBKYHIX.asp (10.139.7.108) 3.61ms referer=None
+[W 18:21:56.256 NotebookApp] 404 GET /7gRjQnBKYHIX.php (10.139.7.108) 2.13ms referer=None
+[W 18:21:56.374 NotebookApp] 404 GET /7gRjQnBKYHIX.php3 (10.139.7.108) 1.77ms referer=None
+[W 18:21:56.480 NotebookApp] 404 GET /7gRjQnBKYHIX.cfm (10.139.7.108) 2.18ms referer=None
+[W 18:21:56.574 NotebookApp] 404 GET /cgi-bin/7gRjQnBKYHIX.html (10.139.7.108) 2.12ms referer=None
+[W 18:21:56.680 NotebookApp] 404 GET /cgi-bin/7gRjQnBKYHIX.cgi (10.139.7.108) 1.85ms referer=None
+[W 18:21:56.785 NotebookApp] 404 GET /cgi-bin/7gRjQnBKYHIX.sh (10.139.7.108) 1.87ms referer=None
+[W 18:21:56.907 NotebookApp] 404 GET /cgi-bin/7gRjQnBKYHIX.pl (10.139.7.108) 1.82ms referer=None
+[W 18:21:56.998 NotebookApp] 404 GET /cgi-bin/7gRjQnBKYHIX.inc (10.139.7.108) 2.01ms referer=None
+[W 18:21:57.103 NotebookApp] 404 GET /cgi-bin/7gRjQnBKYHIX.shtml (10.139.7.108) 2.22ms referer=None
+[W 18:21:57.253 NotebookApp] 404 GET /cgi-bin/7gRjQnBKYHIX.asp (10.139.7.108) 5.50ms referer=None
+[W 18:21:57.348 NotebookApp] 404 GET /cgi-bin/7gRjQnBKYHIX.php (10.139.7.108) 1.79ms referer=None
+[W 18:21:57.446 NotebookApp] 404 GET /cgi-bin/7gRjQnBKYHIX.php3 (10.139.7.108) 2.00ms referer=None
+[W 18:21:57.542 NotebookApp] 404 GET /cgi-bin/7gRjQnBKYHIX.cfm (10.139.7.108) 1.51ms referer=None
+[W 18:21:57.634 NotebookApp] 404 GET /scripts/7gRjQnBKYHIX.html (10.139.7.108) 1.98ms referer=None
+[W 18:21:57.751 NotebookApp] 404 GET /scripts/7gRjQnBKYHIX.cgi (10.139.7.108) 2.25ms referer=None
+[W 18:21:57.853 NotebookApp] 404 GET /scripts/7gRjQnBKYHIX.sh (10.139.7.108) 1.96ms referer=None
+[W 18:21:57.953 NotebookApp] 404 GET /scripts/7gRjQnBKYHIX.pl (10.139.7.108) 3.36ms referer=None
+[W 18:21:58.053 NotebookApp] 404 GET /scripts/7gRjQnBKYHIX.inc (10.139.7.108) 1.63ms referer=None
+[W 18:21:58.162 NotebookApp] 404 GET /scripts/7gRjQnBKYHIX.shtml (10.139.7.108) 2.00ms referer=None
+[W 18:21:58.282 NotebookApp] 404 GET /scripts/7gRjQnBKYHIX.asp (10.139.7.108) 2.05ms referer=None
+[W 18:21:58.383 NotebookApp] 404 GET /scripts/7gRjQnBKYHIX.php (10.139.7.108) 2.24ms referer=None
+[W 18:21:58.503 NotebookApp] 404 GET /scripts/7gRjQnBKYHIX.php3 (10.139.7.108) 2.27ms referer=None
+[W 18:21:58.598 NotebookApp] 404 GET /scripts/7gRjQnBKYHIX.cfm (10.139.7.108) 1.76ms referer=None
+[W 18:21:58.749 NotebookApp] 404 GET /servlet/com.newatlanta.servletexec.JSP10Servlet/..%5c..%5cglobal.asa (10.139.7.108) 2.82ms referer=None
+[I 18:21:58.869 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[I 18:21:59.094 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[W 18:21:59.200 NotebookApp] 404 GET /cas/login (10.139.7.108) 2.15ms referer=None
+[W 18:21:59.319 NotebookApp] 404 GET /auth/login (10.139.7.108) 2.08ms referer=None
+[I 18:21:59.601 NotebookApp] 302 GET / (10.139.7.108) 1.00ms
+[W 18:21:59.717 NotebookApp] 404 GET /about (10.139.7.108) 2.62ms referer=None
+[I 18:21:59.832 NotebookApp] 302 GET / (10.139.7.108) 0.88ms
+[I 18:21:59.935 NotebookApp] 302 GET // (10.139.7.108) 0.71ms
+[I 18:22:00.069 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[W 18:22:00.186 NotebookApp] 404 GET /index.jsp (10.139.7.108) 2.08ms referer=None
+[W 18:22:00.309 NotebookApp] 404 GET /index.JSP (10.139.7.108) 2.85ms referer=None
+[I 18:22:00.394 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[W 18:22:00.468 NotebookApp] 404 GET /rcladmin/js/art_i18n/nls/art_i18n.js (10.139.7.108) 2.01ms referer=None
+[I 18:22:00.581 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[W 18:22:00.682 NotebookApp] 404 GET /reporter/client.jsp (10.139.7.108) 1.89ms referer=None
+[I 18:22:00.799 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[W 18:22:00.917 NotebookApp] 404 GET /CSCOnm/servlet/login/login.jsp (10.139.7.108) 2.90ms referer=None
+[I 18:22:01.058 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[I 18:22:01.166 NotebookApp] 302 GET / (10.139.7.108) 0.67ms
+[I 18:22:01.273 NotebookApp] 302 GET /tree (10.139.7.108) 0.87ms
+[I 18:22:01.512 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[W 18:22:01.602 NotebookApp] 404 GET /CFIDE/administrator/settings/version.cfm (10.139.7.108) 1.87ms referer=None
+[I 18:22:01.714 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[W 18:22:01.884 NotebookApp] 404 GET /qwe/qwe/index.html (10.139.7.108) 1.80ms referer=None
+[W 18:22:01.993 NotebookApp] 404 GET /interscan/cgi-bin/FtpSave.dll?I'm%20Here (10.139.7.108) 2.02ms referer=None
+[W 18:22:02.083 NotebookApp] 404 GET /nessus345678.html (10.139.7.108) 1.11ms referer=None
+[I 18:22:02.202 NotebookApp] 302 GET / (10.139.7.108) 0.35ms
+[W 18:22:02.294 NotebookApp] 404 GET /photo/lang/ENG.js (10.139.7.108) 2.22ms referer=None
+[I 18:22:02.398 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:02.541 NotebookApp] 302 GET / (10.139.7.108) 0.60ms
+[I 18:22:02.582 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:22:02.641 NotebookApp] 302 GET / (10.139.7.108) 1.08ms
+[W 18:22:02.676 NotebookApp] 404 GET /system/console?version=1.5 (10.139.7.108) 3.27ms referer=None
+[I 18:22:02.747 NotebookApp] 302 GET /tree (10.139.7.108) 1.17ms
+[W 18:22:02.773 NotebookApp] 404 GET /images/login_top.gif (10.139.7.108) 2.27ms referer=None
+[W 18:22:02.850 NotebookApp] 404 GET /images/logon_merge.gif (10.139.7.108) 1.79ms referer=None
+[I 18:22:02.913 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:22:02.970 NotebookApp] 302 GET / (10.139.7.108) 1.08ms
+[I 18:22:02.991 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[I 18:22:03.030 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[W 18:22:03.052 NotebookApp] 404 GET /nps/servlet/portalservice (10.139.7.108) 1.78ms referer=None
+[W 18:22:03.093 NotebookApp] 404 GET /gateway/login (10.139.7.108) 2.07ms referer=None
+[I 18:22:03.138 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[I 18:22:03.167 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:22:03.196 NotebookApp] 302 GET / (10.139.7.108) 0.73ms
+[W 18:22:03.226 NotebookApp] 404 GET /userportal/webpages/myaccount/login.jsp (10.139.7.108) 2.80ms referer=None
+[I 18:22:03.267 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[I 18:22:03.270 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:03.303 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:03.338 NotebookApp] 404 GET /login.jsp (10.139.7.108) 2.01ms referer=None
+[W 18:22:03.342 NotebookApp] 404 GET /hazelcast/rest/cluster (10.139.7.108) 2.10ms referer=None
+[W 18:22:03.372 NotebookApp] 404 GET /../../../../../../../../../../../../windows/win.ini (10.139.7.108) 2.05ms referer=None
+[I 18:22:03.405 NotebookApp] 302 GET / (10.139.7.108) 0.98ms
+[W 18:22:03.429 NotebookApp] 404 GET /../../../../../../../../../../../../winnt/win.ini (10.139.7.108) 1.94ms referer=None
+[I 18:22:03.453 NotebookApp] 302 GET /btmui/ (10.139.7.108) 0.70ms
+[W 18:22:03.483 NotebookApp] 404 GET ../../../../../../../../../../../../windows/win.ini (10.139.7.108) 2.14ms referer=None
+[I 18:22:03.521 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:03.571 NotebookApp] 404 GET ../../../../../../../../../../../../winnt/win.ini (10.139.7.108) 1.97ms referer=None
+[W 18:22:03.612 NotebookApp] 404 GET /v1sh4lrf.asp?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.14ms referer=None
+[W 18:22:03.660 NotebookApp] 404 GET ..\..\..\..\..\..\..\..\..\..\windows\win.ini (10.139.7.108) 1.96ms referer=None
+[W 18:22:03.695 NotebookApp] 404 GET /v1sh4lrf.asp?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 1.78ms referer=None
+[W 18:22:03.741 NotebookApp] 404 GET ..\..\..\..\..\..\..\..\..\..\winnt\win.ini (10.139.7.108) 1.99ms referer=None
+[W 18:22:03.783 NotebookApp] 404 GET /v1sh4lrf.aspx?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.04ms referer=None
+[W 18:22:03.830 NotebookApp] 404 GET /..\..\..\..\..\..\..\..\..\..\windows\win.ini (10.139.7.108) 1.84ms referer=None
+[W 18:22:03.876 NotebookApp] 404 GET /v1sh4lrf.aspx?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.39ms referer=None
+[W 18:22:03.934 NotebookApp] 404 GET /..\..\..\..\..\..\..\..\..\..\winnt\win.ini (10.139.7.108) 1.76ms referer=None
+[W 18:22:03.976 NotebookApp] 404 GET /v1sh4lrf.pl?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.69ms referer=None
+[W 18:22:04.035 NotebookApp] 404 GET /%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cwindows%5cwin.ini (10.139.7.108) 2.01ms referer=None
+[W 18:22:04.088 NotebookApp] 404 GET /v1sh4lrf.pl?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 1.75ms referer=None
+[W 18:22:04.142 NotebookApp] 404 GET /%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cwinnt%5cwin.ini (10.139.7.108) 1.96ms referer=None
+[W 18:22:04.202 NotebookApp] 404 GET /v1sh4lrf.cgi?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 1.27ms referer=None
+[W 18:22:04.258 NotebookApp] 404 GET /%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cwindows%5cwin%2eini (10.139.7.108) 1.83ms referer=None
+[W 18:22:04.393 NotebookApp] 404 GET /%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cwinnt%5cwin%2eini (10.139.7.108) 1.56ms referer=None
+[W 18:22:04.512 NotebookApp] 404 GET /%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fwindows%2fwin.ini (10.139.7.108) 1.93ms referer=None
+[W 18:22:04.633 NotebookApp] 404 GET /%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fwinnt%2fwin.ini (10.139.7.108) 3.75ms referer=None
+[W 18:22:04.754 NotebookApp] 404 GET /.|./.|./.|./.|./.|./.|./.|./.|./.|./.|./.|./windows/win.ini (10.139.7.108) 2.21ms referer=None
+[W 18:22:04.858 NotebookApp] 404 GET /.|./.|./.|./.|./.|./.|./.|./.|./.|./.|./.|./winnt/win.ini (10.139.7.108) 1.97ms referer=None
+[W 18:22:04.974 NotebookApp] 404 GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/windows/win.ini (10.139.7.108) 1.87ms referer=None
+[W 18:22:05.074 NotebookApp] 404 GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/winnt/win.ini (10.139.7.108) 2.57ms referer=None
+[W 18:22:05.151 NotebookApp] 404 GET /%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\windows\win.ini (10.139.7.108) 2.06ms referer=None
+[W 18:22:05.226 NotebookApp] 404 GET /%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\%2e%2e\winnt\win.ini (10.139.7.108) 2.17ms referer=None
+[W 18:22:05.297 NotebookApp] 404 GET /v1sh4lrf.cgi?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.32ms referer=None
+[W 18:22:05.303 NotebookApp] 404 GET /%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5cwindows%5cwin.ini (10.139.7.108) 1.81ms referer=None
+[W 18:22:05.388 NotebookApp] 404 GET /v1sh4lrf.exe?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.34ms referer=None
+[W 18:22:05.397 NotebookApp] 404 GET %5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5c%2e%2e%5cwinnt%5cwin.ini (10.139.7.108) 2.06ms referer=None
+[W 18:22:05.481 NotebookApp] 404 GET /v1sh4lrf.exe?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.23ms referer=None
+[W 18:22:05.488 NotebookApp] 404 GET /.../.../.../.../.../.../.../.../.../windows/win.ini (10.139.7.108) 2.09ms referer=None
+[W 18:22:05.584 NotebookApp] 404 GET /v1sh4lrf.cfm?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.05ms referer=None
+[W 18:22:05.589 NotebookApp] 404 GET /.../.../.../.../.../.../.../.../.../winnt/win.ini (10.139.7.108) 1.96ms referer=None
+[W 18:22:05.688 NotebookApp] 404 GET /v1sh4lrf.cfm?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.61ms referer=None
+[W 18:22:05.691 NotebookApp] 404 GET /...\...\...\...\...\...\...\...\...\windows\win.ini (10.139.7.108) 1.94ms referer=None
+[W 18:22:05.724 NotebookApp] 404 GET /.svn/entries (10.139.7.108) 1.33ms referer=None
+[W 18:22:05.797 NotebookApp] 404 GET /v1sh4lrf.html?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 1.69ms referer=None
+[W 18:22:05.801 NotebookApp] 404 GET /...\...\...\...\...\...\...\...\...\winnt\win.ini (10.139.7.108) 2.61ms referer=None
+[I 18:22:05.840 NotebookApp] 302 GET / (10.139.7.108) 0.37ms
+[W 18:22:05.882 NotebookApp] 404 GET /v1sh4lrf.html?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.27ms referer=None
+[W 18:22:05.885 NotebookApp] 404 GET /..../..../..../..../..../..../..../..../..../windows/win.ini (10.139.7.108) 2.29ms referer=None
+[W 18:22:05.915 NotebookApp] 404 GET /dwr/index.html (10.139.7.108) 1.85ms referer=None
+[W 18:22:05.972 NotebookApp] 404 GET /v1sh4lrf.jsp?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 1.70ms referer=None
+[W 18:22:05.988 NotebookApp] 404 GET /..../..../..../..../..../..../..../..../..../winnt/win.ini (10.139.7.108) 2.04ms referer=None
+[I 18:22:06.012 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[W 18:22:06.054 NotebookApp] 404 GET /v1sh4lrf.jsp?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.01ms referer=None
+[W 18:22:06.072 NotebookApp] 404 GET /....\....\....\....\....\....\....\....\....\windows\win.ini (10.139.7.108) 1.96ms referer=None
+[W 18:22:06.103 NotebookApp] 404 GET /ui/login.action (10.139.7.108) 2.76ms referer=None
+[W 18:22:06.166 NotebookApp] 404 GET /v1sh4lrf.php?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 3.19ms referer=None
+[W 18:22:06.172 NotebookApp] 404 GET /....\....\....\....\....\....\....\....\....\winnt\win.ini (10.139.7.108) 2.25ms referer=None
+[I 18:22:06.218 NotebookApp] 302 GET / (10.139.7.108) 0.78ms
+[W 18:22:06.280 NotebookApp] 404 GET /v1sh4lrf.php?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 3.74ms referer=None
+[W 18:22:06.283 NotebookApp] 404 GET /././././././../../../../../windows/win.ini (10.139.7.108) 1.80ms referer=None
+[I 18:22:06.322 NotebookApp] 302 GET /login/ (10.139.7.108) 0.77ms
+[W 18:22:06.377 NotebookApp] 404 GET /v1sh4lrf.php3?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.61ms referer=None
+[W 18:22:06.393 NotebookApp] 404 GET /././././././../../../../../winnt/win.ini (10.139.7.108) 1.82ms referer=None
+[I 18:22:06.415 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[W 18:22:06.445 NotebookApp] 404 GET /v1sh4lrf.php3?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 1.22ms referer=None
+[W 18:22:06.461 NotebookApp] 404 GET .\.\.\.\.\.\.\.\.\.\/windows/win.ini (10.139.7.108) 1.88ms referer=None
+[I 18:22:06.478 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:06.513 NotebookApp] 404 GET /v1sh4lrf.cfc?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.59ms referer=None
+[W 18:22:06.537 NotebookApp] 404 GET .\.\.\.\.\.\.\.\.\.\/winnt/win.ini (10.139.7.108) 1.91ms referer=None
+[I 18:22:06.566 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:06.608 NotebookApp] 404 GET /v1sh4lrf.cfc?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.07ms referer=None
+[W 18:22:06.633 NotebookApp] 404 GET /nessus\..\..\..\..\..\..\windows\win.ini (10.139.7.108) 1.87ms referer=None
+[W 18:22:06.706 NotebookApp] 404 GET /v1sh4lrf.nsf?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.04ms referer=None
+[I 18:22:06.718 NotebookApp] 302 GET / (10.139.7.108) 0.37ms
+[W 18:22:06.723 NotebookApp] 404 GET /nessus\..\..\..\..\..\..\winnt\win.ini (10.139.7.108) 1.83ms referer=None
+[I 18:22:06.759 NotebookApp] 302 GET / (10.139.7.108) 0.90ms
+[W 18:22:06.807 NotebookApp] 404 GET /v1sh4lrf.nsf?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 4.26ms referer=None
+[W 18:22:06.821 NotebookApp] 404 GET /com/novell/webaccess/WebAccessUninstall.ini (10.139.7.108) 3.51ms referer=None
+[W 18:22:06.823 NotebookApp] 400 GET /%80../%80../%80../%80../%80../%80../windows/win.ini (10.139.7.108): Invalid unicode in url: b'/\x80../\x80../\x80../\x80../\x80../\x80../windows/win.ini'
+[W 18:22:06.825 NotebookApp] 400 GET /%80../%80../%80../%80../%80../%80../windows/win.ini (10.139.7.108) 2.37ms referer=None
+[I 18:22:06.848 NotebookApp] 302 GET /ui/ (10.139.7.108) 0.85ms
+[W 18:22:06.907 NotebookApp] 404 GET /v1sh4lrf.dll?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 1.44ms referer=None
+[I 18:22:06.930 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[W 18:22:06.933 NotebookApp] 400 GET /%80../%80../%80../%80../%80../%80../winnt/win.ini (10.139.7.108): Invalid unicode in url: b'/\x80../\x80../\x80../\x80../\x80../\x80../winnt/win.ini'
+[W 18:22:06.935 NotebookApp] 400 GET /%80../%80../%80../%80../%80../%80../winnt/win.ini (10.139.7.108) 3.18ms referer=None
+[I 18:22:06.959 NotebookApp] 302 GET /ui/ (10.139.7.108) 0.49ms
+[W 18:22:07.037 NotebookApp] 404 GET /v1sh4lrf.dll?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.09ms referer=None
+[W 18:22:07.041 NotebookApp] 404 GET /SE/appInfo.xml (10.139.7.108) 1.80ms referer=None
+[W 18:22:07.050 NotebookApp] 400 GET /%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./windows/win.ini (10.139.7.108): Invalid unicode in url: b'/\xc0.\xc0./\xc0.\xc0./\xc0.\xc0./\xc0.\xc0./\xc0.\xc0./windows/win.in'
+[W 18:22:07.052 NotebookApp] 400 GET /%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./windows/win.ini (10.139.7.108) 2.45ms referer=None
+[I 18:22:07.073 NotebookApp] 302 GET /recoveryconsole/ (10.139.7.108) 0.41ms
+[W 18:22:07.146 NotebookApp] 404 GET /v1sh4lrf.fts?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 1.88ms referer=None
+[W 18:22:07.155 NotebookApp] 404 GET /SE/EMC_SE.swf (10.139.7.108) 2.45ms referer=None
+[W 18:22:07.156 NotebookApp] 400 GET /%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./winnt/win.ini (10.139.7.108): Invalid unicode in url: b'/\xc0.\xc0./\xc0.\xc0./\xc0.\xc0./\xc0.\xc0./\xc0.\xc0./winnt/win.ini'
+[W 18:22:07.158 NotebookApp] 400 GET /%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./%c0.%c0./winnt/win.ini (10.139.7.108) 2.20ms referer=None
+[W 18:22:07.180 NotebookApp] 404 GET /Wsusadmin/Errors/BrowserSettings.aspx (10.139.7.108) 1.77ms referer=None
+[W 18:22:07.233 NotebookApp] 404 GET /v1sh4lrf.fts?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 1.10ms referer=None
+[W 18:22:07.236 NotebookApp] 404 GET /SE/EMC_SE.swf (10.139.7.108) 1.03ms referer=None
+[W 18:22:07.237 NotebookApp] 400 GET /%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/windows/win.ini (10.139.7.108): Invalid unicode in url: b'/\xc0.\xc0./\xc0.\xc0./\xc0.\xc0./\xc0.\xc0./windows/win.ini'
+[W 18:22:07.238 NotebookApp] 400 GET /%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/windows/win.ini (10.139.7.108) 1.27ms referer=None
+[I 18:22:07.275 NotebookApp] 302 GET / (10.139.7.108) 0.46ms
+[W 18:22:07.331 NotebookApp] 404 GET /v1sh4lrf.jspa?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.02ms referer=None
+[I 18:22:07.353 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:07.354 NotebookApp] 400 GET /%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/winnt/win.ini (10.139.7.108): Invalid unicode in url: b'/\xc0.\xc0./\xc0.\xc0./\xc0.\xc0./\xc0.\xc0./winnt/win.ini'
+[W 18:22:07.356 NotebookApp] 400 GET /%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/%c0%2e%c0%2e/winnt/win.ini (10.139.7.108) 2.38ms referer=None
+[W 18:22:07.381 NotebookApp] 404 GET /cwhp/CSMSDesktop/about.jsp (10.139.7.108) 2.01ms referer=None
+[W 18:22:07.447 NotebookApp] 404 GET /v1sh4lrf.jspa?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.11ms referer=None
+[W 18:22:07.465 NotebookApp] 404 GET //login/login (10.139.7.108) 2.01ms referer=None
+[W 18:22:07.477 NotebookApp] 404 GET /%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/windows/win.ini (10.139.7.108) 1.90ms referer=None
+[W 18:22:07.507 NotebookApp] 404 GET /CSCOnm/servlet/login/login.jsp (10.139.7.108) 1.97ms referer=None
+[W 18:22:07.576 NotebookApp] 404 GET /v1sh4lrf.kspx?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 3.45ms referer=None
+[I 18:22:07.588 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[W 18:22:07.603 NotebookApp] 404 GET /%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/winnt/win.ini (10.139.7.108) 2.29ms referer=None
+[I 18:22:07.702 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:07.766 NotebookApp] 404 GET /v1sh4lrf.kspx?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 1.86ms referer=None
+[W 18:22:07.768 NotebookApp] 404 GET /.htaccess.old (10.139.7.108) 1.89ms referer=None
+[W 18:22:07.771 NotebookApp] 404 GET /scripts/fake.cgi?arg=/dir/../../../../../../../../../../../windows/win.ini (10.139.7.108) 1.82ms referer=None
+[W 18:22:07.822 NotebookApp] 404 GET /content/n5HvPRXMtb.mp3 (10.139.7.108) 1.86ms referer=None
+[W 18:22:07.870 NotebookApp] 404 GET /scripts/fake.cgi?arg=/dir/../../../../../../../../../../../winnt/win.ini (10.139.7.108) 1.85ms referer=None
+[W 18:22:07.873 NotebookApp] 404 GET /v1sh4lrf.mscgi?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 1.83ms referer=None
+[W 18:22:07.877 NotebookApp] 404 GET /.htaccess.bak (10.139.7.108) 1.74ms referer=None
+[I 18:22:07.917 NotebookApp] 302 GET / (10.139.7.108) 0.76ms
+[W 18:22:07.960 NotebookApp] 404 GET /scripts/fake.cgi?arg=/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/windows/win.ini (10.139.7.108) 2.02ms referer=None
+[W 18:22:07.963 NotebookApp] 404 GET /.htaccess~ (10.139.7.108) 1.54ms referer=None
+[W 18:22:07.965 NotebookApp] 404 GET /v1sh4lrf.mscgi?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 1.63ms referer=None
+[W 18:22:08.005 NotebookApp] 404 GET /images (10.139.7.108) 1.40ms referer=None
+[W 18:22:08.055 NotebookApp] 404 GET /scripts/fake.cgi?arg=/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/winnt/win.ini (10.139.7.108) 1.26ms referer=None
+[W 18:22:08.060 NotebookApp] 404 GET /v1sh4lrf.do?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.07ms referer=None
+[W 18:22:08.063 NotebookApp] 404 GET /.htaccess.copy (10.139.7.108) 1.96ms referer=None
+[I 18:22:08.103 NotebookApp] 302 GET / (10.139.7.108) 0.46ms
+[W 18:22:08.147 NotebookApp] 404 GET /../../../../../../../../../../../../etc/passwd (10.139.7.108) 1.94ms referer=None
+[W 18:22:08.151 NotebookApp] 404 GET /v1sh4lrf.do?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.01ms referer=None
+[W 18:22:08.154 NotebookApp] 404 GET /.htaccess.tmp (10.139.7.108) 1.90ms referer=None
+[W 18:22:08.202 NotebookApp] 403 POST /webui/apps/sdcss (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:22:08.203 NotebookApp] 403 POST /webui/apps/sdcss (10.139.7.108) 1.76ms referer=None
+[W 18:22:08.249 NotebookApp] 404 GET /./../../../../../../../../../../../etc/passwd (10.139.7.108) 1.97ms referer=None
+[W 18:22:08.253 NotebookApp] 404 GET /v1sh4lrf.htm?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 1.54ms referer=None
+[W 18:22:08.260 NotebookApp] 404 GET /..htaccess.swp (10.139.7.108) 1.79ms referer=None
+[I 18:22:08.315 NotebookApp] 302 GET / (10.139.7.108) 0.51ms
+[W 18:22:08.353 NotebookApp] 404 GET //../../../../../../../../../../../../etc/passwd (10.139.7.108) 2.41ms referer=None
+[W 18:22:08.357 NotebookApp] 404 GET /v1sh4lrf.htm?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.02ms referer=None
+[W 18:22:08.360 NotebookApp] 404 GET /.htaccess.1 (10.139.7.108) 1.91ms referer=None
+[W 18:22:08.412 NotebookApp] 403 POST /jsonrpc (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:22:08.414 NotebookApp] 403 POST /jsonrpc (10.139.7.108) 2.55ms referer=None
+[W 18:22:08.453 NotebookApp] 404 GET /..../..../..../..../..../..../..../..../..../..../..../..../etc/passwd (10.139.7.108) 1.97ms referer=None
+[W 18:22:08.456 NotebookApp] 404 GET /v1sh4lrf.idc?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.14ms referer=None
+[W 18:22:08.459 NotebookApp] 404 GET /.htaccess.~1~ (10.139.7.108) 1.77ms referer=None
+[I 18:22:08.532 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[W 18:22:08.571 NotebookApp] 404 GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd (10.139.7.108) 1.81ms referer=None
+[W 18:22:08.574 NotebookApp] 404 GET /v1sh4lrf.idc?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.00ms referer=None
+[I 18:22:08.580 NotebookApp] 302 GET / (10.139.7.108) 0.69ms
+[I 18:22:08.646 NotebookApp] 302 GET // (10.139.7.108) 0.70ms
+[W 18:22:08.689 NotebookApp] 404 GET /..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd (10.139.7.108) 2.65ms referer=None
+[W 18:22:08.698 NotebookApp] 404 GET /v1sh4lrf.x?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 2.68ms referer=None
+[W 18:22:08.701 NotebookApp] 404 GET /xampp/index.php (10.139.7.108) 2.01ms referer=None
+[I 18:22:08.762 NotebookApp] 302 GET /tsp// (10.139.7.108) 0.64ms
+[W 18:22:08.805 NotebookApp] 404 GET /.%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2f..%2fetc/passwd (10.139.7.108) 1.83ms referer=None
+[W 18:22:08.808 NotebookApp] 404 GET /v1sh4lrf.x?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 1.87ms referer=None
+[I 18:22:08.811 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:08.852 NotebookApp] 302 GET /ap// (10.139.7.108) 0.68ms
+[W 18:22:08.912 NotebookApp] 404 GET /%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc/passwd (10.139.7.108) 2.27ms referer=None
+[W 18:22:08.915 NotebookApp] 404 GET /<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 1.95ms referer=None
+[W 18:22:08.918 NotebookApp] 404 GET /sabin/SiteAdmin.htm (10.139.7.108) 1.98ms referer=None
+[I 18:22:08.956 NotebookApp] 302 GET /ssp// (10.139.7.108) 0.87ms
+[W 18:22:09.022 NotebookApp] 404 GET <script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 1.73ms referer=None
+[W 18:22:09.025 NotebookApp] 404 GET /././././././../../../../../etc/passwd (10.139.7.108) 2.59ms referer=None
+[I 18:22:09.026 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[I 18:22:09.082 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:09.145 NotebookApp] 404 GET /%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/%uff0e%uff0e/etc/passwd (10.139.7.108) 2.27ms referer=None
+[W 18:22:09.147 NotebookApp] 404 GET /servlet/webacc?error=webacc (10.139.7.108) 2.23ms referer=None
+[I 18:22:09.149 NotebookApp] 302 GET /?<script>document.cookie=%22testwazb=9315;%22</script> (10.139.7.108) 0.77ms
+[W 18:22:09.203 NotebookApp] 404 GET //perl?-v (10.139.7.108) 1.92ms referer=None
+[I 18:22:09.269 NotebookApp] 302 GET /tree?%3Cscript%3Edocument.cookie=%2522testwazb=9315%3B%2522%3C/script%3E (10.139.7.108) 0.94ms
+[W 18:22:09.271 NotebookApp] 404 GET /scripts/fake.cgi?arg=/dir/../../../../../../etc/passwd (10.139.7.108) 1.73ms referer=None
+[I 18:22:09.292 NotebookApp] 302 GET / (10.139.7.108) 0.73ms
+[W 18:22:09.382 NotebookApp] 404 GET /scripts/fake.cgi?arg=/dir/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd (10.139.7.108) 2.03ms referer=None
+[W 18:22:09.385 NotebookApp] 404 GET //perl.exe?-v (10.139.7.108) 2.00ms referer=None
+[I 18:22:09.402 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[W 18:22:09.487 NotebookApp] 404 GET /<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.45ms referer=None
+[I 18:22:09.497 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:09.504 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:09.506 NotebookApp] 302 GET / (10.139.7.108) 0.69ms
+[W 18:22:09.599 NotebookApp] 404 GET <meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 2.32ms referer=None
+[W 18:22:09.605 NotebookApp] 404 GET ..\..\..\..\..\..\windows\win.ini (10.139.7.108) 1.95ms referer=None
+[I 18:22:09.613 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[I 18:22:09.722 NotebookApp] 302 GET /?<meta%20http-equiv=Set-Cookie%20content=%22testwazb=9315%22> (10.139.7.108) 0.96ms
+[I 18:22:09.739 NotebookApp] 302 GET / (10.139.7.108) 0.83ms
+[W 18:22:09.743 NotebookApp] 404 GET ..\..\..\..\..\..\winnt\win.ini (10.139.7.108) 3.05ms referer=None
+[I 18:22:09.746 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[I 18:22:09.844 NotebookApp] 302 GET /tree?%3Cmeta%2520http-equiv=Set-Cookie%2520content=%2522testwazb=9315%2522%3E (10.139.7.108) 1.24ms
+[W 18:22:09.852 NotebookApp] 404 GET /niet1111174474 (10.139.7.108) 3.16ms referer=None
+[I 18:22:09.860 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:22:09.872 NotebookApp] 302 GET /tree (10.139.7.108) 0.96ms
+[W 18:22:09.971 NotebookApp] 404 GET /niet1941151534. (10.139.7.108) 1.98ms referer=None
+[W 18:22:09.973 NotebookApp] 404 GET /login.php (10.139.7.108) 1.65ms referer=None
+[I 18:22:09.988 NotebookApp] 302 GET / (10.139.7.108) 0.68ms
+[W 18:22:10.071 NotebookApp] 404 GET /sitemap.xml (10.139.7.108) 2.16ms referer=None
+[W 18:22:10.110 NotebookApp] 404 GET /niet426492952.asp (10.139.7.108) 2.95ms referer=None
+[W 18:22:10.113 NotebookApp] 404 GET /header.php (10.139.7.108) 2.04ms referer=None
+[I 18:22:10.117 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[W 18:22:10.189 NotebookApp] 404 GET /sitemap/sitemap.xml (10.139.7.108) 2.61ms referer=None
+[W 18:22:10.237 NotebookApp] 404 GET /niet1840052546.aspx (10.139.7.108) 2.38ms referer=None
+[W 18:22:10.241 NotebookApp] 404 GET /portal/page/portal/Design_Time_PG/Welcome (10.139.7.108) 2.82ms referer=None
+[I 18:22:10.243 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[W 18:22:10.316 NotebookApp] 404 GET /map/sitemap.xml (10.139.7.108) 1.36ms referer=None
+[I 18:22:10.378 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[W 18:22:10.381 NotebookApp] 404 GET /niet1969509498.html (10.139.7.108) 2.01ms referer=None
+[W 18:22:10.383 NotebookApp] 404 GET /page/portal/Design_Time_PG/Welcome (10.139.7.108) 1.93ms referer=None
+[I 18:22:10.465 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[I 18:22:10.492 NotebookApp] 302 GET / (10.139.7.108) 0.52ms
+[W 18:22:10.509 NotebookApp] 404 GET /niet1688150904.htm (10.139.7.108) 1.60ms referer=None
+[I 18:22:10.518 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:10.578 NotebookApp] 404 GET /cgi-mod/index.cgi (10.139.7.108) 1.90ms referer=None
+[W 18:22:10.649 NotebookApp] 404 GET /portal/pls/portal/PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.36ms referer=None
+[W 18:22:10.652 NotebookApp] 404 GET /niet1806415359.shtm (10.139.7.108) 2.18ms referer=None
+[I 18:22:10.712 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[I 18:22:10.733 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:10.769 NotebookApp] 404 GET /portal/pls/portal/DEV_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.19ms referer=None
+[W 18:22:10.783 NotebookApp] 404 GET /niet1771172937.shtml (10.139.7.108) 2.67ms referer=None
+[W 18:22:10.826 NotebookApp] 404 GET /_vti_bin/shtml.dll/_vti_rpc (10.139.7.108) 2.02ms referer=None
+[W 18:22:10.838 NotebookApp] 404 GET /0aKWIa0v.ashx (10.139.7.108) 2.13ms referer=None
+[W 18:22:10.875 NotebookApp] 404 GET /portal/pls/portal/DEV1_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.03ms referer=None
+[W 18:22:10.915 NotebookApp] 404 GET /niet2074245343.jsp (10.139.7.108) 1.92ms referer=None
+[I 18:22:10.937 NotebookApp] 302 GET / (10.139.7.108) 0.74ms
+[W 18:22:10.943 NotebookApp] 404 GET /8mDPfSe5.aspx (10.139.7.108) 2.24ms referer=None
+[W 18:22:10.988 NotebookApp] 404 GET /portal/pls/portal/DEV2_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.27ms referer=None
+[W 18:22:11.036 NotebookApp] 404 GET /niet1544653165.jspx (10.139.7.108) 1.98ms referer=None
+[W 18:22:11.039 NotebookApp] 404 GET /event/index.do (10.139.7.108) 1.99ms referer=None
+[W 18:22:11.051 NotebookApp] 404 GET /nwmI3uYF.asmx (10.139.7.108) 1.99ms referer=None
+[W 18:22:11.115 NotebookApp] 404 GET /portal/pls/portal/DEV3_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 1.43ms referer=None
+[W 18:22:11.161 NotebookApp] 404 GET /niet239846012.php (10.139.7.108) 2.18ms referer=None
+[W 18:22:11.164 NotebookApp] 404 GET /lSSDZWi4.rem (10.139.7.108) 1.74ms referer=None
+[I 18:22:11.176 NotebookApp] 302 GET / (10.139.7.108) 0.68ms
+[W 18:22:11.251 NotebookApp] 404 GET /portal/pls/portal/DEV4_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 3.75ms referer=None
+[W 18:22:11.307 NotebookApp] 404 GET /niet1601129889.php3 (10.139.7.108) 1.52ms referer=None
+[W 18:22:11.310 NotebookApp] 404 GET /dp/login.xml (10.139.7.108) 3.17ms referer=None
+[W 18:22:11.313 NotebookApp] 404 GET /F_U50RIT.soap (10.139.7.108) 1.79ms referer=None
+[W 18:22:11.446 NotebookApp] 404 GET /niet1728303272.php4 (10.139.7.108) 1.99ms referer=None
+[I 18:22:11.457 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[I 18:22:11.467 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[W 18:22:11.571 NotebookApp] 404 GET /niet2079044155.php5 (10.139.7.108) 2.17ms referer=None
+[W 18:22:11.572 NotebookApp] 404 GET /+CSCOE+/logon.html (10.139.7.108) 1.48ms referer=None
+[I 18:22:11.574 NotebookApp] 302 GET / (10.139.7.108) 0.48ms
+[W 18:22:11.697 NotebookApp] 404 GET /niet907084674.php6 (10.139.7.108) 1.97ms referer=None
+[W 18:22:11.701 NotebookApp] 404 OPTIONS * (10.139.7.108) 2.01ms referer=None
+[I 18:22:11.718 NotebookApp] 302 GET / (10.139.7.108) 0.86ms
+[W 18:22:11.814 NotebookApp] 404 GET /niet1622347719.cfm (10.139.7.108) 2.18ms referer=None
+[I 18:22:11.816 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:11.821 NotebookApp] 404 GET /284kixL_.aspx (10.139.7.108) 0.82ms referer=None
+[W 18:22:11.866 NotebookApp] 404 GET /portal/pls/portal/DEV5_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 1.95ms referer=None
+[I 18:22:11.951 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:11.962 NotebookApp] 302 GET / (10.139.7.108) 0.80ms
+[I 18:22:11.979 NotebookApp] 302 GET / (10.139.7.108) 0.55ms
+[W 18:22:11.982 NotebookApp] 404 GET /portal/pls/portal/DEV6_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.45ms referer=None
+[W 18:22:12.054 NotebookApp] 404 GET /cgi-bin/com5.pl (10.139.7.108) 2.32ms referer=None
+[I 18:22:12.068 NotebookApp] 302 GET / (10.139.7.108) 0.73ms
+[I 18:22:12.086 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[W 18:22:12.090 NotebookApp] 404 GET /portal/pls/portal/DEV7_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.05ms referer=None
+[I 18:22:12.182 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[I 18:22:12.207 NotebookApp] 302 GET /%NETHOOD%/ (10.139.7.108) 0.64ms
+[I 18:22:12.208 NotebookApp] 302 GET /tree (10.139.7.108) 0.84ms
+[W 18:22:12.309 NotebookApp] 404 GET /brightmail/viewLogin.do (10.139.7.108) 1.96ms referer=None
+[I 18:22:12.328 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:12.442 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:22:12.444 NotebookApp] 302 GET /client/ (10.139.7.108) 0.70ms
+[I 18:22:12.460 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[W 18:22:12.554 NotebookApp] 404 GET /qsoap.qap (10.139.7.108) 2.19ms referer=None
+[I 18:22:12.560 NotebookApp] 302 GET / (10.139.7.108) 0.76ms
+[W 18:22:12.571 NotebookApp] 404 GET /stcenter.nsf (10.139.7.108) 1.99ms referer=None
+[I 18:22:12.668 NotebookApp] 302 GET / (10.139.7.108) 0.73ms
+[W 18:22:12.671 NotebookApp] 404 GET /cgi-bin/pub/pki?cmd=serverInfo (10.139.7.108) 2.21ms referer=None
+[W 18:22:12.676 NotebookApp] 404 GET /Sametime/buildinfo.txt (10.139.7.108) 1.79ms referer=None
+[W 18:22:12.777 NotebookApp] 404 GET /admin/login.jsp (10.139.7.108) 2.00ms referer=None
+[I 18:22:12.787 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[W 18:22:12.790 NotebookApp] 404 GET /Sametime/domino/html/sametime/buildinfoST75CF1.txt (10.139.7.108) 1.47ms referer=None
+[I 18:22:12.912 NotebookApp] 302 GET / (10.139.7.108) 0.71ms
+[W 18:22:12.915 NotebookApp] 404 GET /mod_gzip_status (10.139.7.108) 2.03ms referer=None
+[I 18:22:12.929 NotebookApp] 302 GET / (10.139.7.108) 0.38ms
+[I 18:22:13.028 NotebookApp] 302 GET / (10.139.7.108) 0.77ms
+[I 18:22:13.041 NotebookApp] 302 GET / (10.139.7.108) 0.67ms
+[I 18:22:13.050 NotebookApp] 302 GET / (10.139.7.108) 0.67ms
+[W 18:22:13.152 NotebookApp] 403 POST /perl/ (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:22:13.152 NotebookApp] 403 POST /perl/ (10.139.7.108) 1.15ms referer=None
+[I 18:22:13.157 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[I 18:22:13.170 NotebookApp] 302 GET / (10.139.7.108) 0.54ms
+[W 18:22:13.201 NotebookApp] 404 GET /portal/pls/portal/DEV8_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.75ms referer=None
+[I 18:22:13.267 NotebookApp] 302 GET / (10.139.7.108) 0.86ms
+[I 18:22:13.268 NotebookApp] 302 GET /tree (10.139.7.108) 0.98ms
+[W 18:22:13.271 NotebookApp] 404 GET /spotfire/about.jsp (10.139.7.108) 2.33ms referer=None
+[W 18:22:13.294 NotebookApp] 404 GET /portal/pls/portal/DEV9_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 1.75ms referer=None
+[W 18:22:13.360 NotebookApp] 404 GET /ews/index.htm (10.139.7.108) 1.58ms referer=None
+[I 18:22:13.397 NotebookApp] 302 GET / (10.139.7.108) 0.69ms
+[W 18:22:13.402 NotebookApp] 404 GET /pls/portal/PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 1.32ms referer=None
+[W 18:22:13.492 NotebookApp] 404 GET /chassis/config/GeneralChassisConfig.html (10.139.7.108) 2.82ms referer=None
+[I 18:22:13.495 NotebookApp] 302 GET / (10.139.7.108) 0.54ms
+[W 18:22:13.528 NotebookApp] 404 GET /pls/portal/DEV_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 1.75ms referer=None
+[I 18:22:13.617 NotebookApp] 302 GET / (10.139.7.108) 0.84ms
+[W 18:22:13.620 NotebookApp] 404 GET /crossdomain.xml (10.139.7.108) 2.24ms referer=None
+[W 18:22:13.716 NotebookApp] 404 GET /f360/login.jsp (10.139.7.108) 2.27ms referer=None
+[I 18:22:13.729 NotebookApp] 302 GET / (10.139.7.108) 0.53ms
+[W 18:22:13.740 NotebookApp] 404 GET /images (10.139.7.108) 1.30ms referer=None
+[W 18:22:13.819 NotebookApp] 404 GET //login.jsp (10.139.7.108) 2.15ms referer=None
+[W 18:22:13.825 NotebookApp] 404 GET /NCMContainer.cc (10.139.7.108) 1.76ms referer=None
+[I 18:22:13.842 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[I 18:22:13.931 NotebookApp] 302 GET / (10.139.7.108) 0.79ms
+[I 18:22:13.957 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:22:13.959 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[W 18:22:14.036 NotebookApp] 404 GET /IDMProv/jsps/help/Help.jsp (10.139.7.108) 2.31ms referer=None
+[W 18:22:14.063 NotebookApp] 404 GET /LoginPage.do (10.139.7.108) 2.03ms referer=None
+[I 18:22:14.126 NotebookApp] 302 GET / (10.139.7.108) 0.60ms
+[W 18:22:14.143 NotebookApp] 404 GET /pls/portal/DEV1_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.68ms referer=None
+[I 18:22:14.145 NotebookApp] 302 GET / (10.139.7.108) 0.81ms
+[I 18:22:14.178 NotebookApp] 302 GET / (10.139.7.108) 0.68ms
+[W 18:22:14.228 NotebookApp] 404 GET /triton-help/en/first.htm (10.139.7.108) 2.20ms referer=None
+[W 18:22:14.251 NotebookApp] 404 GET /pls/portal/DEV2_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.28ms referer=None
+[W 18:22:14.364 NotebookApp] 404 GET /pls/portal/DEV3_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 1.89ms referer=None
+[I 18:22:14.366 NotebookApp] 302 GET / (10.139.7.108) 0.53ms
+[I 18:22:14.376 NotebookApp] 302 GET / (10.139.7.108) 0.76ms
+[I 18:22:14.437 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[W 18:22:14.478 NotebookApp] 404 GET /pls/portal/DEV4_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.07ms referer=None
+[W 18:22:14.481 NotebookApp] 404 GET /login.html (10.139.7.108) 1.90ms referer=None
+[W 18:22:14.493 NotebookApp] 404 GET /trc (10.139.7.108) 2.00ms referer=None
+[W 18:22:14.544 NotebookApp] 404 GET /active.log (10.139.7.108) 2.08ms referer=None
+[W 18:22:14.590 NotebookApp] 404 GET /pls/portal/DEV5_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 1.97ms referer=None
+[I 18:22:14.596 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:14.609 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:14.701 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[W 18:22:14.704 NotebookApp] 404 GET /pls/portal/DEV6_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 1.92ms referer=None
+[W 18:22:14.708 NotebookApp] 404 GET /sgdadmin/faces/jsp/Version.jsp (10.139.7.108) 1.99ms referer=None
+[I 18:22:14.718 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[W 18:22:14.809 NotebookApp] 404 GET /common/about.php (10.139.7.108) 2.07ms referer=None
+[W 18:22:14.812 NotebookApp] 404 GET /pls/portal/DEV7_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 1.99ms referer=None
+[I 18:22:14.826 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:14.842 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:14.924 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[W 18:22:14.930 NotebookApp] 404 GET /pls/portal/DEV8_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 2.09ms referer=None
+[I 18:22:14.957 NotebookApp] 302 GET / (10.139.7.108) 1.17ms
+[I 18:22:14.959 NotebookApp] 302 GET // (10.139.7.108) 1.26ms
+[W 18:22:15.041 NotebookApp] 404 GET /syslog.htm (10.139.7.108) 1.91ms referer=None
+[W 18:22:15.052 NotebookApp] 404 GET /pls/portal/DEV9_PORTAL_DEMO.ORG_CHART.SHOW (10.139.7.108) 1.58ms referer=None
+[I 18:22:15.074 NotebookApp] 302 GET /tree? (10.139.7.108) 0.65ms
+[I 18:22:15.099 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:15.164 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[I 18:22:15.186 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:15.214 NotebookApp] 302 GET /appliance/ (10.139.7.108) 0.65ms
+[W 18:22:15.268 NotebookApp] 405 NESSUS / (10.139.7.108) 0.78ms referer=None
+[W 18:22:15.276 NotebookApp] 404 GET /system/login (10.139.7.108) 2.25ms referer=None
+[I 18:22:15.310 NotebookApp] 302 GET / (10.139.7.108) 0.60ms
+[I 18:22:15.369 NotebookApp] 302 GET / (10.139.7.108) 0.68ms
+[W 18:22:15.399 NotebookApp] 404 GET /ConsoleHelp/default.jsp (10.139.7.108) 1.75ms referer=None
+[W 18:22:15.428 NotebookApp] 404 GET /lem/index.html (10.139.7.108) 1.83ms referer=None
+[W 18:22:15.529 NotebookApp] 404 GET c:\boot.ini (10.139.7.108) 1.83ms referer=None
+[I 18:22:15.553 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:15.658 NotebookApp] 302 GET / (10.139.7.108) 0.47ms
+[I 18:22:15.662 NotebookApp] 302 GET /SiteScope/ (10.139.7.108) 0.63ms
+[W 18:22:15.775 NotebookApp] 404 GET /csamc52/webadmin?page=invalid&type=browser (10.139.7.108) 2.34ms referer=None
+[I 18:22:15.791 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:15.905 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[W 18:22:15.942 NotebookApp] 403 POST /sawmillcl.exe (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:22:15.945 NotebookApp] 403 POST /sawmillcl.exe (10.139.7.108) 3.97ms referer=None
+[I 18:22:15.948 NotebookApp] 302 GET / (10.139.7.108) 0.82ms
+[W 18:22:16.021 NotebookApp] 404 GET /imc (10.139.7.108) 1.75ms referer=None
+[W 18:22:16.065 NotebookApp] 404 GET /sawmillcl.exe?ho+{COMPLETE_VERSION} (10.139.7.108) 1.09ms referer=None
+[W 18:22:16.067 NotebookApp] 404 GET /VncViewer.jar (10.139.7.108) 1.04ms referer=None
+[I 18:22:16.151 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:16.192 NotebookApp] 403 POST /sawmill6cl.exe (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:22:16.194 NotebookApp] 403 POST /sawmill6cl.exe (10.139.7.108) 2.35ms referer=None
+[I 18:22:16.209 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[W 18:22:16.268 NotebookApp] 404 GET /gwadmin-console/login.jsp (10.139.7.108) 3.71ms referer=None
+[W 18:22:16.317 NotebookApp] 404 GET /sawmill6cl.exe?ho+{COMPLETE_VERSION} (10.139.7.108) 1.93ms referer=None
+[I 18:22:16.337 NotebookApp] 302 GET /public/ (10.139.7.108) 0.67ms
+[W 18:22:16.448 NotebookApp] 403 POST / (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:22:16.449 NotebookApp] 403 POST / (10.139.7.108) 1.27ms referer=None
+[W 18:22:16.493 NotebookApp] 404 GET /login.html (10.139.7.108) 3.85ms referer=None
+[I 18:22:16.551 NotebookApp] 302 GET /?ho+{COMPLETE_VERSION} (10.139.7.108) 0.75ms
+[I 18:22:16.555 NotebookApp] 302 GET / (10.139.7.108) 0.97ms
+[I 18:22:16.609 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:16.652 NotebookApp] 302 GET / (10.139.7.108) 0.68ms
+[W 18:22:16.655 NotebookApp] 404 GET /index.do (10.139.7.108) 2.23ms referer=None
+[I 18:22:16.702 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[W 18:22:16.754 NotebookApp] 404 GET /snmx-cgi/fxm.exe (10.139.7.108) 2.05ms referer=None
+[I 18:22:16.773 NotebookApp] 302 GET / (10.139.7.108) 0.83ms
+[I 18:22:16.827 NotebookApp] 302 GET / (10.139.7.108) 0.78ms
+[W 18:22:16.942 NotebookApp] 404 GET /main_internet.php (10.139.7.108) 2.22ms referer=None
+[I 18:22:17.019 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:17.063 NotebookApp] 404 GET /netbasic/websinfo.bas (10.139.7.108) 2.43ms referer=None
+[W 18:22:17.132 NotebookApp] 404 GET /ofbizsetup/control/checkLogin (10.139.7.108) 2.08ms referer=None
+[W 18:22:17.142 NotebookApp] 404 GET /9A8vU9GJ.ashx (10.139.7.108) 2.02ms referer=None
+[W 18:22:17.183 NotebookApp] 404 GET /lcgi/sewse.nlm?sys:/novonyx/suitespot/docs/sewse/misc/allfield.jse (10.139.7.108) 1.10ms referer=None
+[W 18:22:17.247 NotebookApp] 404 GET /ordermgr/control/checkLogin (10.139.7.108) 1.84ms referer=None
+[W 18:22:17.266 NotebookApp] 404 GET /V6xxpUi7.aspx (10.139.7.108) 1.92ms referer=None
+[W 18:22:17.289 NotebookApp] 404 GET /lcgi/sewse.nlm?sys:/novonyx/suitespot/docs/sewse/misc/test.jse (10.139.7.108) 1.98ms referer=None
+[W 18:22:17.366 NotebookApp] 404 GET /examples/jsp/source.jsp?%2e%2e/%2e%2e/%2e%2e/%2e%2e/system/autoexec.ncf (10.139.7.108) 2.20ms referer=None
+[W 18:22:17.377 NotebookApp] 404 GET /AR_ZbUYV.asmx (10.139.7.108) 1.84ms referer=None
+[W 18:22:17.404 NotebookApp] 404 GET /perl/samples/lancgi.pl (10.139.7.108) 2.03ms referer=None
+[I 18:22:17.482 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:17.490 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:17.513 NotebookApp] 404 GET /perl/samples/ndslogin.pl (10.139.7.108) 2.40ms referer=None
+[W 18:22:17.581 NotebookApp] 404 GET /about.jsp (10.139.7.108) 2.04ms referer=None
+[W 18:22:17.597 NotebookApp] 404 GET /sapmc/sapmc.html (10.139.7.108) 2.01ms referer=None
+[W 18:22:17.607 NotebookApp] 404 GET /perl/samples/volscgi.pl (10.139.7.108) 2.00ms referer=None
+[W 18:22:17.674 NotebookApp] 404 GET /login.htm (10.139.7.108) 1.86ms referer=None
+[I 18:22:17.700 NotebookApp] 302 GET / (10.139.7.108) 0.69ms
+[W 18:22:17.703 NotebookApp] 404 GET /perl/samples/env.pl (10.139.7.108) 1.91ms referer=None
+[I 18:22:17.794 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[W 18:22:17.815 NotebookApp] 404 GET /shared/userlogin.php (10.139.7.108) 2.05ms referer=None
+[W 18:22:17.818 NotebookApp] 404 GET /nsn/env.bas (10.139.7.108) 2.12ms referer=None
+[W 18:22:17.904 NotebookApp] 404 GET /iisprotect/admin/SiteAdmin.ASP?V_SiteName=&V_FirstTab=Groups&V_SecondTab=All&GroupName=nessus (10.139.7.108) 2.16ms referer=None
+[I 18:22:17.944 NotebookApp] 302 GET / (10.139.7.108) 0.88ms
+[W 18:22:17.948 NotebookApp] 404 GET /nsn/fdir.bas (10.139.7.108) 3.11ms referer=None
+[W 18:22:18.025 NotebookApp] 404 GET /iisprotect/admin/SiteAdmin.ASP?V_SiteName=&V_FirstTab=Groups&V_SecondTab=All&GroupName=nessus' (10.139.7.108) 1.93ms referer=None
+[I 18:22:18.054 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[W 18:22:18.055 NotebookApp] 403 POST /av-centerd (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:22:18.057 NotebookApp] 403 POST /av-centerd (10.139.7.108) 2.26ms referer=None
+[I 18:22:18.066 NotebookApp] 302 GET / (10.139.7.108) 1.29ms
+[I 18:22:18.145 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[W 18:22:18.180 NotebookApp] 404 GET /dtlt/home.html (10.139.7.108) 1.69ms referer=None
+[W 18:22:18.255 NotebookApp] 404 GET /cgi-bin/printenv (10.139.7.108) 1.69ms referer=None
+[W 18:22:18.293 NotebookApp] 404 GET /apex/f?p=nessuscheck (10.139.7.108) 1.91ms referer=None
+[I 18:22:18.359 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:18.393 NotebookApp] 404 GET /pls/apex/f?p=nessuscheck (10.139.7.108) 1.72ms referer=None
+[I 18:22:18.452 NotebookApp] 302 GET /SnoopServlet/ (10.139.7.108) 0.56ms
+[I 18:22:18.506 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:22:18.544 NotebookApp] 302 GET /snoopservlet/ (10.139.7.108) 0.66ms
+[W 18:22:18.604 NotebookApp] 404 GET /login.jsp (10.139.7.108) 1.97ms referer=None
+[I 18:22:18.640 NotebookApp] 302 GET /snoop/ (10.139.7.108) 0.64ms
+[I 18:22:18.699 NotebookApp] 302 GET / (10.139.7.108) 0.69ms
+[I 18:22:18.728 NotebookApp] 302 GET /servlet/SnoopServlet/ (10.139.7.108) 0.68ms
+[W 18:22:18.808 NotebookApp] 404 GET /1555323738/facts/10.134.171.250 (10.139.7.108) 2.04ms referer=None
+[I 18:22:18.850 NotebookApp] 302 GET /servlet/snoopservlet/ (10.139.7.108) 0.60ms
+[W 18:22:18.931 NotebookApp] 404 GET /1555323738/certificate/10.134.171.250 (10.139.7.108) 1.76ms referer=None
+[I 18:22:18.964 NotebookApp] 302 GET /servlet/snoop/ (10.139.7.108) 0.68ms
+[W 18:22:19.042 NotebookApp] 404 GET /v2.0/environments/10.134.171.250 (10.139.7.108) 1.94ms referer=None
+[I 18:22:19.067 NotebookApp] 302 GET / (10.139.7.108) 0.69ms
+[W 18:22:19.147 NotebookApp] 404 GET /puppet-ca/v1/certificate/10.134.171.250 (10.139.7.108) 2.41ms referer=None
+[W 18:22:19.151 NotebookApp] 404 GET /devinfo.xml (10.139.7.108) 2.55ms referer=None
+[W 18:22:19.162 NotebookApp] 405 PROPFIND / (10.139.7.108) 0.77ms referer=None
+[W 18:22:19.242 NotebookApp] 404 GET /puppet/v3/facts/10.134.171.250 (10.139.7.108) 2.28ms referer=None
+[I 18:22:19.267 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[I 18:22:19.286 NotebookApp] 302 GET / (10.139.7.108) 0.37ms
+[I 18:22:19.322 NotebookApp] 302 GET / (10.139.7.108) 0.60ms
+[I 18:22:19.349 NotebookApp] 302 GET / (10.139.7.108) 0.44ms
+[W 18:22:19.381 NotebookApp] 404 GET /cgi-bin/index.cgi (10.139.7.108) 1.98ms referer=None
+[W 18:22:19.391 NotebookApp] 404 GET /web-console/ServerInfo.jsp (10.139.7.108) 2.01ms referer=None
+[W 18:22:19.413 NotebookApp] 404 GET /stream/0 (10.139.7.108) 1.10ms referer=None
+[W 18:22:19.432 NotebookApp] 404 GET /xmldata?item=all (10.139.7.108) 1.13ms referer=None
+[I 18:22:19.486 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:19.489 NotebookApp] 404 GET /web-console/ServerInfo.jsp%00 (10.139.7.108) 2.00ms referer=None
+[I 18:22:19.500 NotebookApp] 302 GET / (10.139.7.108) 0.36ms
+[I 18:22:19.532 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:19.558 NotebookApp] 302 GET /ui/login/ (10.139.7.108) 0.60ms
+[W 18:22:19.581 NotebookApp] 403 POST / (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:22:19.582 NotebookApp] 403 POST / (10.139.7.108) 0.76ms referer=None
+[W 18:22:19.584 NotebookApp] 404 GET %. (10.139.7.108) 1.44ms referer=None
+[I 18:22:19.601 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[W 18:22:19.656 NotebookApp] 404 GET /ui/login (10.139.7.108) 1.98ms referer=http://10.134.171.250:8888/ui/login/
+[I 18:22:19.693 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:22:19.695 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[I 18:22:19.696 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[I 18:22:19.750 NotebookApp] 302 GET / (10.139.7.108) 1.11ms
+[W 18:22:19.774 NotebookApp] 404 GET /Orion/Login.aspx (10.139.7.108) 1.62ms referer=None
+[W 18:22:19.777 NotebookApp] 404 GET /tightvnc-jviewer.jar (10.139.7.108) 1.60ms referer=None
+[W 18:22:19.835 NotebookApp] 404 GET /ui/faces/Login.xhtml (10.139.7.108) 1.85ms referer=None
+[W 18:22:19.855 NotebookApp] 404 GET /Orion/Login.asp (10.139.7.108) 1.81ms referer=None
+[I 18:22:19.871 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:22:19.884 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:19.922 NotebookApp] 404 GET /index.html (10.139.7.108) 1.80ms referer=None
+[I 18:22:19.942 NotebookApp] 302 GET / (10.139.7.108) 0.75ms
+[I 18:22:19.947 NotebookApp] 302 GET / (10.139.7.108) 1.08ms
+[W 18:22:19.975 NotebookApp] 405 SEARCH / (10.139.7.108) 0.88ms referer=None
+[I 18:22:20.015 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[W 18:22:20.038 NotebookApp] 404 GET /features (10.139.7.108) 2.13ms referer=None
+[W 18:22:20.086 NotebookApp] 405 TRACE /Nessus769379504.html (10.139.7.108) 2.22ms referer=None
+[I 18:22:20.122 NotebookApp] 302 GET /jts/ (10.139.7.108) 0.89ms
+[I 18:22:20.160 NotebookApp] 302 GET / (10.139.7.108) 0.52ms
+[W 18:22:20.199 NotebookApp] 405 TRACK /Nessus769379504.html (10.139.7.108) 1.68ms referer=None
+[W 18:22:20.258 NotebookApp] 404 GET /jts (10.139.7.108) 2.04ms referer=http://10.134.171.250:8888/jts/
+[W 18:22:20.279 NotebookApp] 404 GET /app/ui/login.jsp (10.139.7.108) 1.98ms referer=None
+[I 18:22:20.410 NotebookApp] 302 GET / (10.139.7.108) 0.83ms
+[I 18:22:20.412 NotebookApp] 302 GET / (10.139.7.108) 0.54ms
+[I 18:22:20.526 NotebookApp] 302 GET / (10.139.7.108) 0.69ms
+[W 18:22:20.530 NotebookApp] 404 GET /portal/diag/index.jsp (10.139.7.108) 2.00ms referer=None
+[I 18:22:20.637 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[I 18:22:20.638 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[W 18:22:20.726 NotebookApp] 404 GET /baselining/version (10.139.7.108) 2.38ms referer=None
+[W 18:22:20.729 NotebookApp] 404 GET /webapps/login/index.html (10.139.7.108) 1.73ms referer=None
+[I 18:22:20.847 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[W 18:22:20.850 NotebookApp] 404 GET /webct/about.jsp (10.139.7.108) 1.82ms referer=None
+[I 18:22:20.914 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[W 18:22:20.949 NotebookApp] 404 GET /mve/help/en/inventory/am_about.html (10.139.7.108) 1.95ms referer=None
+[I 18:22:20.968 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[W 18:22:21.023 NotebookApp] 404 GET /console/login/LoginForm.jsp (10.139.7.108) 2.39ms referer=None
+[I 18:22:21.072 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:21.096 NotebookApp] 404 GET /PUBLIC/ADMIN/INDEX.HTM (10.139.7.108) 1.85ms referer=None
+[W 18:22:21.127 NotebookApp] 404 GET /wls-wsat/CoordinatorPortType (10.139.7.108) 1.92ms referer=None
+[I 18:22:21.171 NotebookApp] 302 GET /NASApp/nessus/ (10.139.7.108) 0.60ms
+[I 18:22:21.212 NotebookApp] 302 GET / (10.139.7.108) 0.89ms
+[I 18:22:21.240 NotebookApp] 302 GET / (10.139.7.108) 0.53ms
+[I 18:22:21.290 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:21.337 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[W 18:22:21.355 NotebookApp] 404 GET /av/api/1.0/system/local/tasks (10.139.7.108) 2.13ms referer=None
+[I 18:22:21.396 NotebookApp] 302 GET /NASApp/nessus/ (10.139.7.108) 0.61ms
+[I 18:22:21.455 NotebookApp] 302 GET /tree (10.139.7.108) 0.85ms
+[I 18:22:21.531 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[W 18:22:21.628 NotebookApp] 404 GET /js/zimbraMail/share/model/ZmSettings.js (10.139.7.108) 1.30ms referer=None
+[W 18:22:21.685 NotebookApp] 404 GET /RSAarcher/Default.aspx (10.139.7.108) 1.96ms referer=None
+[W 18:22:21.847 NotebookApp] 404 GET /RSAarcher/Default.asp (10.139.7.108) 1.97ms referer=None
+[I 18:22:21.996 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[I 18:22:21.997 NotebookApp] 302 GET / (10.139.7.108) 0.53ms
+[W 18:22:22.121 NotebookApp] 404 GET /vsmc.html (10.139.7.108) 2.05ms referer=None
+[W 18:22:22.124 NotebookApp] 404 GET /query.idq?CiTemplate=../../../../../winnt/win.ini (10.139.7.108) 2.04ms referer=None
+[I 18:22:22.239 NotebookApp] 302 GET / (10.139.7.108) 0.82ms
+[W 18:22:22.242 NotebookApp] 404 GET /query.idq?CiTemplate=../../../../../winnt/win.ini%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20 (10.139.7.108) 2.40ms referer=None
+[W 18:22:22.357 NotebookApp] 404 GET /builtin/index.html (10.139.7.108) 2.08ms referer=None
+[W 18:22:22.369 NotebookApp] 404 GET /WebID/IISWebAgentIF.dll?postdata="><script>foo</script> (10.139.7.108) 2.43ms referer=None
+[I 18:22:22.462 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:22:22.493 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:22:22.561 NotebookApp] 302 GET /? (10.139.7.108) 0.67ms
+[W 18:22:22.582 NotebookApp] 404 GET /auth/login (10.139.7.108) 2.05ms referer=None
+[I 18:22:22.673 NotebookApp] 302 GET / (10.139.7.108) 0.94ms
+[I 18:22:22.712 NotebookApp] 302 GET / (10.139.7.108) 0.53ms
+[W 18:22:22.791 NotebookApp] 404 GET /ws_utc/login.do (10.139.7.108) 2.16ms referer=None
+[W 18:22:22.843 NotebookApp] 404 GET /securecgi-bin/CSUserCGI.exe?ver (10.139.7.108) 2.40ms referer=None
+[I 18:22:22.914 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[I 18:22:22.921 NotebookApp] 302 GET /wls_utc/ (10.139.7.108) 0.80ms
+[W 18:22:22.964 NotebookApp] 404 GET /securecgi-bin/CSUserCGI.exe?Init+0 (10.139.7.108) 2.26ms referer=None
+[I 18:22:23.031 NotebookApp] 302 GET /hc/admin/login/ (10.139.7.108) 0.67ms
+[W 18:22:23.039 NotebookApp] 404 GET /CVS/Entries (10.139.7.108) 2.82ms referer=None
+[I 18:22:23.074 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:22:23.133 NotebookApp] 302 GET / (10.139.7.108) 0.36ms
+[I 18:22:23.144 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:22:23.186 NotebookApp] 302 GET /HNAP1/ (10.139.7.108) 0.94ms
+[W 18:22:23.250 NotebookApp] 404 GET /menu.htm (10.139.7.108) 2.83ms referer=None
+[W 18:22:23.368 NotebookApp] 404 GET /WEB-INF./web.xml (10.139.7.108) 1.86ms referer=None
+[I 18:22:23.394 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:23.472 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:22:23.489 NotebookApp] 302 GET /admin/ (10.139.7.108) 0.69ms
+[W 18:22:23.576 NotebookApp] 404 GET /uddipublic/default.aspx (10.139.7.108) 3.09ms referer=None
+[W 18:22:23.608 NotebookApp] 404 GET /admin (10.139.7.108) 1.92ms referer=http://10.134.171.250:8888/admin/
+[W 18:22:23.673 NotebookApp] 404 GET /uddi/default.aspx (10.139.7.108) 1.83ms referer=None
+[W 18:22:23.744 NotebookApp] 404 GET /admin/LocalIndex.html (10.139.7.108) 2.88ms referer=None
+[I 18:22:23.796 NotebookApp] 302 GET / (10.139.7.108) 0.42ms
+[I 18:22:23.797 NotebookApp] 302 GET / (10.139.7.108) 0.41ms
+[I 18:22:23.861 NotebookApp] 302 GET /scmadmin/ (10.139.7.108) 0.69ms
+[I 18:22:23.917 NotebookApp] 302 GET /oo/ (10.139.7.108) 0.69ms
+[I 18:22:23.919 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[W 18:22:23.986 NotebookApp] 404 GET /scmadmin (10.139.7.108) 1.95ms referer=http://10.134.171.250:8888/scmadmin/
+[W 18:22:24.037 NotebookApp] 404 GET /oo (10.139.7.108) 1.92ms referer=http://10.134.171.250:8888/oo/
+[I 18:22:24.156 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:24.209 NotebookApp] 404 GET /scmadmin/LocalIndex.html (10.139.7.108) 1.84ms referer=None
+[W 18:22:24.275 NotebookApp] 404 GET /etc/passwd (10.139.7.108) 1.87ms referer=None
+[I 18:22:24.345 NotebookApp] 302 GET / (10.139.7.108) 0.99ms
+[W 18:22:24.392 NotebookApp] 404 GET //etc/passwd (10.139.7.108) 1.91ms referer=None
+[W 18:22:24.452 NotebookApp] 404 GET /otrs/index.pl (10.139.7.108) 1.96ms referer=None
+[I 18:22:24.496 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[W 18:22:24.506 NotebookApp] 404 GET /help/contents.htm (10.139.7.108) 1.92ms referer=None
+[I 18:22:24.598 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:24.609 NotebookApp] 404 GET /setup (10.139.7.108) 2.05ms referer=None
+[W 18:22:24.628 NotebookApp] 404 GET /manual/ag/contents.htm (10.139.7.108) 2.34ms referer=None
+[W 18:22:24.713 NotebookApp] 404 GET /invoker/EJBInvokerServlet (10.139.7.108) 1.93ms referer=None
+[I 18:22:24.731 NotebookApp] 302 GET / (10.139.7.108) 0.49ms
+[W 18:22:24.751 NotebookApp] 404 GET /search/results.stm (10.139.7.108) 3.51ms referer=None
+[W 18:22:24.822 NotebookApp] 404 GET /invoker/JMXInvokerServlet (10.139.7.108) 1.81ms referer=None
+[I 18:22:24.841 NotebookApp] 302 GET /platform-ui/ (10.139.7.108) 0.69ms
+[I 18:22:24.866 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:24.972 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[W 18:22:24.984 NotebookApp] 404 GET /nnm/main (10.139.7.108) 1.69ms referer=None
+[I 18:22:25.054 NotebookApp] 302 GET / (10.139.7.108) 0.45ms
+[W 18:22:25.088 NotebookApp] 404 GET /system.xml (10.139.7.108) 2.06ms referer=None
+[I 18:22:25.131 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:25.184 NotebookApp] 404 GET /Director (10.139.7.108) 2.09ms referer=None
+[I 18:22:25.243 NotebookApp] 302 GET / (10.139.7.108) 0.68ms
+[I 18:22:25.251 NotebookApp] 302 GET /./WEB-INF/ (10.139.7.108) 0.63ms
+[W 18:22:25.329 NotebookApp] 404 GET /DesktopDirector (10.139.7.108) 1.90ms referer=None
+[W 18:22:25.354 NotebookApp] 404 HEAD /someunexistantstuff41971801971522835.html (10.139.7.108) 1.94ms referer=None
+[I 18:22:25.385 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[I 18:22:25.430 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:25.446 NotebookApp] 404 HEAD /someunexistantstuff.exe (10.139.7.108) 2.37ms referer=None
+[W 18:22:25.481 NotebookApp] 404 GET /PassTrixMain.cc (10.139.7.108) 1.99ms referer=None
+[W 18:22:25.518 NotebookApp] 404 GET /index.exp (10.139.7.108) 1.97ms referer=None
+[W 18:22:25.528 NotebookApp] 404 GET /someunexistantantsutff848945633373894016.html (10.139.7.108) 1.86ms referer=None
+[W 18:22:25.571 NotebookApp] 404 GET /NULL.ida (10.139.7.108) 2.27ms referer=None
+[I 18:22:25.623 NotebookApp] 302 GET / (10.139.7.108) 0.60ms
+[W 18:22:25.626 NotebookApp] 404 GET /someunexistantantsutff.exe (10.139.7.108) 2.12ms referer=None
+[I 18:22:25.694 NotebookApp] 302 GET / (10.139.7.108) 0.77ms
+[W 18:22:25.725 NotebookApp] 404 GET /idm/login.jsp?lang=en&cntry= (10.139.7.108) 2.41ms referer=None
+[I 18:22:25.759 NotebookApp] 302 GET / (10.139.7.108) 0.80ms
+[W 18:22:25.818 NotebookApp] 404 GET /vncviewer.jar (10.139.7.108) 2.18ms referer=None
+[I 18:22:25.850 NotebookApp] 302 GET / (10.139.7.108) 0.53ms
+[W 18:22:25.871 NotebookApp] 404 GET /dndirector/dashboard/Show.dn (10.139.7.108) 1.99ms referer=None
+[I 18:22:25.929 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[I 18:22:25.967 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:22:26.009 NotebookApp] 404 GET /nessus345678.html (10.139.7.108) 1.80ms referer=None
+[I 18:22:26.036 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[W 18:22:26.070 NotebookApp] 404 GET /dndirector (10.139.7.108) 2.06ms referer=None
+[I 18:22:26.120 NotebookApp] 302 GET / (10.139.7.108) 0.53ms
+[I 18:22:26.176 NotebookApp] 302 GET / (10.139.7.108) 0.67ms
+[W 18:22:26.218 NotebookApp] 404 GET /configurations.do (10.139.7.108) 2.04ms referer=None
+[I 18:22:26.220 NotebookApp] 302 GET / (10.139.7.108) 0.67ms
+[W 18:22:26.264 NotebookApp] 404 OPTIONS * (10.139.7.108) 1.89ms referer=None
+[W 18:22:26.308 NotebookApp] 404 GET /autopass/login_input (10.139.7.108) 1.89ms referer=None
+[W 18:22:26.326 NotebookApp] 404 GET /SilverStream (10.139.7.108) 2.64ms referer=None
+[I 18:22:26.348 NotebookApp] 302 GET / (10.139.7.108) 0.35ms
+[I 18:22:26.402 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[I 18:22:26.419 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:22:26.433 NotebookApp] 404 GET /~nobody/etc/passwd (10.139.7.108) 2.08ms referer=None
+[I 18:22:26.476 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:26.508 NotebookApp] 302 GET / (10.139.7.108) 0.60ms
+[I 18:22:26.537 NotebookApp] 302 GET / (10.139.7.108) 0.54ms
+[I 18:22:26.582 NotebookApp] 302 GET /tree (10.139.7.108) 0.84ms
+[W 18:22:26.634 NotebookApp] 404 GET /rest-service/reviews-v1/versionInfo (10.139.7.108) 1.90ms referer=None
+[I 18:22:26.651 NotebookApp] 302 GET /tarantella/cgi-bin/secure/ttawlogin.cgi/?action=bootstrap (10.139.7.108) 0.85ms
+[W 18:22:26.702 NotebookApp] 404 GET /this_page_should_not_exist.htm (10.139.7.108) 1.69ms referer=None
+[I 18:22:26.748 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[I 18:22:26.763 NotebookApp] 302 GET / (10.139.7.108) 0.43ms
+[I 18:22:26.828 NotebookApp] 302 GET /SilverStream/Meta/Tables/?access-mode=text (10.139.7.108) 0.69ms
+[W 18:22:26.868 NotebookApp] 404 GET /ldap/cgi-bin/ldacgi.exe?Action=Substitute&Template=../../../../../boot.ini&Sub=LocalePath&LocalePath=enus1252 (10.139.7.108) 3.10ms referer=None
+[W 18:22:26.874 NotebookApp] 404 GET /igsponsor (10.139.7.108) 2.84ms referer=None
+[I 18:22:26.921 NotebookApp] 302 GET / (10.139.7.108) 0.71ms
+[I 18:22:26.942 NotebookApp] 302 GET / (10.139.7.108) 0.49ms
+[I 18:22:26.968 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[I 18:22:26.981 NotebookApp] 302 GET / (10.139.7.108) 0.67ms
+[I 18:22:26.994 NotebookApp] 302 GET /mainui/ (10.139.7.108) 0.54ms
+[I 18:22:27.030 NotebookApp] 302 GET / (10.139.7.108) 0.78ms
+[I 18:22:27.052 NotebookApp] 302 GET /tree (10.139.7.108) 0.75ms
+[I 18:22:27.085 NotebookApp] 302 GET / (10.139.7.108) 0.73ms
+[I 18:22:27.139 NotebookApp] 302 GET / (10.139.7.108) 0.45ms
+[W 18:22:27.183 NotebookApp] 404 GET /core/orionSplashScreen.do (10.139.7.108) 2.17ms referer=None
+[I 18:22:27.233 NotebookApp] 302 GET / (10.139.7.108) 0.92ms
+[W 18:22:27.247 NotebookApp] 404 GET /cgi-bin/pdesk.cgi?lang=../../../../../../../../etc/passwd%00 (10.139.7.108) 1.18ms referer=None
+[I 18:22:27.267 NotebookApp] 302 GET / (10.139.7.108) 0.48ms
+[I 18:22:27.307 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[I 18:22:27.343 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:22:27.381 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[I 18:22:27.432 NotebookApp] 302 GET / (10.139.7.108) 0.71ms
+[I 18:22:27.469 NotebookApp] 302 GET /tree (10.139.7.108) 0.79ms
+[I 18:22:27.512 NotebookApp] 302 GET /acopia/ (10.139.7.108) 1.21ms
+[W 18:22:27.526 NotebookApp] 404 GET /index.html?urlmaskfilter=<script>foo</script> (10.139.7.108) 2.04ms referer=None
+[W 18:22:27.556 NotebookApp] 404 GET /<script>foo</script> (10.139.7.108) 2.00ms referer=None
+[W 18:22:27.620 NotebookApp] 404 GET /acopia (10.139.7.108) 2.41ms referer=http://10.134.171.250:8888/acopia/
+[I 18:22:27.638 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:27.671 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[I 18:22:27.691 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:27.736 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[W 18:22:27.743 NotebookApp] 404 GET /servlet/webacc?User.lang=<script>foo</script> (10.139.7.108) 2.05ms referer=None
+[W 18:22:27.767 NotebookApp] 404 GET /clientaccesspolicy.xml (10.139.7.108) 2.11ms referer=None
+[W 18:22:27.791 NotebookApp] 404 GET /VncViewer.jar (10.139.7.108) 4.25ms referer=None
+[W 18:22:27.827 NotebookApp] 404 GET /login.do (10.139.7.108) 1.98ms referer=None
+[I 18:22:27.835 NotebookApp] 302 GET / (10.139.7.108) 0.48ms
+[I 18:22:27.889 NotebookApp] 302 GET / (10.139.7.108) 0.78ms
+[I 18:22:27.893 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[W 18:22:27.943 NotebookApp] 404 GET /help/introduction/release-notes.html (10.139.7.108) 2.97ms referer=None
+[I 18:22:27.945 NotebookApp] 302 GET /SAPHostControl/?wsdl (10.139.7.108) 0.69ms
+[W 18:22:27.987 NotebookApp] 404 GET /apps/zxtm/login.cgi (10.139.7.108) 1.98ms referer=None
+[I 18:22:27.993 NotebookApp] 302 GET /web-determinations/?CookieSet=true (10.139.7.108) 0.63ms
+[I 18:22:28.045 NotebookApp] 302 GET / (10.139.7.108) 0.46ms
+[I 18:22:28.046 NotebookApp] 302 GET / (10.139.7.108) 0.44ms
+[I 18:22:28.090 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[W 18:22:28.158 NotebookApp] 404 GET /nosuchfile-1694435035-645735098.jsp (10.139.7.108) 1.56ms referer=None
+[W 18:22:28.160 NotebookApp] 404 GET /_vti_bin/fpcount.exe (10.139.7.108) 1.33ms referer=None
+[W 18:22:28.162 NotebookApp] 404 GET /cgi-bin/kvm.cgi?&file=login (10.139.7.108) 1.34ms referer=None
+[I 18:22:28.163 NotebookApp] 302 GET / (10.139.7.108) 0.42ms
+[I 18:22:28.249 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[I 18:22:28.251 NotebookApp] 302 GET /mail/ (10.139.7.108) 0.61ms
+[I 18:22:28.279 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[W 18:22:28.282 NotebookApp] 404 GET /nsn/..%5Cutil/chkvol.bas (10.139.7.108) 2.01ms referer=None
+[W 18:22:28.363 NotebookApp] 404 GET /system/login (10.139.7.108) 2.39ms referer=None
+[I 18:22:28.383 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[W 18:22:28.412 NotebookApp] 404 GET /nsn/..%5Cutil/dir.bas (10.139.7.108) 2.42ms referer=None
+[I 18:22:28.473 NotebookApp] 302 GET / (10.139.7.108) 0.48ms
+[W 18:22:28.488 NotebookApp] 405 HEAD / (10.139.7.108) 0.72ms referer=None
+[W 18:22:28.728 NotebookApp] 404 GET /nsn/..%5Cutil/glist.bas (10.139.7.108) 2.02ms referer=None
+[W 18:22:28.783 NotebookApp] 404 GET http://10.134.171.250:8888/authentication/login/ (10.139.7.108) 2.41ms referer=None
+[W 18:22:28.851 NotebookApp] 404 GET /nsn/..%5Cutil/lancard.bas (10.139.7.108) 2.19ms referer=None
+[I 18:22:28.904 NotebookApp] 302 GET / (10.139.7.108) 0.90ms
+[W 18:22:28.942 NotebookApp] 404 GET /nsn/..%5Cutil/set.bas (10.139.7.108) 1.95ms referer=None
+[W 18:22:28.990 NotebookApp] 404 GET /rdweb/login/login.html (10.139.7.108) 2.84ms referer=None
+[W 18:22:29.025 NotebookApp] 404 GET /nsn/..%5Cutil/userlist.bas (10.139.7.108) 2.01ms referer=None
+[I 18:22:29.082 NotebookApp] 302 GET / (10.139.7.108) 0.54ms
+[W 18:22:29.092 NotebookApp] 404 GET /nsn/..%5Cweb/env.bas (10.139.7.108) 2.71ms referer=None
+[I 18:22:29.146 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[W 18:22:29.159 NotebookApp] 404 GET /nsn/..%5Cwebdemo/fdir.bas (10.139.7.108) 2.00ms referer=None
+[I 18:22:29.221 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[I 18:22:29.231 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[W 18:22:29.303 NotebookApp] 404 GET /nps/servlet/portal (10.139.7.108) 2.65ms referer=None
+[I 18:22:29.310 NotebookApp] 302 GET / (10.139.7.108) 0.76ms
+[W 18:22:29.391 NotebookApp] 404 GET /cgi-bin/login.cgi (10.139.7.108) 1.85ms referer=None
+[I 18:22:29.392 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:29.410 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:22:29.506 NotebookApp] 302 GET / (10.139.7.108) 0.48ms
+[W 18:22:29.513 NotebookApp] 403 POST /something/maybe/ping (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:22:29.515 NotebookApp] 403 POST /something/maybe/ping (10.139.7.108) 2.75ms referer=None
+[I 18:22:29.611 NotebookApp] 302 GET / (10.139.7.108) 0.49ms
+[W 18:22:29.633 NotebookApp] 404 GET /exchweb/bin/auth/owalogon.asp?url=http://12345678910 (10.139.7.108) 2.61ms referer=None
+[I 18:22:29.641 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[W 18:22:29.717 NotebookApp] 404 GET //W5mc8MdN.asp (10.139.7.108) 2.11ms referer=None
+[I 18:22:29.740 NotebookApp] 302 GET / (10.139.7.108) 0.95ms
+[W 18:22:29.757 NotebookApp] 404 GET /index.html (10.139.7.108) 2.39ms referer=None
+[I 18:22:29.787 NotebookApp] Malformed HTTP message from 10.139.7.108: Malformed HTTP version in HTTP Request-Line: 'HTTP/2.0'
+[W 18:22:29.846 NotebookApp] 404 GET /servlet/admin?category=server&method=listAll&Authorization=Digest+username%3D%22admin%22%2C+response%3D%22ae9f86d6beaa3f9ecb9a5b7e072a4138%22%2C+nonce%3D%222b089ba7985a883ab2eddcd3539a6c94%22%2C+realm%3D%22adminRealm%22%2C+uri%3D%22%2Fservlet%2Fadmin%22&service= (10.139.7.108) 2.23ms referer=None
+[I 18:22:29.861 NotebookApp] 302 GET /MM/ (10.139.7.108) 0.76ms
+[W 18:22:29.871 NotebookApp] 404 GET /nexus/index.html (10.139.7.108) 1.67ms referer=None
+[I 18:22:29.917 NotebookApp] 302 GET / (10.139.7.108) 0.60ms
+[I 18:22:29.969 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[W 18:22:29.996 NotebookApp] 404 GET /%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd (10.139.7.108) 2.19ms referer=None
+[I 18:22:30.006 NotebookApp] 302 GET / (10.139.7.108) 0.71ms
+[W 18:22:30.035 NotebookApp] 404 GET /portal (10.139.7.108) 2.74ms referer=None
+[W 18:22:30.104 NotebookApp] 404 GET /servlet/com.newatlanta.servletexec.JSP10Servlet (10.139.7.108) 2.62ms referer=None
+[I 18:22:30.108 NotebookApp] 302 GET / (10.139.7.108) 0.51ms
+[W 18:22:30.112 NotebookApp] 404 GET /index.html (10.139.7.108) 1.20ms referer=None
+[I 18:22:30.149 NotebookApp] 302 GET / (10.139.7.108) 0.46ms
+[I 18:22:30.234 NotebookApp] 302 GET / (10.139.7.108) 0.54ms
+[I 18:22:30.237 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[I 18:22:30.254 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:22:30.265 NotebookApp] 302 GET /api/v1/?format=api (10.139.7.108) 0.71ms
+[W 18:22:30.347 NotebookApp] 404 GET /getxml (10.139.7.108) 2.34ms referer=None
+[I 18:22:30.352 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[W 18:22:30.367 NotebookApp] 404 GET /mapviewer/omserver?getv=t (10.139.7.108) 1.75ms referer=None
+[I 18:22:30.388 NotebookApp] 302 GET / (10.139.7.108) 0.52ms
+[I 18:22:30.515 NotebookApp] 302 GET /usage/ (10.139.7.108) 0.70ms
+[I 18:22:30.517 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[W 18:22:30.520 NotebookApp] 404 GET /servlet/UDataArea?plugin=com.dell.oma.webplugins.AboutWebPlugin (10.139.7.108) 2.07ms referer=None
+[I 18:22:30.521 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[W 18:22:30.606 NotebookApp] 404 GET /UDataArea?plugin=com.dell.oma.webplugins.AboutWebPlugin (10.139.7.108) 1.95ms referer=None
+[W 18:22:30.609 NotebookApp] 404 GET /netflow/html/aboutus.jsp (10.139.7.108) 1.99ms referer=None
+[I 18:22:30.611 NotebookApp] 302 GET /webalizer/ (10.139.7.108) 0.69ms
+[I 18:22:30.613 NotebookApp] 302 GET /tree (10.139.7.108) 0.48ms
+[I 18:22:30.697 NotebookApp] 302 GET / (10.139.7.108) 0.54ms
+[W 18:22:30.712 NotebookApp] 404 GET /smconf.nsf (10.139.7.108) 2.05ms referer=None
+[W 18:22:30.715 NotebookApp] 404 GET //Help.action (10.139.7.108) 1.85ms referer=None
+[I 18:22:30.717 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[I 18:22:30.794 NotebookApp] 302 GET /ControllerWeb/ (10.139.7.108) 0.69ms
+[W 18:22:30.823 NotebookApp] 404 GET /smadmr5.nsf (10.139.7.108) 1.90ms referer=None
+[W 18:22:30.829 NotebookApp] 404 GET /js/hpsum/hpsum-version.js (10.139.7.108) 2.27ms referer=None
+[I 18:22:30.849 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[W 18:22:30.902 NotebookApp] 404 GET /ControllerWeb (10.139.7.108) 1.86ms referer=http://10.134.171.250:8888/ControllerWeb/
+[W 18:22:30.936 NotebookApp] 404 GET /smency.nsf (10.139.7.108) 1.94ms referer=None
+[W 18:22:30.939 NotebookApp] 404 GET /js/hpsum/hpsum-version.js (10.139.7.108) 1.95ms referer=None
+[W 18:22:30.949 NotebookApp] 404 GET /swvm/ConsoleContainer.jsp (10.139.7.108) 2.00ms referer=None
+[I 18:22:31.016 NotebookApp] 302 GET / (10.139.7.108) 0.82ms
+[W 18:22:31.026 NotebookApp] 404 GET /smftypes.nsf (10.139.7.108) 1.92ms referer=None
+[W 18:22:31.028 NotebookApp] 404 GET /js/hpsum/hpsum-version.js (10.139.7.108) 1.66ms referer=None
+[I 18:22:31.054 NotebookApp] 302 GET / (10.139.7.108) 0.46ms
+[W 18:22:31.100 NotebookApp] 404 GET /qip (10.139.7.108) 2.20ms referer=None
+[W 18:22:31.105 NotebookApp] 404 GET /smsmvlog.nsf (10.139.7.108) 1.48ms referer=None
+[W 18:22:31.117 NotebookApp] 404 GET /js/hpsum/hpsum-version.js (10.139.7.108) 1.32ms referer=None
+[W 18:22:31.135 NotebookApp] 404 GET /html/en/index.htm (10.139.7.108) 1.71ms referer=None
+[W 18:22:31.189 NotebookApp] 404 GET /smhelp.nsf (10.139.7.108) 2.40ms referer=None
+[W 18:22:31.192 NotebookApp] 404 GET /qip (10.139.7.108) 2.03ms referer=None
+[W 18:22:31.200 NotebookApp] 404 GET /js/hpsum/hpsum-version.js (10.139.7.108) 1.91ms referer=None
+[I 18:22:31.229 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[W 18:22:31.291 NotebookApp] 404 GET /smmsg.nsf (10.139.7.108) 2.29ms referer=None
+[I 18:22:31.292 NotebookApp] 302 GET / (10.139.7.108) 0.47ms
+[I 18:22:31.309 NotebookApp] 302 GET / (10.139.7.108) 0.44ms
+[W 18:22:31.325 NotebookApp] 403 POST /spipe?Source=nessus (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:22:31.326 NotebookApp] 403 POST /spipe?Source=nessus (10.139.7.108) 1.73ms referer=None
+[W 18:22:31.408 NotebookApp] 404 GET /smtime.nsf (10.139.7.108) 2.10ms referer=None
+[W 18:22:31.411 NotebookApp] 404 GET //admincp/login.php (10.139.7.108) 2.05ms referer=None
+[W 18:22:31.414 NotebookApp] 404 GET /courier/web/1000@/wmLogin.html (10.139.7.108) 2.03ms referer=None
+[I 18:22:31.462 NotebookApp] 302 GET / (10.139.7.108) 0.35ms
+[W 18:22:31.507 NotebookApp] 404 GET /names.nsf/view?ReadDesign (10.139.7.108) 2.03ms referer=None
+[W 18:22:31.510 NotebookApp] 404 GET /smquar.nsf (10.139.7.108) 1.86ms referer=None
+[I 18:22:31.514 NotebookApp] 302 GET / (10.139.7.108) 0.45ms
+[W 18:22:31.547 NotebookApp] 404 GET /iisadmpwd/aexp.htr (10.139.7.108) 2.07ms referer=None
+[I 18:22:31.589 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[I 18:22:31.591 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:22:31.595 NotebookApp] 302 GET / (10.139.7.108) 0.90ms
+[W 18:22:31.626 NotebookApp] 404 GET /iisadmpwd/aexp2.htr (10.139.7.108) 1.78ms referer=None
+[I 18:22:31.674 NotebookApp] 302 GET / (10.139.7.108) 0.35ms
+[I 18:22:31.675 NotebookApp] 302 GET / (10.139.7.108) 0.37ms
+[W 18:22:31.692 NotebookApp] 404 GET /.DS_Store (10.139.7.108) 1.68ms referer=None
+[W 18:22:31.712 NotebookApp] 404 GET /iisadmpwd/aexp2b.htr (10.139.7.108) 1.51ms referer=None
+[I 18:22:31.752 NotebookApp] 302 GET /api/v1/?format=api (10.139.7.108) 0.68ms
+[I 18:22:31.754 NotebookApp] 302 GET /tree (10.139.7.108) 1.16ms
+[I 18:22:31.776 NotebookApp] 302 GET / (10.139.7.108) 0.61ms
+[W 18:22:31.789 NotebookApp] 404 GET /iisadmpwd/aexp3.htr (10.139.7.108) 1.81ms referer=None
+[W 18:22:31.868 NotebookApp] 404 GET /login.html (10.139.7.108) 2.05ms referer=None
+[W 18:22:31.889 NotebookApp] 404 GET /iisadmpwd/aexp4.htr (10.139.7.108) 1.98ms referer=None
+[W 18:22:31.973 NotebookApp] 404 GET /iisadmpwd/aexp4b.htr (10.139.7.108) 1.92ms referer=None
+[I 18:22:36.985 NotebookApp] 302 GET / (10.139.7.108) 0.72ms
+[W 18:22:37.108 NotebookApp] 404 GET /favicon2.iso (10.139.7.108) 2.09ms referer=None
+[W 18:22:37.228 NotebookApp] 404 GET /favicon.iso (10.139.7.108) 1.79ms referer=None
+[I 18:22:37.931 NotebookApp] 302 GET / (10.139.7.108) 0.41ms
+[W 18:22:38.027 NotebookApp] 404 GET /self_upgrade.html (10.139.7.108) 2.01ms referer=None
+[I 18:22:38.127 NotebookApp] Malformed HTTP message from 10.139.7.108: Malformed HTTP request line
+[I 18:23:00.747 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[W 18:23:00.875 NotebookApp] 404 GET /axis2/services/CUPMService/ping (10.139.7.108) 2.81ms referer=None
+[W 18:23:01.073 NotebookApp] 404 GET /dfcweb/lib/cupm/nls/applicationproperties.js (10.139.7.108) 2.62ms referer=None
+[I 18:23:01.207 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:23:01.316 NotebookApp] 404 GET /emsam/index.html (10.139.7.108) 2.18ms referer=None
+[I 18:23:01.413 NotebookApp] 302 GET / (10.139.7.108) 0.73ms
+[I 18:23:01.525 NotebookApp] 302 GET /ords/ (10.139.7.108) 0.71ms
+[W 18:23:01.627 NotebookApp] 404 GET /apex/listenerConfigure (10.139.7.108) 2.38ms referer=None
+[I 18:23:01.935 NotebookApp] 302 GET / (10.139.7.108) 0.76ms
+[I 18:23:03.245 NotebookApp] 302 GET / (10.139.7.108) 0.73ms
+[I 18:23:03.340 NotebookApp] 302 GET /?tag=tenable-1779319192&method%3a%23_memberAccess%3d%40ognl.OgnlContext%40DEFAULT_MEMBER_ACCESS,%23writer%3d%40org.apache.struts2.ServletActionContext%40getResponse().getWriter(),%23writer.println(%23parameters.tag[0]),%23writer.flush(),%23writer.close (10.139.7.108) 0.86ms
+[I 18:23:03.434 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[W 18:23:03.503 NotebookApp] 403 POST /flex2gateway/http (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:23:03.505 NotebookApp] 403 POST /flex2gateway/http (10.139.7.108) 2.58ms referer=None
+[W 18:23:03.573 NotebookApp] 403 POST /messagebroker/http (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:23:03.575 NotebookApp] 403 POST /messagebroker/http (10.139.7.108) 2.44ms referer=None
+[W 18:23:03.657 NotebookApp] 403 POST /blazeds/messagebroker/http (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:23:03.659 NotebookApp] 403 POST /blazeds/messagebroker/http (10.139.7.108) 2.59ms referer=None
+[W 18:23:03.744 NotebookApp] 403 POST /lcds/messagebroker/http (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:23:03.746 NotebookApp] 403 POST /lcds/messagebroker/http (10.139.7.108) 2.62ms referer=None
+[I 18:23:04.101 NotebookApp] 302 GET / (10.139.7.108) 0.79ms
+[I 18:23:04.213 NotebookApp] 302 GET /?action:%25{(new+java.lang.ProcessBuilder(new+java.lang.String[]{'id'})).start()} (10.139.7.108) 0.94ms
+[I 18:23:04.329 NotebookApp] 302 GET /?redirect:${%23req%3d%23context.get('com.opensymphony.xwork2.dispatcher.HttpServletRequest'),%23webroot%3d%23req.getSession().getServletContext().getRealPath('/'),%23resp%3d%23context.get('com.opensymphony.xwork2.dispatcher.HttpServletResponse').getWriter(),%23resp.print('At%201555323784%20Nessus%20found%20the%20path%20is%20'),%23resp.println(%23webroot),%23resp.flush(),%23resp.close()} (10.139.7.108) 0.97ms
+[I 18:23:04.447 NotebookApp] 302 GET /?redirect:$%7b%23context%5b%27xwork.MethodAccessor.denyMethodExecution%27%5d%3dfalse%2c%23f%3d%23_memberAccess.getClass%28%29.getDeclaredField%28%27allowStaticMethodAccess%27%29%2c%23f.setAccessible%28true%29%2c%23f.set%28%23_memberAccess%2ctrue%29%2c@org.apache.commons.io.IOUtils@toString%28@java.lang.Runtime@getRuntime%28%29.exec%28%27ping%20-c%203%20-p34426f4e7735594c7351%2010.139.7.108%27%29.getInputStream%28%29%29%7d (10.139.7.108) 0.72ms
+[I 18:23:04.555 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[W 18:23:04.660 NotebookApp] 404 GET //${%23context['xwork.MethodAccessor.denyMethodExecution']=!(%23_memberAccess['allowStaticMethodAccess']=true),(@java.lang.Runtime@getRuntime()).exec('id').waitFor()}.action (10.139.7.108) 2.17ms referer=None
+[I 18:23:04.793 NotebookApp] 302 GET / (10.139.7.108) 0.56ms
+[I 18:23:04.919 NotebookApp] 302 GET /? (10.139.7.108) 0.86ms
+[W 18:23:05.049 NotebookApp] 403 POST / (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:23:05.050 NotebookApp] 403 POST / (10.139.7.108) 1.30ms referer=None
+[I 18:23:05.072 NotebookApp] 302 GET / (10.139.7.108) 0.68ms
+[I 18:23:05.149 NotebookApp] 302 GET / (10.139.7.108) 0.81ms
+[W 18:23:05.169 NotebookApp] 404 GET /item.fts?href=%22%3E%3Cscript%3Ealert(%22ftgate_44002.nasl%22)%3C%2Fscript%3E%3B (10.139.7.108) 1.44ms referer=None
+[W 18:23:05.247 NotebookApp] 404 GET /LoginPage.do (10.139.7.108) 2.09ms referer=None
+[I 18:23:05.286 NotebookApp] 302 GET / (10.139.7.108) 0.60ms
+[I 18:23:05.378 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:23:05.394 NotebookApp] 404 GET /console/faces/com_sun_web_ui/help/masthead.jsp?windowTitle=%3c/title%3e%3cscript%3ealert(%27sun_java_web_console_helpwindow_xss.nasl%27)%3c/script%3e (10.139.7.108) 2.16ms referer=None
+[W 18:23:05.511 NotebookApp] 404 GET /console/faces/com_sun_web_ui/help/helpwindow.jsp?windowTitle=%3c/title%3e%3cscript%3ealert(%27sun_java_web_console_helpwindow_xss.nasl%27)%3c/script%3e (10.139.7.108) 2.03ms referer=None
+[I 18:23:05.608 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:23:05.624 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:23:05.712 NotebookApp] 404 GET /home.jsf?autoScroll=0%2c275)%3b%2f%2f--%3e%3c%2fscript%3e%3cscript%3ealert('myfaces_tomahawk_autoscroll_xss.nasl' (10.139.7.108) 2.15ms referer=None
+[W 18:23:05.724 NotebookApp] 404 GET /index.aspx (10.139.7.108) 2.06ms referer=None
+[W 18:23:05.820 NotebookApp] 404 GET /Default.aspx (10.139.7.108) 1.79ms referer=None
+[I 18:23:05.823 NotebookApp] 302 GET / (10.139.7.108) 0.68ms
+[W 18:23:05.906 NotebookApp] 404 GET /admin/statistics/ConfigureStatistics (10.139.7.108) 2.46ms referer=None
+[I 18:23:05.915 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[W 18:23:06.004 NotebookApp] 404 GET /altercast/AlterCast?op=%3cscript%3ealert(%22adobe_document_server_61.nasl%22)%3c%2fscript%3e (10.139.7.108) 2.19ms referer=None
+[I 18:23:06.014 NotebookApp] 302 GET / (10.139.7.108) 0.52ms
+[W 18:23:06.099 NotebookApp] 404 GET /webhost (10.139.7.108) 2.11ms referer=None
+[I 18:23:06.103 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:23:06.215 NotebookApp] 404 GET /Websense/cgi-bin/WsCgiLogin.exe?Page=login&UserName=nessus%22%3e%3cscript%3ealert('websense_username_xss.nasl')%3c%2fscript%3e (10.139.7.108) 2.23ms referer=None
+[I 18:23:06.216 NotebookApp] 302 GET / (10.139.7.108) 0.35ms
+[I 18:23:06.309 NotebookApp] 302 GET /?"><script>alert('struts_sa_surl_xss.nasl-1555323786')</script> (10.139.7.108) 0.73ms
+[I 18:23:06.335 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:23:06.412 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[W 18:23:06.428 NotebookApp] 404 GET /nul.dbm (10.139.7.108) 2.06ms referer=None
+[W 18:23:06.514 NotebookApp] 404 GET /mxhelp/cgi-bin/namazucgi?lang=/../../../../../../../../../../../../../boot.ini (10.139.7.108) 2.18ms referer=None
+[I 18:23:06.580 NotebookApp] 302 GET / (10.139.7.108) 0.65ms
+[I 18:23:06.636 NotebookApp] 302 GET / (10.139.7.108) 0.84ms
+[W 18:23:06.685 NotebookApp] 404 GET /setup/setup-/../../log.jsp?log=info&mode=asc&lines=10 (10.139.7.108) 3.30ms referer=None
+[W 18:23:06.756 NotebookApp] 403 POST / (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:23:06.757 NotebookApp] 403 POST / (10.139.7.108) 33.93ms referer=None
+[I 18:23:06.794 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:23:06.857 NotebookApp] 302 GET / (10.139.7.108) 1.30ms
+[I 18:23:06.881 NotebookApp] 302 GET /ifx/?LO=../../../../../etc/passwd (10.139.7.108) 0.66ms
+[W 18:23:06.964 NotebookApp] 404 GET /kl2M_Fy3FGIL (10.139.7.108) 1.16ms referer=None
+[I 18:23:06.991 NotebookApp] 302 GET / (10.139.7.108) 0.33ms
+[W 18:23:07.045 NotebookApp] 403 PUT /kl2M_Fy3FGIL (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:23:07.046 NotebookApp] 403 PUT /kl2M_Fy3FGIL (10.139.7.108) 1.40ms referer=None
+[I 18:23:07.079 NotebookApp] 302 GET / (10.139.7.108) 0.68ms
+[W 18:23:07.125 NotebookApp] 404 GET /kl2M_Fy3FGIL (10.139.7.108) 1.83ms referer=None
+[I 18:23:07.201 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[I 18:23:07.228 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[W 18:23:07.272 NotebookApp] 404 GET /SiteScope/cgi/go.exe/SiteScope?page=eventLog&machine=&logName=System&account=administrator (10.139.7.108) 1.83ms referer=None
+[W 18:23:07.291 NotebookApp] 404 GET /error_page.htm (10.139.7.108) 1.89ms referer=None
+[I 18:23:07.336 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:23:07.382 NotebookApp] 404 GET /CFIDE/administrator/index.cfm (10.139.7.108) 2.40ms referer=None
+[W 18:23:07.384 NotebookApp] 403 POST http://127.0.0.1/iControl/iControlPortal.cgi (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:23:07.386 NotebookApp] 403 POST http://127.0.0.1/iControl/iControlPortal.cgi (10.139.7.108) 2.48ms referer=None
+[I 18:23:07.483 NotebookApp] 302 GET / (10.139.7.108) 0.68ms
+[I 18:23:07.516 NotebookApp] 302 GET / (10.139.7.108) 0.87ms
+[W 18:23:07.569 NotebookApp] 404 GET /version (10.139.7.108) 2.30ms referer=None
+[W 18:23:07.578 NotebookApp] 404 GET /logon?onok=%22%3e%3cscript%3ealert('axon_logon_xss.nasl')%3c%2fscript%3e (10.139.7.108) 1.18ms referer=None
+[W 18:23:07.641 NotebookApp] 404 GET /trace.axd (10.139.7.108) 1.67ms referer=None
+[I 18:23:07.648 NotebookApp] 302 GET / (10.139.7.108) 0.79ms
+[W 18:23:07.692 NotebookApp] 404 GET /axis/DirectDownload.jsp (10.139.7.108) 1.32ms referer=None
+[I 18:23:07.718 NotebookApp] 302 GET / (10.139.7.108) 0.54ms
+[I 18:23:07.795 NotebookApp] 302 GET / (10.139.7.108) 0.54ms
+[W 18:23:07.797 NotebookApp] 404 GET /cgi-bin/filescan (10.139.7.108) 2.37ms referer=None
+[W 18:23:07.847 NotebookApp] 404 GET /search?NS-query-pat=..\..\..\..\..\..\..\..\winnt\win.ini (10.139.7.108) 2.03ms referer=None
+[W 18:23:07.872 NotebookApp] 404 GET /global.asa (10.139.7.108) 2.22ms referer=None
+[W 18:23:07.919 NotebookApp] 404 GET /search?NS-query-pat=../../../../../../../../../etc/passwd (10.139.7.108) 1.58ms referer=None
+[I 18:23:07.953 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[I 18:23:08.029 NotebookApp] 302 GET / (10.139.7.108) 0.70ms
+[I 18:23:08.038 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:23:08.083 NotebookApp] 302 GET /?class.classLoader.URLs[0]=struts_2_3_16_1_classloader_manipulation-1555323787 (10.139.7.108) 0.62ms
+[W 18:23:08.093 NotebookApp] 404 GET /index.jsp (10.139.7.108) 1.97ms referer=None
+[W 18:23:08.179 NotebookApp] 404 GET /index.jsp (10.139.7.108) 1.93ms referer=None
+[I 18:23:08.189 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[I 18:23:08.253 NotebookApp] 302 GET / (10.139.7.108) 0.67ms
+[W 18:23:08.262 NotebookApp] 404 GET /web.config (10.139.7.108) 2.99ms referer=None
+[W 18:23:08.313 NotebookApp] 403 POST /FormHandler.cgi (10.139.7.108): '_xsrf' argument missing from POST
+[W 18:23:08.315 NotebookApp] 403 POST /FormHandler.cgi (10.139.7.108) 3.24ms referer=None
+[I 18:23:08.415 NotebookApp] 302 GET / (10.139.7.108) 0.44ms
+[I 18:23:08.445 NotebookApp] 302 GET / (10.139.7.108) 0.62ms
+[I 18:23:08.482 NotebookApp] 302 GET /dev/ (10.139.7.108) 0.69ms
+[I 18:23:08.514 NotebookApp] 302 GET / (10.139.7.108) 0.53ms
+[I 18:23:08.584 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:23:08.588 NotebookApp] 404 GET /_mt/mt.cgi (10.139.7.108) 2.10ms referer=None
+[W 18:23:08.662 NotebookApp] 404 GET /index.jsp%00x (10.139.7.108) 3.71ms referer=None
+[W 18:23:08.673 NotebookApp] 404 GET /admin.cgi (10.139.7.108) 2.40ms referer=None
+[I 18:23:08.776 NotebookApp] 302 GET / (10.139.7.108) 0.71ms
+[W 18:23:08.784 NotebookApp] 404 GET /administrator.cgi (10.139.7.108) 1.97ms referer=None
+[W 18:23:08.878 NotebookApp] 404 GET /.%252e/.%252e/.%252e/.%252e/windows/win.ini (10.139.7.108) 1.87ms referer=None
+[W 18:23:08.899 NotebookApp] 404 GET /buglist.cgi (10.139.7.108) 2.17ms referer=None
+[W 18:23:08.977 NotebookApp] 404 GET /.%252e/.%252e/.%252e/.%252e/winnt/win.ini (10.139.7.108) 1.98ms referer=None
+[W 18:23:09.010 NotebookApp] 404 GET /cgi/mid.cgi (10.139.7.108) 1.94ms referer=None
+[W 18:23:09.073 NotebookApp] 404 GET /.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/.%252e/etc/passwd (10.139.7.108) 4.01ms referer=None
+[W 18:23:09.094 NotebookApp] 404 GET /cgi-bin/admin (10.139.7.108) 2.09ms referer=None
+[W 18:23:09.156 NotebookApp] 404 GET /.anydomain.test (10.139.7.108) 2.95ms referer=None
+[W 18:23:09.183 NotebookApp] 404 GET /cgi-bin/admin.cgi (10.139.7.108) 1.56ms referer=None
+[I 18:23:09.246 NotebookApp] 302 GET / (10.139.7.108) 0.66ms
+[W 18:23:09.279 NotebookApp] 404 GET /cgi-bin/admin.pl (10.139.7.108) 1.76ms referer=None
+[I 18:23:09.317 NotebookApp] 302 GET / (10.139.7.108) 0.59ms
+[W 18:23:09.363 NotebookApp] 404 GET /cgi-bin/administrator (10.139.7.108) 1.74ms referer=None
+[W 18:23:09.392 NotebookApp] 404 GET /_mt/mt.cgi (10.139.7.108) 1.36ms referer=None
+[W 18:23:09.445 NotebookApp] 404 GET /cgi-bin/administrator.cgi (10.139.7.108) 1.64ms referer=None
+[W 18:23:09.470 NotebookApp] 404 GET /admin.cgi (10.139.7.108) 2.33ms referer=None
+[I 18:23:09.479 NotebookApp] 302 GET /?redirect:%24%7B57550614%2b16044095%7D (10.139.7.108) 0.74ms
+[W 18:23:09.506 NotebookApp] 404 GET /cgi-bin/agorn.cgi (10.139.7.108) 1.05ms referer=None
+[W 18:23:09.543 NotebookApp] 404 GET /administrator.cgi (10.139.7.108) 2.01ms referer=None
+[I 18:23:09.559 NotebookApp] 302 GET / (10.139.7.108) 0.63ms
+[W 18:23:09.587 NotebookApp] 404 GET /cgi-bin/bugreport.cgi (10.139.7.108) 1.81ms referer=None
+[W 18:23:09.614 NotebookApp] 404 GET /buglist.cgi (10.139.7.108) 1.83ms referer=None
+[W 18:23:09.619 NotebookApp] 404 GET //${304121837+5}.action (10.139.7.108) 2.11ms referer=None
+[W 18:23:09.649 NotebookApp] 404 GET /cgi-bin/cart.cgi (10.139.7.108) 2.00ms referer=None
+[W 18:23:09.688 NotebookApp] 404 GET /cgi/mid.cgi (10.139.7.108) 1.91ms referer=None
+[W 18:23:09.694 NotebookApp] 404 GET //${%23w%3d%23context.get('com.opensymphony.xwork2.dispatcher.HttpServletResponse').getWriter(),%23w.print('Nessus%20Response:%20'),%23w.println('struts_2_3_14_3_command_execution-304121837'),%23w.flush(),%23w.close()}.action (10.139.7.108) 2.53ms referer=None
+[W 18:23:09.741 NotebookApp] 404 GET /cgi-bin/clwarn.cgi (10.139.7.108) 1.91ms referer=None
+[W 18:23:09.779 NotebookApp] 404 GET /cgi-bin/admin (10.139.7.108) 2.80ms referer=None
+[I 18:23:09.786 NotebookApp] 302 GET / (10.139.7.108) 0.57ms
+[W 18:23:09.822 NotebookApp] 404 GET /cgi-bin/count.cgi (10.139.7.108) 1.94ms referer=None
+[W 18:23:09.846 NotebookApp] 404 GET /cgi-bin/admin.cgi (10.139.7.108) 1.91ms referer=None
+[W 18:23:09.855 NotebookApp] 404 GET /user_settings.cfg (10.139.7.108) 2.00ms referer=None
+[W 18:23:09.903 NotebookApp] 404 GET /cgi-bin/Count.cgi (10.139.7.108) 2.09ms referer=None
+[W 18:23:09.934 NotebookApp] 404 GET /cgi-bin/admin.pl (10.139.7.108) 2.12ms referer=None
+[W 18:23:09.948 NotebookApp] 404 GET /lcgi/sewse.nlm?sys:/novonyx/suitespot/docs/sewse/viewcode.jse+httplist+httplist/../../../../../system/autoexec.ncf (10.139.7.108) 1.85ms referer=None
+[W 18:23:09.982 NotebookApp] 404 GET /cgi-bin/faqmanager.cgi (10.139.7.108) 1.45ms referer=None
+[W 18:23:10.012 NotebookApp] 404 GET /cgi-bin/administrator (10.139.7.108) 1.43ms referer=None
+[I 18:23:10.026 NotebookApp] 302 GET / (10.139.7.108) 0.38ms
+[W 18:23:10.036 NotebookApp] 404 GET /cgi-bin/FormHandler.cgi (10.139.7.108) 1.54ms referer=None
+[W 18:23:10.071 NotebookApp] 404 GET /cgi-bin/administrator.cgi (10.139.7.108) 1.01ms referer=None
+[W 18:23:10.080 NotebookApp] 404 GET /struts/webconsole.html (10.139.7.108) 2.36ms referer=None
+[W 18:23:10.096 NotebookApp] 404 GET /cgi-bin/FormMail.cgi (10.139.7.108) 1.31ms referer=None
+[W 18:23:10.142 NotebookApp] 404 GET /cgi-bin/agorn.cgi (10.139.7.108) 1.20ms referer=None
+[W 18:23:10.168 NotebookApp] 404 GET /././.. (10.139.7.108) 1.11ms referer=None
+[W 18:23:10.170 NotebookApp] 404 GET /cgi-bin/guestbook.cgi (10.139.7.108) 1.47ms referer=None
+[W 18:23:10.211 NotebookApp] 404 GET /cgi-bin/bugreport.cgi (10.139.7.108) 1.91ms referer=None
+[W 18:23:10.235 NotebookApp] 404 GET ././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././././../../../../../../../../ (10.139.7.108) 2.14ms referer=None
+[W 18:23:10.244 NotebookApp] 404 GET /cgi-bin/help.cgi (10.139.7.108) 1.91ms referer=None
+[W 18:23:10.281 NotebookApp] 404 GET /cgi-bin/cart.cgi (10.139.7.108) 1.73ms referer=None
+[W 18:23:10.304 NotebookApp] 404 GET /scripts/w3who.dll (10.139.7.108) 2.05ms referer=None
+[W 18:23:10.306 NotebookApp] 404 GET /cgi-bin/hi (10.139.7.108) 1.61ms referer=None
+[W 18:23:10.353 NotebookApp] 404 GET /cgi-bin/clwarn.cgi (10.139.7.108) 1.95ms referer=None
+[I 18:23:10.385 NotebookApp] 302 GET / (10.139.7.108) 0.53ms
+[W 18:23:10.390 NotebookApp] 404 GET /cgi-bin/index.cgi (10.139.7.108) 2.42ms referer=None
+[W 18:23:10.426 NotebookApp] 404 GET /cgi-bin/count.cgi (10.139.7.108) 1.79ms referer=None
+[W 18:23:10.451 NotebookApp] 404 GET //struts/webconsole.html (10.139.7.108) 2.47ms referer=None
+[W 18:23:10.455 NotebookApp] 404 GET /cgi-bin/index.pl (10.139.7.108) 1.86ms referer=None
+[W 18:23:10.498 NotebookApp] 404 GET /cgi-bin/Count.cgi (10.139.7.108) 1.99ms referer=None
+[I 18:23:10.528 NotebookApp] 302 GET / (10.139.7.108) 0.55ms
+[W 18:23:10.531 NotebookApp] 404 GET /cgi-bin/index.sh (10.139.7.108) 1.64ms referer=None
+[W 18:23:10.585 NotebookApp] 404 GET /cgi-bin/faqmanager.cgi (10.139.7.108) 1.90ms referer=None
+[W 18:23:10.634 NotebookApp] 404 GET /cgi-bin/login (10.139.7.108) 1.91ms referer=None
+[I 18:23:10.636 NotebookApp] 302 GET /?debug=command&expression=%23_memberAccess["allowStaticMethodAccess"]=true,@java.lang.Thread@sleep(5000) (10.139.7.108) 0.79ms
+[W 18:23:10.688 NotebookApp] 404 GET /cgi-bin/FormHandler.cgi (10.139.7.108) 2.57ms referer=None
+[W 18:23:10.734 NotebookApp] 404 GET /cgi-bin/login.cgi (10.139.7.108) 2.37ms referer=None
+[I 18:23:10.736 NotebookApp] 302 GET / (10.139.7.108) 0.87ms
+[W 18:23:10.809 NotebookApp] 404 GET /cgi-bin/FormMail.cgi (10.139.7.108) 2.26ms referer=None
+[W 18:23:10.830 NotebookApp] 404 GET /cgi-bin/mailit.pl (10.139.7.108) 2.06ms referer=None
+[I 18:23:10.843 NotebookApp] 302 GET / (10.139.7.108) 0.54ms
+[W 18:23:10.902 NotebookApp] 404 GET /cgi-bin/guestbook.cgi (10.139.7.108) 1.61ms referer=None
+[W 18:23:10.939 NotebookApp] 404 GET /cgi-bin/mt/mt-check.cgi (10.139.7.108) 2.65ms referer=None
+[I 18:23:10.941 NotebookApp] 302 GET /?('\u0023_memberAccess[\'allowStaticMethodAccess\']')(meh)=true&(aaa)(('\u0023context[\'xwork.MethodAccessor.denyMethodExecution\']\u003d\u0023foo')(\u0023foo\u003dnew%20java.lang.Boolean(%22false%22)))&(asdf)(('\u0023thread.sleep(5000)')(\u0023thread\u003d@java.lang.Thread@currentThread()))=1 (10.139.7.108) 0.70ms
+[W 18:23:11.020 NotebookApp] 404 GET /cgi-bin/help.cgi (10.139.7.108) 2.00ms referer=None
+[W 18:23:11.044 NotebookApp] 404 GET /cgi-bin/mt/mt-load.cgi (10.139.7.108) 1.75ms referer=None
+[I 18:23:11.063 NotebookApp] 302 GET / (10.139.7.108) 0.37ms
+[W 18:23:11.119 NotebookApp] 404 GET /cgi-bin/hi (10.139.7.108) 1.70ms referer=None
+[W 18:23:11.160 NotebookApp] 404 GET /cgi-bin/mt-static/mt-check.cgi (10.139.7.108) 2.01ms referer=None
+[W 18:23:11.165 NotebookApp] 404 GET /note.txt?F_notini=&T_note=&nomentreprise=blah&filenote=../../windows/win.ini (10.139.7.108) 1.21ms referer=None
+[W 18:23:11.223 NotebookApp] 404 GET /cgi-bin/index.cgi (10.139.7.108) 2.33ms referer=None
+[W 18:23:11.262 NotebookApp] 404 GET /cgi-bin/mt-static/mt-load.cgi (10.139.7.108) 2.09ms referer=None
+[W 18:23:11.265 NotebookApp] 404 GET /note.txt?F_notini=&T_note=&nomentreprise=blah&filenote=../../winnt/win.ini (10.139.7.108) 2.46ms referer=None
+[W 18:23:11.317 NotebookApp] 404 GET /cgi-bin/index.pl (10.139.7.108) 2.00ms referer=None
+[W 18:23:11.358 NotebookApp] 404 GET /cgi-bin/ncbook/book.cgi (10.139.7.108) 2.75ms referer=None
+[I 18:23:11.375 NotebookApp] 302 GET / (10.139.7.108) 0.64ms
+[W 18:23:11.424 NotebookApp] 404 GET /cgi-bin/index.sh (10.139.7.108) 2.42ms referer=None
+[W 18:23:11.446 NotebookApp] 404 GET /cgi-bin/printenv (10.139.7.108) 2.21ms referer=None
+[W 18:23:11.486 NotebookApp] 404 GET /status.xsl. (10.139.7.108) 2.02ms referer=None
+[W 18:23:11.539 NotebookApp] 404 GET /cgi-bin/login.cgi (10.139.7.108) 1.74ms referer=None
+[W 18:23:11.561 NotebookApp] 404 GET /cgi-bin/printenv.cgi (10.139.7.108) 1.82ms referer=None
+[W 18:23:11.603 NotebookApp] 404 GET /..\pixfir~1\how_to_login.html (10.139.7.108) 3.08ms referer=None
+[W 18:23:11.638 NotebookApp] 404 GET /cgi-bin/mailit.pl (10.139.7.108) 1.91ms referer=None
+[W 18:23:11.651 NotebookApp] 404 GET /cgi-bin/quickstore.cgi (10.139.7.108) 1.54ms referer=None
+[I 18:23:11.694 NotebookApp] 302 GET / (10.139.7.108) 0.78ms
+[W 18:23:11.744 NotebookApp] 404 GET /cgi-bin/mt/mt-check.cgi (10.139.7.108) 2.06ms referer=None
+[W 18:23:11.747 NotebookApp] 404 GET /cgi-bin/search (10.139.7.108) 1.69ms referer=None
+[I 18:23:11.794 NotebookApp] 302 GET / (10.139.7.108) 0.77ms
+[W 18:23:11.840 NotebookApp] 404 GET /cgi-bin/mt/mt-load.cgi (10.139.7.108) 2.52ms referer=None
+[W 18:23:11.846 NotebookApp] 404 GET /cgi-bin/search.cgi (10.139.7.108) 1.24ms referer=None
+[W 18:23:11.899 NotebookApp] 404 GET /xsql/demo/airport/airport.xsql?xml-stylesheet=none (10.139.7.108) 1.48ms referer=None
+[W 18:23:11.953 NotebookApp] 404 GET /cgi-bin/search/search.cgi (10.139.7.108) 2.38ms referer=None
+[W 18:23:11.956 NotebookApp] 404 GET /cgi-bin/mt-static/mt-check.cgi (10.139.7.108) 2.00ms referer=None
+[I 18:23:12.008 NotebookApp] 302 GET / (10.139.7.108) 0.81ms
+[W 18:23:12.039 NotebookApp] 404 GET /cgi-bin/status (10.139.7.108) 1.88ms referer=None
+[W 18:23:12.042 NotebookApp] 404 GET /cgi-bin/mt-static/mt-load.cgi (10.139.7.108) 1.91ms referer=None
+[W 18:23:12.103 NotebookApp] 404 GET /OvCgi/freeIPaddrs.ovpl?netnum=127.0.0.1&netmask=255.255.255.0&netid=127.0.0.1%20|%20id| (10.139.7.108) 2.49ms referer=None
+[W 18:23:12.143 NotebookApp] 404 GET /cgi-bin/status.cgi (10.139.7.108) 2.09ms referer=None
+[W 18:23:12.150 NotebookApp] 404 GET /cgi-bin/ncbook/book.cgi (10.139.7.108) 1.99ms referer=None
+[W 18:23:12.212 NotebookApp] 404 GET /cgi-bin/faqmanager.cgi?toc=/etc/passwd%00 (10.139.7.108) 3.35ms referer=None
+[W 18:23:12.262 NotebookApp] 404 GET /cgi-bin/test.cgi (10.139.7.108) 2.06ms referer=None
+[W 18:23:12.265 NotebookApp] 404 GET /cgi-bin/printenv (10.139.7.108) 1.69ms referer=None
+[I 18:23:12.402 NotebookApp] 302 GET / (10.139.7.108) 0.89ms
+[W 18:23:12.406 NotebookApp] 404 GET /cgi-bin/test.sh (10.139.7.108) 2.25ms referer=None
+[W 18:23:12.409 NotebookApp] 404 GET /cgi-bin/printenv.cgi (10.139.7.108) 2.21ms referer=None
+[I 18:23:12.468 NotebookApp] 302 GET / (10.139.7.108) 0.55ms
+[W 18:23:12.475 NotebookApp] 404 GET /cgi-bin/test-cgi (10.139.7.108) 1.93ms referer=None
+[W 18:23:12.495 NotebookApp] 404 GET /cgi-bin/quickstore.cgi (10.139.7.108) 2.01ms referer=None
+[I 18:23:12.514 NotebookApp] 302 GET / (10.139.7.108) 0.73ms
+[W 18:23:12.524 NotebookApp] 404 GET /cgi-bin/upload.cgi (10.139.7.108) 1.79ms referer=None
+[W 18:23:12.541 NotebookApp] 404 GET /cgi-bin/search (10.139.7.108) 1.86ms referer=None
+[I 18:23:12.569 NotebookApp] 302 GET / (10.139.7.108) 0.58ms
+[W 18:23:12.573 NotebookApp] 404 GET /cgi-bin/urlcount.cgi (10.139.7.108) 2.45ms referer=None
+[W 18:23:12.590 NotebookApp] 404 GET /cgi-bin/search.cgi (10.139.7.108) 1.95ms referer=None
+[W 18:23:12.611 NotebookApp] 404 GET /DB4Web/DESKTOP-IBU5B6M:23/foo (10.139.7.108) 2.83ms referer=None
+[W 18:23:12.625 NotebookApp] 404 GET /cgi-bin/viewcvs.cgi (10.139.7.108) 1.61ms referer=None
+[W 18:23:12.627 NotebookApp] 404 GET /cgi-bin/search/search.cgi (10.139.7.108) 1.48ms referer=None
+[W 18:23:12.681 NotebookApp] 404 GET /cgi-bin/wa (10.139.7.108) 1.95ms referer=None
+[W 18:23:12.683 NotebookApp] 404 GET /cgi-bin/status (10.139.7.108) 2.04ms referer=None
+[W 18:23:12.713 NotebookApp] 404 GET /cgi-bin/wa.cgi (10.139.7.108) 1.50ms referer=None
+[W 18:23:12.728 NotebookApp] 404 GET /cgi-bin/status.cgi (10.139.7.108) 2.00ms referer=None
+[W 18:23:12.747 NotebookApp] 404 GET /cgi-bin/wa.exe (10.139.7.108) 1.50ms referer=None
+[W 18:23:12.758 NotebookApp] 404 GET /cgi-bin/test.cgi (10.139.7.108) 2.02ms referer=None
+[W 18:23:12.775 NotebookApp] 404 GET /cgi-bin/whois.cgi (10.139.7.108) 1.96ms referer=None
+[W 18:23:12.786 NotebookApp] 404 GET /cgi-bin/test.sh (10.139.7.108) 1.36ms referer=None
+[W 18:23:12.802 NotebookApp] 404 GET /cgi-bin-sdb/printenv (10.139.7.108) 1.95ms referer=None
+[W 18:23:12.821 NotebookApp] 404 GET /cgi-bin/test-cgi (10.139.7.108) 1.88ms referer=None
+[W 18:23:12.847 NotebookApp] 404 GET /cgi-mod/index.cgi (10.139.7.108) 1.98ms referer=None
+[W 18:23:12.869 NotebookApp] 404 GET /cgi-bin/upload.cgi (10.139.7.108) 1.87ms referer=None
+[W 18:23:12.882 NotebookApp] 404 GET /cgi-sys/defaultwebpage.cgi (10.139.7.108) 1.16ms referer=None
+[W 18:23:12.889 NotebookApp] 404 GET /cgi-bin/urlcount.cgi (10.139.7.108) 1.69ms referer=None
+[W 18:23:12.901 NotebookApp] 404 GET /cgi-sys/entropysearch.cgi (10.139.7.108) 1.96ms referer=None
+[W 18:23:12.908 NotebookApp] 404 GET /cgi-bin/viewcvs.cgi (10.139.7.108) 2.32ms referer=None
+[W 18:23:12.921 NotebookApp] 404 GET /index.cgi (10.139.7.108) 1.71ms referer=None
+[W 18:23:12.923 NotebookApp] 404 GET /cgi-bin/wa (10.139.7.108) 1.66ms referer=None
+[W 18:23:12.938 NotebookApp] 404 GET /index.pl (10.139.7.108) 1.83ms referer=None
+[W 18:23:12.940 NotebookApp] 404 GET /cgi-bin/wa.cgi (10.139.7.108) 1.47ms referer=None
+[W 18:23:12.957 NotebookApp] 404 GET /index.sh (10.139.7.108) 1.85ms referer=None
+[W 18:23:12.960 NotebookApp] 404 GET /cgi-bin/wa.exe (10.139.7.108) 1.94ms referer=None
+[W 18:23:12.976 NotebookApp] 404 GET /nph-mr.cgi (10.139.7.108) 1.65ms referer=None
+[W 18:23:12.997 NotebookApp] 404 GET /cgi-bin/whois.cgi (10.139.7.108) 1.46ms referer=None
+[W 18:23:13.000 NotebookApp] 404 GET /query.cgi (10.139.7.108) 1.06ms referer=None
+[W 18:23:13.013 NotebookApp] 404 GET /cgi-bin-sdb/printenv (10.139.7.108) 1.85ms referer=None
+[W 18:23:13.015 NotebookApp] 404 GET /session_login.cgi (10.139.7.108) 1.39ms referer=None
+[W 18:23:13.025 NotebookApp] 404 GET /cgi-mod/index.cgi (10.139.7.108) 1.39ms referer=None
+[W 18:23:13.029 NotebookApp] 404 GET /show_bug.cgi (10.139.7.108) 1.44ms referer=None
+[W 18:23:13.044 NotebookApp] 404 GET /cgi-sys/defaultwebpage.cgi (10.139.7.108) 1.85ms referer=None
+[W 18:23:13.048 NotebookApp] 404 GET /test (10.139.7.108) 1.47ms referer=None
+[W 18:23:13.063 NotebookApp] 404 GET /cgi-sys/entropysearch.cgi (10.139.7.108) 1.76ms referer=None
+[W 18:23:13.065 NotebookApp] 404 GET /test.cgi (10.139.7.108) 1.36ms referer=None
+[W 18:23:13.082 NotebookApp] 404 GET /index.cgi (10.139.7.108) 1.91ms referer=None
+[W 18:23:13.092 NotebookApp] 404 GET /ucsm/isSamInstalled.cgi (10.139.7.108) 1.51ms referer=None
+[W 18:23:13.100 NotebookApp] 404 GET /index.pl (10.139.7.108) 1.52ms referer=None
+[W 18:23:13.109 NotebookApp] 404 GET /whois.cgi (10.139.7.108) 1.64ms referer=None
+[W 18:23:13.121 NotebookApp] 404 GET /index.sh (10.139.7.108) 1.21ms referer=None
+[W 18:23:13.137 NotebookApp] 404 GET /wp-login.php (10.139.7.108) 1.95ms referer=None
+[W 18:23:13.141 NotebookApp] 404 GET /nph-mr.cgi (10.139.7.108) 2.73ms referer=None
+[W 18:23:13.149 NotebookApp] 404 GET /wwwadmin.cgi (10.139.7.108) 1.19ms referer=None
+[W 18:23:13.151 NotebookApp] 404 GET /query.cgi (10.139.7.108) 1.15ms referer=None
+[W 18:23:13.161 NotebookApp] 404 GET /wwwboard.cgi (10.139.7.108) 1.33ms referer=None
+[W 18:23:13.167 NotebookApp] 404 GET /session_login.cgi (10.139.7.108) 1.14ms referer=None
+[W 18:23:13.181 NotebookApp] 404 GET /xampp/cgi.cgi (10.139.7.108) 2.87ms referer=None
+[W 18:23:13.185 NotebookApp] 404 GET /show_bug.cgi (10.139.7.108) 1.12ms referer=None
+[W 18:23:13.211 NotebookApp] 404 GET /test (10.139.7.108) 1.37ms referer=None
+[W 18:23:13.232 NotebookApp] 404 GET /test.cgi (10.139.7.108) 1.20ms referer=None
+[W 18:23:13.253 NotebookApp] 404 GET /ucsm/isSamInstalled.cgi (10.139.7.108) 2.26ms referer=None
+[W 18:23:13.539 NotebookApp] 404 GET /whois.cgi (10.139.7.108) 2.34ms referer=None
+[W 18:23:13.577 NotebookApp] 404 GET /wp-login.php (10.139.7.108) 1.76ms referer=None
+[W 18:23:13.615 NotebookApp] 404 GET /wwwadmin.cgi (10.139.7.108) 1.81ms referer=None
+[W 18:23:13.644 NotebookApp] 404 GET /wwwboard.cgi (10.139.7.108) 2.03ms referer=None
+[W 18:23:13.683 NotebookApp] 404 GET /xampp/cgi.cgi (10.139.7.108) 2.76ms referer=None
+[W 18:23:14.746 NotebookApp] 404 GET /password (10.139.7.108) 2.32ms referer=None
+[I 18:23:15.786 NotebookApp] 302 GET / (10.139.7.108) 0.77ms
+[W 18:23:15.826 NotebookApp] 404 GET /index.html (10.139.7.108) 2.26ms referer=None
+[I 18:23:15.907 NotebookApp] 302 GET / (10.139.7.108) 0.82ms
+[W 18:23:15.938 NotebookApp] 404 GET /rails_info/properties (10.139.7.108) 2.75ms referer=None
+[W 18:54:14.801 NotebookApp] Replacing stale connection: ff20b92b-8597-4175-b97c-07de01e24696:6002cfd60066475e8eca69709a3517e2
+[E 18:54:15.443 NotebookApp] Uncaught exception in ZMQStream callback
+    Traceback (most recent call last):
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+[E 18:54:15.444 NotebookApp] Uncaught exception in zmqstream callback
+    Traceback (most recent call last):
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+        self._handle_recv()
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+        self._run_callback(callback, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+        callback(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+        return fn(*args, **kwargs)
+      File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+        self.on_recv(lambda msg: callback(self, msg), copy=copy)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+        super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+      File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+        self.write_message(msg, binary=isinstance(msg, bytes))
+      File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+        raise WebSocketClosedError()
+    tornado.websocket.WebSocketClosedError
+ERROR:asyncio:Exception in callback BaseAsyncIOLoop._handle_events(35, 1)
+handle: <Handle BaseAsyncIOLoop._handle_events(35, 1)>
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/events.py", line 125, in _run
+    self._callback(*self._args)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/platform/asyncio.py", line 122, in _handle_events
+    handler_func(fileobj, events)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 450, in _handle_events
+    self._handle_recv()
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 480, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 432, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/stack_context.py", line 300, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/cai/.local/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py", line 196, in <lambda>
+    self.on_recv(lambda msg: callback(self, msg), copy=copy)
+  File "/home/cai/.local/lib/python3.5/site-packages/notebook/services/kernels/handlers.py", line 419, in _on_zmq_reply
+    super(ZMQChannelsHandler, self)._on_zmq_reply(stream, msg)
+  File "/home/cai/.local/lib/python3.5/site-packages/notebook/base/zmqhandlers.py", line 250, in _on_zmq_reply
+    self.write_message(msg, binary=isinstance(msg, bytes))
+  File "/home/cai/.local/lib/python3.5/site-packages/tornado/websocket.py", line 259, in write_message
+    raise WebSocketClosedError()
+tornado.websocket.WebSocketClosedError
+[I 18:54:19.804 NotebookApp] Starting buffering for ff20b92b-8597-4175-b97c-07de01e24696:6002cfd60066475e8eca69709a3517e2
+[I 18:54:19.805 NotebookApp] Adapting to protocol v5.1 for kernel ff20b92b-8597-4175-b97c-07de01e24696
+[I 18:54:19.807 NotebookApp] Restoring connection for ff20b92b-8597-4175-b97c-07de01e24696:6002cfd60066475e8eca69709a3517e2
+[I 18:54:19.807 NotebookApp] Replaying 3 buffered messages
+[W 18:54:19.902 NotebookApp] Replacing stale connection: 89000c9a-ffea-465e-8908-d6f4c30223b5:f1c4eeb04c8c46e5887b06741a1b0552
+[I 18:54:24.904 NotebookApp] Starting buffering for 89000c9a-ffea-465e-8908-d6f4c30223b5:f1c4eeb04c8c46e5887b06741a1b0552
+[I 18:54:24.905 NotebookApp] Adapting to protocol v5.1 for kernel 89000c9a-ffea-465e-8908-d6f4c30223b5
+[I 18:54:24.906 NotebookApp] Restoring connection for 89000c9a-ffea-465e-8908-d6f4c30223b5:f1c4eeb04c8c46e5887b06741a1b0552
+[W 18:54:25.033 NotebookApp] Replacing stale connection: 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[I 18:54:30.036 NotebookApp] Starting buffering for 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[I 18:54:30.037 NotebookApp] Adapting to protocol v5.1 for kernel 935e7045-18be-429b-90d8-915522c87117
+[I 18:54:30.038 NotebookApp] Restoring connection for 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[I 18:57:53.543 NotebookApp] Starting buffering for 935e7045-18be-429b-90d8-915522c87117:8c69778214c64db0bbf54b54ee9e42f5
+[I 18:58:00.991 NotebookApp] Starting buffering for 89000c9a-ffea-465e-8908-d6f4c30223b5:f1c4eeb04c8c46e5887b06741a1b0552
+[I 18:58:02.071 NotebookApp] Starting buffering for ff20b92b-8597-4175-b97c-07de01e24696:6002cfd60066475e8eca69709a3517e2
+[I 10:46:58.359 NotebookApp] 302 GET / (10.136.27.134) 1.28ms
+[W 10:48:15.642 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20190414225022 (10.136.27.134) 3.12ms referer=http://10.134.171.250:8888/notebooks/project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:48:16.662 NotebookApp] Adapting to protocol v5.1 for kernel ff20b92b-8597-4175-b97c-07de01e24696
+[I 10:48:16.663 NotebookApp] Discarding 51972 buffered messages for ff20b92b-8597-4175-b97c-07de01e24696:6002cfd60066475e8eca69709a3517e2
+[I 10:49:18.094 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:50:16.962 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:52:16.839 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:54:17.199 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:55:10.206 NotebookApp] Saving file at /project/RFB-Keras/drawing.py
+[I 10:56:11.492 NotebookApp] Saving file at /project/RFB-Keras/drawing.py
+[I 10:56:17.162 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 10:56:24.622 NotebookApp] Saving file at /project/RFB-Keras/drawing.py
+[I 10:58:17.077 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:30:16.857 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 11:32:17.312 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:17:44.142 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:17:52.699 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:18:05.146 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:18:16.980 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:18:24.564 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:18:27.988 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:19:18.816 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:19:19.782 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:19:25.370 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:19:26.562 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:41:51.994 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+2019-04-16 17:42:10.325496: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0, 1
+2019-04-16 17:42:10.391065: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-16 17:42:10.391107: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 1 
+2019-04-16 17:42:10.391121: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N Y 
+2019-04-16 17:42:10.391131: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 1:   Y N 
+2019-04-16 17:42:10.417870: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10408 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+2019-04-16 17:42:10.464996: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10409 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:04:00.0, compute capability: 6.1)
+[I 17:42:16.942 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[I 17:44:17.195 NotebookApp] Saving file at /project/RFB-Keras/rfbnet_mobile_300.ipynb
+[W 18:39:46.664 NotebookApp] WebSocket ping timeout after 119958 ms.
+[I 18:39:51.666 NotebookApp] Starting buffering for ff20b92b-8597-4175-b97c-07de01e24696:f495827fb6854b85866535faa6e23853
+[I 19:37:20.642 NotebookApp] Adapting to protocol v5.1 for kernel ff20b92b-8597-4175-b97c-07de01e24696
+[I 19:37:20.644 NotebookApp] Restoring connection for ff20b92b-8597-4175-b97c-07de01e24696:f495827fb6854b85866535faa6e23853

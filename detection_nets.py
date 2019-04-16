@@ -298,12 +298,13 @@ def build_tiny_dsod(input_shape,
     return model
 def build_ssdlite(base_model,
             prior_config,
+            base_index,
             source_layer_name_1,
             num_classes):
     base_model = load_mobilenetv2()
 #     source_layer_name_1 = 'block_16_expansion'
     source_layer_1 = base_model.get_layer(source_layer_name_1).output
-    source_layer_2 = base_model.layers[-1].output
+    source_layer_2 = base_model.layers[base_index].output
     source_layer_3 = BasicSepConv(512,kernel_size = 3,stride = 2, padding='same',name = 'extra_3')(source_layer_2)
     source_layer_4 = BasicSepConv(256,kernel_size = 3,stride = 2, padding='same',name = 'extra_4')(source_layer_3)
     source_layer_5 = BasicSepConv(256,kernel_size = 3,stride = 1,padding='same',name = 'extra_5')(source_layer_4)

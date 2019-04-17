@@ -17,8 +17,6 @@ class BasicModule():
         layers = [self.conv]
         if self.bn is not None:
             layers.append(self.bn)
-        if self.avt is not None:
-            layers.append(self.avt)
         return layers
     
 class BasicConv(BasicModule):
@@ -38,11 +36,9 @@ class BasicConv(BasicModule):
         if name is not None:
             conv_name = name + '_conv'
             bn_name = name + '_bn'
-            avt_name = name + '_' + activation if activation else None
         else:
             conv_name = None
             bn_name = None
-            avt_name = None
          
         self.conv = Conv2D( out_planes,
               kernel_size=kernel_size,
@@ -56,11 +52,10 @@ class BasicConv(BasicModule):
               name = conv_name,
               data_format='channels_last')
         self.bn = None
-        self.avt = None
+
         if use_bn:
             self.bn = BatchNormalization(axis=-1, epsilon=1e-5, momentum=0.99,name = bn_name) 
-        if activation is not None:
-            self.avt = Activation(activation,name = avt_name)
+
 class BasicSepConv(BasicModule):
     def __init__(self,
           out_planes,
@@ -79,11 +74,9 @@ class BasicSepConv(BasicModule):
         if name is not None:
             conv_name = name + '_sep'
             bn_name = name + '_bn'
-            avt_name = name + '_' + activation if activation else None
         else:
             conv_name = None
             bn_name = None
-            avt_name = None
          
         self.conv = SeparableConv2D( out_planes,
               kernel_size=kernel_size,
@@ -98,11 +91,8 @@ class BasicSepConv(BasicModule):
               name = conv_name,
               data_format='channels_last')
         self.bn = None
-        self.avt = None
         if use_bn:
             self.bn = BatchNormalization(axis=-1, epsilon=1e-5, momentum=0.99,name = bn_name) 
-        if activation is not None:
-            self.avt = Activation(activation,name = avt_name)
                       
 class BasicDepConv(BasicModule):
     def __init__(self,
@@ -121,11 +111,9 @@ class BasicDepConv(BasicModule):
         if name is not None:
             conv_name = name + '_dep'
             bn_name = name + '_bn'
-            avt_name = name + '_' + activation  if activation else None
         else:
             conv_name = None
             bn_name = None
-            avt_name = None
     #     if name is None:
     #         name = 'BasicDepthwiseConv'
         self.conv = DepthwiseConv2D( kernel_size=kernel_size,
@@ -139,11 +127,9 @@ class BasicDepConv(BasicModule):
                            name = conv_name,
                            data_format='channels_last')
         self.bn = None
-        self.avt = None
         if  use_bn:
             self.bn = BatchNormalization(axis=-1, epsilon=1e-5, momentum=0.99,name = bn_name) 
-        if activation is not None:
-            self.avt = Activation(activation,name = avt_name)
+
             
 # class BasicSepConv(BasicModule):
 #     def __init__(self,
@@ -419,7 +405,7 @@ def LiteRFB_d(x,
          ):
   
     '''
-    Lite RFB_a module
+    LiteRFB_d module
     1. Used an inverted bottleneck 
     '''
     stride = 1
